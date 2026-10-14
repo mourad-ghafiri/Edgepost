@@ -1,0 +1,44 @@
+{
+  "domainsFilterAll": "All",
+  "domainsFilterAttention": "Needs you",
+  "domainsFilterPinned": "Pinned",
+  "domainsEmptyTitle": "No domains yet",
+  "domainsEmptyMessage": "This token can't see any zones. Add a token with “Zone · Zone · Read”, or add a domain in the Cloudflare dashboard.",
+  "domainsAttentionEmpty": "Every domain is in line.",
+  "domainsPinnedEmpty": "Pin a domain from its page to keep it on top.",
+  "zoneFieldStatus": "Status",
+  "zoneFieldPlan": "Plan",
+  "zoneStatusActive": "Active",
+  "zoneStatusPending": "Pending",
+  "zoneStatusPaused": "Paused",
+  "zoneStatusMoved": "Moved",
+  "zoneStatusOther": "Inactive",
+  "zoneReasonPending": "Nameservers not switched yet: Cloudflare isn't serving this domain.",
+  "zoneReasonPaused": "Cloudflare is paused: traffic bypasses the proxy, cache and security.",
+  "zoneReasonDevMode": "Development mode is on: the cache is bypassed for {minutes} more min.",
+  "@zoneReasonDevMode": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "zoneHubDns": "DNS records",
+  "zoneHubControls": "SSL, cache & security",
+  "zoneHubAnalytics": "Traffic",
+  "zoneHubEmail": "Email routing",
+  "zoneHubMailbox": "Mailbox",
+  "zoneHubWorkers": "Worker routes",
+  "zoneHubPin": "Pin",
+  "zoneHubUnpin": "Unpin",
+  "zoneHubNameservers": "Nameservers",
+  "zoneHubNameserversHelp": "Set these at your registrar to finish moving the domain to Cloudflare.",
+  "zoneHubOpenDashboard": "Open in Cloudflare dashboard",
+  "zoneHubDetails": "Details",
+  "zoneHubCreated": "Added",
+  "zoneHubActivated": "Activated",
+  "zoneHubRegistrar": "Previous registrar",
+  "zoneHubManage": "Manage",
+  "domainsFieldRequests": "Requests · 7d",
+  "domainsSplitPlaceholder": "Choose a domain to see its DNS, traffic and settings here."
+}

@@ -1,0 +1,561 @@
+{
+  "mailAllInboxes": "All inboxes",
+  "mailFolderInbox": "Inbox",
+  "mailFolderSent": "Sent",
+  "mailFolderArchive": "Archive",
+  "mailFolderTrash": "Trash",
+  "mailCompose": "New message",
+  "mailReply": "Reply",
+  "mailReplyAll": "Reply all",
+  "mailForward": "Forward",
+  "mailArchive": "Archive",
+  "mailMoveToInbox": "Move to inbox",
+  "mailTrash": "Move to trash",
+  "mailDeleteForever": "Delete forever",
+  "mailDeleteForeverConfirm": "Delete this message forever? It can't be recovered.",
+  "mailMarkRead": "Mark as read",
+  "mailMarkUnread": "Mark as unread",
+  "mailStar": "Star",
+  "mailUnstar": "Remove star",
+  "mailArchived": "Archived",
+  "mailTrashed": "Moved to trash",
+  "mailMoved": "Moved to inbox",
+  "mailDeleted": "Deleted",
+  "mailUnreadCount": "{count, plural, =0{No unread mail} =1{1 unread} other{{count} unread}}",
+  "@mailUnreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailEmptyInbox": "Inbox zero. Nothing waiting on you.",
+  "mailEmptyFolder": "Nothing in {folder}.",
+  "@mailEmptyFolder": {
+    "placeholders": {
+      "folder": {
+        "type": "String"
+      }
+    }
+  },
+  "mailLoadMore": "Load older messages",
+  "mailFieldTo": "To",
+  "mailFieldFrom": "From",
+  "mailFieldCc": "Cc",
+  "mailFieldBcc": "Bcc",
+  "mailFieldSubject": "Subject",
+  "mailToPrefix": "To {name}",
+  "@mailToPrefix": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailNoSubject": "(no subject)",
+  "mailSetupTitle": "Your domain mailbox",
+  "mailSetupIntro": "Read, reply to and send mail on your own domains. Edgepost deploys a small mail service into your Cloudflare account: incoming mail is stored in your account's D1 and R2, and you send through Cloudflare Email Sending. Nothing passes through anyone else's server.",
+  "mailSetupStart": "Set up mailbox",
+  "mailSetupRequirements": "What it needs",
+  "mailSetupReqToken": "A token with Workers Scripts, D1, Workers R2 Storage and Email Routing permissions",
+  "mailSetupReqR2": "R2 turned on for the account (once, in the Cloudflare dashboard)",
+  "mailSetupReqPaid": "To send to any address: the Workers Paid plan. Email Sending is in public beta. Receiving works on every plan.",
+  "mailSetupDomains": "Domains",
+  "mailSetupDomainsHelp": "Mail to these domains lands in Edgepost.",
+  "mailSetupRouting": "Which addresses",
+  "mailSetupCatchAll": "Every address (catch-all)",
+  "mailSetupSpecific": "Only these addresses",
+  "mailSetupAddressesHelp": "Local parts, separated by commas, e.g. contact, billing",
+  "mailSetupSending": "Enable sending",
+  "mailSetupSendingHelp": "Onboards each domain to Cloudflare Email Sending and adds its DNS records (cf-bounce MX, SPF and DKIM).",
+  "mailSetupRun": "Deploy and connect",
+  "mailSetupRunning": "Setting up…",
+  "mailSetupDone": "Your mailbox is ready",
+  "mailSetupDoneBody": "Send yourself a message at one of your addresses to see it arrive.",
+  "mailSetupOpenInbox": "Open inbox",
+  "mailSetupRetry": "Retry from this step",
+  "mailStepPermissions": "Check token permissions",
+  "mailStepD1": "Create D1 database",
+  "mailStepR2": "Create R2 bucket",
+  "mailStepUpload": "Upload mail Worker",
+  "mailStepPublish": "Publish on workers.dev",
+  "mailStepSchedule": "Schedule trash clean-up",
+  "mailStepConnect": "Connect to the mail service",
+  "mailStepRoute": "Route mail for {domain}",
+  "@mailStepRoute": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailStepSending": "Enable sending for {domain}",
+  "@mailStepSending": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailStepSave": "Save on this device",
+  "mailErrNoSubdomain": "This account has no workers.dev subdomain yet. In the Cloudflare dashboard open Workers & Pages once to choose one, then retry.",
+  "mailErrR2Disabled": "R2 isn't turned on for this account. Open R2 in the Cloudflare dashboard and enable it (the free tier is enough), then retry.",
+  "mailErrHealth": "The Worker was uploaded but isn't answering yet. New workers.dev addresses can take a minute. Retry shortly.",
+  "mailServiceTitle": "Mail service",
+  "mailServiceVersion": "Version {version}",
+  "@mailServiceVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "mailServiceUpdate": "Update mail service",
+  "mailServiceUpdateAvailable": "An update is available ({version}).",
+  "@mailServiceUpdateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "mailServiceAddDomains": "Add domains",
+  "mailServiceForget": "Disconnect from this device",
+  "mailServiceForgetBody": "Edgepost forgets this mail service on this device. The Worker and your stored mail stay in your Cloudflare account.",
+  "mailServiceUrl": "Endpoint",
+  "mailServiceDomains": "Domains",
+  "mailSetupNoService": "No mailbox yet",
+  "mailSetupNoServiceBody": "Deploy your mail service once and every domain you pick gets a real inbox you can answer from.",
+  "mailRemoteImagesBlocked": "Remote images are blocked to stop tracking.",
+  "mailLoadImages": "Load images",
+  "mailOpenLinkTitle": "Open link?",
+  "mailOpenLinkBody": "This link goes to:\n{url}",
+  "@mailOpenLinkBody": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachments": "{count, plural, =1{1 attachment} other{{count} attachments}}",
+  "@mailAttachments": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailShowQuoted": "Show quoted text",
+  "mailIncludeQuote": "Include original message",
+  "mailIncludeAttachments": "Include original attachments",
+  "mailAddAttachment": "Attach files",
+  "mailRecipientsRequired": "Add at least one recipient.",
+  "mailInvalidAddress": "“{value}” isn't a valid email address.",
+  "@mailInvalidAddress": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSent": "Sent",
+  "mailSending": "Sending…",
+  "mailDiscardTitle": "Discard this message?",
+  "mailDiscard": "Discard",
+  "mailSaveDraft": "Save draft",
+  "mailDraftRestored": "Draft restored",
+  "mailBodyPlaceholder": "Write your message",
+  "mailRecipientsPlaceholder": "name@example.com",
+  "mailErrRecipientNotAllowed": "Cloudflare refused this recipient. Sending to outside addresses needs the Workers Paid plan and the sending domain onboarded to Email Sending.",
+  "mailErrSenderDomain": "{domain} isn't onboarded to Email Sending yet. Run “Enable sending” in Mail service settings.",
+  "@mailErrSenderDomain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrSenderNotAllowed": "You can only send from domains connected to your mail service.",
+  "mailErrSuppressed": "This recipient is on Cloudflare's suppression list after earlier bounces or complaints.",
+  "mailErrSendingLimit": "Sending limit reached. Cloudflare raises it gradually; try again later.",
+  "mailErrTooLarge": "The message is too large to send (5 MB limit including attachments).",
+  "mailErrDelivery": "Cloudflare couldn't deliver the message. Try again in a moment.",
+  "mailErrInvalid": "Cloudflare rejected the message format: {detail}",
+  "@mailErrInvalid": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "mailNotifNewMany": "{count} new messages",
+  "@mailNotifNewMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailNotifChannel": "New mail",
+  "mailNotifChannelDescription": "A new message arrived at one of your domain addresses.",
+  "mailIdentityName": "Display name",
+  "mailSearchPlaceholder": "Search mail",
+  "mailThreadCount": "{count, plural, =1{1 message} other{{count} messages}}",
+  "@mailThreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailAttachmentFailed": "Couldn't open the attachment: {error}",
+  "@mailAttachmentFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "mailYesterday": "Yesterday",
+  "mailUnread": "Unread",
+  "mailStarred": "Starred",
+  "mailBudgetTitle": "Sending budget",
+  "mailBudgetExplain": "Workers Paid includes 3,000 sent emails a month. Beyond that Cloudflare charges $0.35 per 1,000 and has no spending cap, so your mail service stops at the limit you set here. It counts every recipient over the last 31 days. Receiving is always free.",
+  "mailBudgetLimit": "Monthly sending limit",
+  "mailBudgetOff": "Off (receive only)",
+  "mailBudgetValue": "{count} recipients",
+  "@mailBudgetValue": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetIncluded": "{count} recipients (included in Workers Paid)",
+  "@mailBudgetIncluded": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetUsage": "Sent in the last 31 days: {used} of {limit}",
+  "@mailBudgetUsage": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetResets": "Room frees up from {date}.",
+  "@mailBudgetResets": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetSaved": "Sending limit updated",
+  "mailErrMonthlyLimit": "You've reached your sending limit for the last 31 days. Raise it in Settings → Mail service, or wait for older sends to drop out of the window.",
+  "mailSetupBlockedDenied": "The token is missing a permission mail needs. Add it in the Cloudflare dashboard (My Profile → API Tokens → Edit), then check again.",
+  "mailSetupBlockedR2": "Turn on R2 for this account first (one-time, free tier included), then check again.",
+  "mailSendingPending": "Sending is set up. Cloudflare is still publishing these records: {records}. This usually takes 5–15 minutes. If they don't appear, open the domain under Compute → Email Service → Email Sending in the dashboard.",
+  "@mailSendingPending": {
+    "placeholders": {
+      "records": {
+        "type": "String"
+      }
+    }
+  },
+  "mailCloudflareSaid": "Cloudflare said: {message}",
+  "@mailCloudflareSaid": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "mailDnsCheckTitle": "Mail DNS check",
+  "mailDnsCheckHelp": "Each domain must have exactly one DMARC record and one SPF record per name. Extra copies make receivers ignore them.",
+  "mailDnsCheckClean": "No duplicate DMARC or SPF records.",
+  "mailDnsCheckRunning": "Checking DNS…",
+  "mailDnsDupDmarc": "{count} DMARC records at _dmarc: keep one, delete the others.",
+  "@mailDnsDupDmarc": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailDnsDupSpf": "{count} SPF records at {name}: keep one, delete the others.",
+  "@mailDnsDupSpf": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailDnsAddedOn": "added {date}",
+  "@mailDnsAddedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthTitle": "Sending health",
+  "mailHealthIntro": "What happened to each email you sent in the last {days} days. Cloudflare's targets: deliver above 95%, hard bounces under 2%.",
+  "@mailHealthIntro": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "mailHealthDelivered": "Delivered",
+  "mailHealthFailed": "Failed",
+  "mailHealthRate": "Rate",
+  "mailHealthNoSends": "Nothing sent from this domain in the last {days} days.",
+  "@mailHealthNoSends": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "mailHealthLowRate": "Delivery is below Cloudflare's 95% target. Fix the causes below before sending more.",
+  "mailHealthAllGood": "Every recent send was delivered.",
+  "mailHealthAuth": "SPF {spf} · DKIM {dkim} · DMARC {dmarc}",
+  "@mailHealthAuth": {
+    "placeholders": {
+      "spf": {
+        "type": "String"
+      },
+      "dkim": {
+        "type": "String"
+      },
+      "dmarc": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthHintAuth": "Authentication failed: receivers reject mail that fails SPF, DKIM or DMARC. Run the Mail DNS check, make sure each name has only one SPF and one DMARC record, and wait until the sending records are published.",
+  "mailHealthHintUnknownUser": "The address doesn't exist. Check it for typos; Cloudflare stops sending to it for a while.",
+  "mailHealthHintSpam": "The receiver flagged this message as spam.",
+  "mailHealthHintOther": "Not delivered. The receiving server's reason is below.",
+  "mailHealthPause": "Pause sending",
+  "mailHealthPauseBody": "Sets your sending limit to Off, so nothing more is sent until you raise it again in Mail service. Receiving keeps working.",
+  "mailHealthPaused": "Sending paused",
+  "mailHealthOpen": "Sending health",
+  "mailHealthOpenHelp": "Delivery rate, bounces and why each failed send failed.",
+  "mailFromTitle": "Send from",
+  "mailFromSearch": "Search addresses",
+  "mailFromRecent": "Recent",
+  "mailFromOtherTitle": "Another address",
+  "mailFromOtherHelp": "Any address on your domains works. Replies to it land in Edgepost.",
+  "mailFromLocalHint": "name",
+  "mailFromUse": "Use this address",
+  "mailFromInvalid": "Use letters, numbers, dots, dashes or underscores.",
+  "mailFromNameTitle": "Name and signature",
+  "mailFromNameHelp": "Shown to recipients for {address}.",
+  "@mailFromNameHelp": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailFromNoMatch": "No address matches “{query}”.",
+  "@mailFromNoMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachPhoto": "Photo or video",
+  "mailAttachFile": "File",
+  "mailAttachTooBig": "{name} is too big: {size} won't fit. {room} left in this message.",
+  "@mailAttachTooBig": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      },
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachFailed": "Couldn't add the file: {error}",
+  "@mailAttachFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSizeAsSent": "{used} of 5 MB as sent",
+  "@mailSizeAsSent": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSizeOver": "Over Cloudflare's 5 MB limit (attachments grow about a third when encoded). Remove an attachment.",
+  "mailSendFailedTitle": "Couldn't send",
+  "mailErrorDetails": "Details: {details}",
+  "@mailErrorDetails": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrOffline": "You're offline. The message is kept as a draft.",
+  "mailErrTimeout": "Your mail service is taking too long. If the message went out it won't be sent twice: try again.",
+  "mailErrUnavailable": "Your mail service is temporarily unavailable (Cloudflare {status}). Try again in a moment.",
+  "@mailErrUnavailable": {
+    "placeholders": {
+      "status": {
+        "type": "int"
+      }
+    }
+  },
+  "mailToAddress": "to {address}",
+  "@mailToAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailFromAddress": "from {address}",
+  "@mailFromAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHasAttachment": "Has attachments",
+  "mailAddCcBcc": "Add Cc or Bcc",
+  "mailSendsLeft": "{count, plural, =0{Sending limit reached: this message won't go out until older sends leave the 31-day window.} =1{1 send left before your sending limit.} other{{count} sends left before your sending limit.}}",
+  "@mailSendsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailFromEditFor": "Name and signature for {address}",
+  "@mailFromEditFor": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailChooseInbox": "Showing {scope}. Choose inbox",
+  "@mailChooseInbox": {
+    "placeholders": {
+      "scope": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthEmpty": "No sending domains yet",
+  "mailHealthEmptyBody": "Once you send from one of your domains, delivered, bounced and failed messages show up here.",
+  "mailYouTo": "You → {name}",
+  "@mailYouTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSignature": "Signature",
+  "mailSignaturePlaceholder": "Add a signature to this message",
+  "mailSignatureReset": "Reset",
+  "mailSignatureThisMessage": "Changes here are for this message only.",
+  "mailSignatureEditedHere": "Changed for this message only.",
+  "mailSignatureLogo": "Logo",
+  "mailSignatureLogoLabel": "The {domain} logo",
+  "@mailSignatureLogoLabel": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSignatureEditDefault": "Edit the default for {domain}",
+  "@mailSignatureEditDefault": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandTitle": "Signature & logo",
+  "mailBrandLogo": "Logo",
+  "mailBrandLogoHelp": "Shown above your signature in mail you send. Any photo or image works; it's resized to fit 240 × 48.",
+  "mailBrandChooseLogo": "Choose image",
+  "mailBrandReplaceLogo": "Replace image",
+  "mailBrandRemoveLogo": "Remove logo",
+  "mailBrandSignaturePlaceholder": "Your name, role, phone, website…",
+  "mailBrandSignature": "Signature",
+  "mailBrandSignatureHelp": "Added to mail you send from {domain}, on every device. Links and email addresses become clickable. You can still change it for a single message.",
+  "@mailBrandSignatureHelp": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandPreview": "Preview",
+  "mailBrandSample": "Thanks for your message, I'll get back to you today.",
+  "mailBrandSaved": "Saved for {domain}",
+  "@mailBrandSaved": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandLogoUnreadable": "That file isn't an image Edgepost can read. Try a PNG or JPEG.",
+  "mailBrandSummaryNone": "Add a signature or logo",
+  "mailBrandSummarySignature": "Signature",
+  "mailBrandSummaryLogo": "Logo",
+  "mailBrandSummaryBoth": "Signature and logo",
+  "mailSplitPlaceholder": "Choose a message to read it here.",
+  "mailSuggestedRecipients": "People you've written to",
+  "mailSuggestAdd": "Add {recipient}",
+  "@mailSuggestAdd": {
+    "placeholders": {
+      "recipient": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSuggestTypo": "Did you mean this? You typed {domain}",
+  "@mailSuggestTypo": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrServiceMissing": "Your mail service is no longer in your Cloudflare account.",
+  "mailServiceMissingTitle": "Your mail service is gone",
+  "mailServiceMissingBody": "The edgepost-mail Worker isn't in your Cloudflare account any more. Set it up again to receive and send mail here. Mail it kept is gone if its database and bucket were deleted too.",
+  "mailServiceSetUpAgain": "Set up again"
+}

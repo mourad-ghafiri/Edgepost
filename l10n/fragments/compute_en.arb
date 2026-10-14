@@ -1,0 +1,541 @@
+{
+  "computeBayWorkers": "Workers",
+  "computeBayPages": "Pages",
+  "computeGapPermission": "This token can't list these. Add “{permission}” to it in the Cloudflare dashboard, then pull to refresh.",
+  "@computeGapPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "computeGapFailed": "Couldn't load these: {message} Pull to refresh to try again.",
+  "@computeGapFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "computeNoAccessTitle": "No access to Workers or Pages",
+  "computeNoAccessMessage": "Your tokens can't read Workers or Pages. In the Cloudflare dashboard, add “{workers}” and “{pages}” to a token, then pull to refresh.",
+  "@computeNoAccessMessage": {
+    "placeholders": {
+      "workers": {
+        "type": "String"
+      },
+      "pages": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesTitle": "Worker routes",
+  "computeZoneRoutesSectionRoutes": "Routes",
+  "computeZoneRoutesRoutesFooter": "Requests matching a route run the Worker before reaching your origin.",
+  "computeZoneRoutesSectionDomains": "Custom domains",
+  "computeZoneRoutesDomainsFooter": "A custom domain points a whole hostname at a Worker, with no origin behind it.",
+  "computeZoneRoutesNoRoutes": "No routes on this domain.",
+  "computeZoneRoutesNoDomains": "No Worker custom domains on this domain.",
+  "computeZoneRoutesNoScript": "No Worker: requests go straight to the origin",
+  "computeZoneRoutesRunsScript": "Runs {script}",
+  "@computeZoneRoutesRunsScript": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesEmptyTitle": "No Workers on {zone}",
+  "@computeZoneRoutesEmptyTitle": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesEmptyMessage": "Add a route or custom domain to a Worker in the Cloudflare dashboard or with wrangler, then pull to refresh.",
+  "workersEmpty": "No Workers in this account yet.",
+  "workersFieldModified": "Modified",
+  "workersFieldRoutes": "Routes",
+  "workersFieldCompat": "Compat date",
+  "workersFieldUsage": "Usage",
+  "workersStripSemantics": "Worker {name}, modified {modified}, {routes, plural, =0{no routes} =1{1 route} other{{routes} routes}}",
+  "@workersStripSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "modified": {
+        "type": "String"
+      },
+      "routes": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLiveLogs": "Live logs",
+  "workersLiveLogsHint": "Stream console output and requests as they happen",
+  "workersOpenWorkersDev": "Open on workers.dev",
+  "workersSectionOverview": "Overview",
+  "workersCreated": "Created",
+  "workersModified": "Modified",
+  "workersCompatDate": "Compatibility date",
+  "workersCompatFlags": "Compatibility flags",
+  "workersUsageModel": "Usage model",
+  "workersDeployedFrom": "Last deployed from",
+  "workersHandlers": "Handlers",
+  "workersSectionTriggers": "Triggers",
+  "workersDev": "workers.dev",
+  "workersStateOn": "On",
+  "workersStateOff": "Off",
+  "workersPreviewsOn": "Preview URLs on",
+  "workersPreviewsOff": "Preview URLs off",
+  "workersCustomDomain": "Custom domain",
+  "workersRoute": "Route",
+  "workersNoTriggers": "This Worker has no route, custom domain or workers.dev address, so nothing on the internet reaches it.",
+  "workersSectionDeployment": "Deployment",
+  "workersActiveDeployment": "Serving now",
+  "workersNoDeployments": "Nothing is deployed yet.",
+  "workersGradualFooter": "Traffic is split between versions (a gradual deployment).",
+  "workersPercent": "{percent}%",
+  "@workersPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLiveShare": "Live {percent}%",
+  "@workersLiveShare": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "workersSectionVersions": "Versions",
+  "workersNoVersions": "No versions uploaded yet.",
+  "workersVersionsFooter": "Tap a version to roll back to it. Rolling back sends all traffic to that version; you can roll forward the same way.",
+  "workersVersionNumber": "Version {number}",
+  "@workersVersionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "workersVersionShort": "Version {id}",
+  "@workersVersionShort": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackAction": "Roll back to this version",
+  "workersCopyVersionId": "Copy version ID",
+  "workersRollbackTitle": "Roll back to {version}?",
+  "@workersRollbackTitle": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackMessage": "All traffic to {script} will go to {version} ({id}). The version serving now stays available, so you can roll forward the same way.",
+  "@workersRollbackMessage": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      },
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackConfirm": "Roll back",
+  "workersRollbackDone": "{version} now serves all traffic.",
+  "@workersRollbackDone": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackBlockedTitle": "Cloudflare blocked this rollback",
+  "workersRollbackBlockedMessage": "Cloudflare said: “{message}” You can force it, but that version may expect secrets or settings that have changed since.",
+  "@workersRollbackBlockedMessage": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackForce": "Roll back anyway",
+  "workersSectionSecrets": "Secrets",
+  "workersSecretsFooter": "Cloudflare never returns secret values, so only names are shown.",
+  "workersNoSecrets": "No secrets on this Worker.",
+  "workersSecretText": "Secret text",
+  "workersSecretKey": "Secret key",
+  "workersLogsTitle": "Live logs",
+  "workersLogsConnecting": "Connecting…",
+  "workersLogsLive": "{count, plural, =0{Live · waiting for events} =1{Live · 1 event} other{Live · {count} events}}",
+  "@workersLogsLive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsPaused": "{count, plural, =0{Paused} =1{Paused · 1 new event held} other{Paused · {count} new events held}}",
+  "@workersLogsPaused": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsEnded": "Stream ended",
+  "workersLogsEndedHint": "Cloudflare closed the log stream; log sessions expire after a while. Reconnect to keep watching.",
+  "workersLogsStopped": "Stopped",
+  "workersLogsFailed": "Couldn't start the log stream",
+  "workersLogsWaiting": "Waiting for {script} to run…",
+  "@workersLogsWaiting": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsWaitingHint": "Send a request to the Worker; its console output, exceptions and requests show up here as they happen.",
+  "workersLogsPrivacy": "Logs stream straight from Cloudflare and are not saved.",
+  "workersLogsPause": "Pause",
+  "workersLogsResume": "Resume",
+  "workersLogsClear": "Clear",
+  "workersLogsStop": "Stop",
+  "workersLogsReconnect": "Reconnect",
+  "workersLogsNoUrl": "(no URL)",
+  "workersLogsCron": "Cron {cron}",
+  "@workersLogsCron": {
+    "placeholders": {
+      "cron": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsAlarm": "Durable Object alarm",
+  "workersLogsEmail": "Email {route}",
+  "@workersLogsEmail": {
+    "placeholders": {
+      "route": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsQueue": "Queue {queue}",
+  "@workersLogsQueue": {
+    "placeholders": {
+      "queue": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsRpc": "RPC {method}",
+  "@workersLogsRpc": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsTailEvent": "Tail {scripts}",
+  "@workersLogsTailEvent": {
+    "placeholders": {
+      "scripts": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsEvent": "Event",
+  "workersLogsOverload": "Too many events: Cloudflare is sampling this stream.",
+  "workersLogsOverloadStop": "Sampling stopped: every event is shown again.",
+  "workersLogsLines": "{count, plural, =1{1 log line} other{{count} log lines}}",
+  "@workersLogsLines": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsExceptions": "{count, plural, =1{1 exception} other{{count} exceptions}}",
+  "@workersLogsExceptions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersOutcomeOk": "OK",
+  "workersOutcomeCanceled": "Canceled",
+  "workersOutcomeException": "Exception thrown",
+  "workersOutcomeCpu": "Exceeded CPU limit",
+  "workersOutcomeMemory": "Exceeded memory limit",
+  "workersOutcomeUnknown": "Unknown outcome",
+  "pagesEmpty": "No Pages projects in this account.",
+  "pagesFieldStatus": "Latest",
+  "pagesFieldBranch": "Branch",
+  "pagesFieldWhen": "When",
+  "pagesFieldEnv": "Environment",
+  "pagesStatusSuccess": "Success",
+  "pagesStatusFailed": "Failed",
+  "pagesStatusBuilding": "Building",
+  "pagesStatusQueued": "Queued",
+  "pagesStatusCanceled": "Canceled",
+  "pagesStatusSkipped": "Skipped",
+  "pagesStatusUnknown": "Unknown",
+  "pagesStatusNone": "No deploys",
+  "pagesReasonFailed": "Last build on {branch} failed {time}.",
+  "@pagesReasonFailed": {
+    "placeholders": {
+      "branch": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesReasonFailedNoBranch": "Last build failed {time}.",
+  "@pagesReasonFailedNoBranch": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesWorkersNote": "Cloudflare recommends starting new projects on Workers.",
+  "pagesWorkersNoteLink": "Migration guide",
+  "pagesEnvProduction": "Production",
+  "pagesEnvPreview": "Preview",
+  "pagesLiveMarker": "Live",
+  "pagesDeploymentSemantics": "Deployment {id}, {status}, {environment}, branch {branch}, {time}",
+  "@pagesDeploymentSemantics": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      },
+      "environment": {
+        "type": "String"
+      },
+      "branch": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesOpenSite": "Open site",
+  "pagesSectionProject": "Project",
+  "pagesSite": "Site",
+  "pagesProductionBranch": "Production branch",
+  "pagesRepository": "Repository",
+  "pagesCreated": "Created",
+  "pagesSectionDomains": "Custom domains",
+  "pagesNoDomains": "No custom domains.",
+  "pagesDomainActive": "Active",
+  "pagesDomainPending": "Pending",
+  "pagesDomainInitializing": "Setting up",
+  "pagesDomainBlocked": "Blocked",
+  "pagesDomainDeactivated": "Deactivated",
+  "pagesDomainError": "Error",
+  "pagesSectionDeployments": "Deployments",
+  "pagesNoDeployments": "No deployments yet.",
+  "pagesDeploymentsHint": "Touch and hold a deployment to retry, roll back or open it.",
+  "pagesSectionDeployment": "Deployment",
+  "pagesCommit": "Commit",
+  "pagesTrigger": "Trigger",
+  "pagesTriggerPush": "Git push",
+  "pagesTriggerUpload": "Direct upload",
+  "pagesTriggerHook": "Deploy hook",
+  "pagesAlias": "Alias",
+  "pagesSectionStages": "Stages",
+  "pagesStageQueued": "Queued",
+  "pagesStageInitialize": "Initialize",
+  "pagesStageClone": "Clone repository",
+  "pagesStageBuild": "Build",
+  "pagesStageDeploy": "Deploy",
+  "pagesStageSuccess": "Done",
+  "pagesStageActive": "Running",
+  "pagesStageIdle": "Waiting",
+  "pagesStageFailure": "Failed",
+  "pagesStageCanceled": "Canceled",
+  "pagesStageSkipped": "Skipped",
+  "pagesSectionBuildLog": "Build log",
+  "pagesLogEmpty": "This build has no log lines.",
+  "pagesLogUnavailable": "Cloudflare has no build log for this deployment (direct uploads don't build).",
+  "pagesLogPartial": "Showing {shown} of {total} lines.",
+  "@pagesLogPartial": {
+    "placeholders": {
+      "shown": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "pagesOpenDeployment": "Open this deployment",
+  "pagesRetry": "Retry build",
+  "pagesRetryHint": "Builds the same commit again as a new deployment",
+  "pagesRetryStarted": "New build started for {name}.",
+  "@pagesRetryStarted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackAction": "Roll back production to this",
+  "pagesRollbackHint": "Production serves this deployment again",
+  "pagesRollbackTitle": "Roll back to {id}?",
+  "@pagesRollbackTitle": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackMessage": "Production for {project} will serve {deployment} again. Newer deployments stay in the list, so you can roll forward the same way.",
+  "@pagesRollbackMessage": {
+    "placeholders": {
+      "project": {
+        "type": "String"
+      },
+      "deployment": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackConfirm": "Roll back",
+  "pagesRollbackDone": "Production now serves {id}.",
+  "@pagesRollbackDone": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesCopyId": "Copy deployment ID",
+  "pagesDeploymentOnBranch": "{id} on {branch}",
+  "@pagesDeploymentOnBranch": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "branch": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarTitle": "Registrar",
+  "registrarRowTitle": "Registered domains",
+  "registrarSummary": "{count, plural, =1{1 domain, in line} other{{count} domains, all in line}}",
+  "@registrarSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarSummaryAttention": "{count, plural, =1{1 domain needs you} other{{count} domains need you}}",
+  "@registrarSummaryAttention": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarSummaryNone": "No domains registered with Cloudflare",
+  "registrarSummaryFailed": "Couldn't load registrations",
+  "registrarAccountTokenShort": "Not available with account-owned tokens",
+  "registrarNeedsPermission": "Needs “{permission}” on the token",
+  "@registrarNeedsPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarAccountTokenTitle": "Registrar needs a user API token",
+  "registrarAccountTokenMessage": "Cloudflare Registrar doesn't accept account-owned API tokens. To see expiry dates here, add a user API token with “{permission}” in Settings.",
+  "@registrarAccountTokenMessage": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarPermissionTitle": "No access to Registrar",
+  "registrarPermissionMessage": "Add “{permission}” to a user API token in the Cloudflare dashboard, then pull to refresh.",
+  "@registrarPermissionMessage": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarFailedTitle": "Couldn't load registered domains",
+  "registrarEmptyTitle": "No domains registered with Cloudflare",
+  "registrarEmptyMessage": "Domains you register or transfer to Cloudflare Registrar show up here with their expiry dates.",
+  "registrarBayAttention": "Needs you",
+  "registrarBayAll": "In line",
+  "registrarAllAttention": "Every registered domain needs a look.",
+  "registrarFieldExpires": "Expires",
+  "registrarFieldAutoRenew": "Auto-renew",
+  "registrarFieldLock": "Transfer lock",
+  "registrarAutoRenewOn": "On",
+  "registrarAutoRenewOff": "Off",
+  "registrarLocked": "Locked",
+  "registrarUnlocked": "Unlocked",
+  "registrarExpiresSemantics": "expires {date}",
+  "@registrarExpiresSemantics": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarReasonExpiring": "{days, plural, =1{Expires tomorrow and won't renew automatically.} other{Expires in {days} days and won't renew automatically.}}",
+  "@registrarReasonExpiring": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarReasonToday": "Expires today and won't renew automatically.",
+  "registrarReasonStatus": "{status}: renew or restore it in Cloudflare Registrar before it's lost.",
+  "@registrarReasonStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarStatusActive": "Active",
+  "registrarStatusRegistering": "Registering",
+  "registrarStatusTransferring": "Transferring in",
+  "registrarStatusExpired": "Expired",
+  "registrarStatusSuspended": "Suspended",
+  "registrarStatusRedemption": "In redemption period",
+  "registrarStatusPendingDelete": "Pending deletion",
+  "registrarStatusUnknown": "Unknown status",
+  "registrarFooter": "Turn on auto-renew in the Cloudflare dashboard so a domain never lapses."
+}

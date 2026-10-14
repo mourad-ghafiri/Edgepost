@@ -1,0 +1,80 @@
+{
+  "trafficTitle": "Traffic",
+  "trafficRange24h": "24 hours",
+  "trafficRange7d": "7 days",
+  "trafficRange30d": "30 days",
+  "trafficCaption24h": "Last 24 hours · UTC",
+  "trafficCaption7d": "Last 7 days · UTC",
+  "trafficCaption30d": "Last 30 days · UTC",
+  "trafficFieldRequests": "Requests",
+  "trafficFieldBandwidth": "Bandwidth",
+  "trafficFieldCached": "Cached",
+  "trafficFieldThreats": "Threats",
+  "trafficFieldVisitors": "Visitors",
+  "trafficChartHourly": "Requests per hour",
+  "trafficChartDaily": "Requests per day",
+  "trafficLegendAll": "Not cached",
+  "trafficLegendCached": "Served from cache",
+  "trafficTooltipRequests": "{count} requests",
+  "@trafficTooltipRequests": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficTooltipCached": "{count} from cache ({percent})",
+  "@trafficTooltipCached": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficChartSummary": "{chart}, {range}. {total} requests in all, {cached} served from cache. Busiest: {peak} requests, {when}.",
+  "@trafficChartSummary": {
+    "placeholders": {
+      "chart": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "cached": {
+        "type": "String"
+      },
+      "peak": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficEmptyTitle": "No traffic in this range",
+  "trafficEmptyMessage": "Cloudflare saw no requests for {domain}. Traffic shows here once its DNS records are proxied through Cloudflare and visitors arrive.",
+  "@trafficEmptyMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficRangeUnavailableTitle": "This range isn't available on your plan",
+  "trafficRangeUnavailableMessage": "Cloudflare keeps traffic history for a limited time on each plan, and this range reaches further back. Pick a shorter range.",
+  "trafficShowRange": "Show {range}",
+  "@trafficShowRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficFieldPageViews": "Page views"
+}

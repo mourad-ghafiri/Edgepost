@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy policy · Edgepost</title>
+  <meta name="description" content="Edgepost has no server and collects no personal data. What the app sends and where, what it keeps on your device, and your rights." />
+  <link rel="canonical" href="https://edgepost.dev/privacy.html" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="flap" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+        <rect width="100" height="100" fill="#fff" />
+        <path d="M25.5 29 45 40.5 64.5 29" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+      </mask>
+      <symbol id="i-mark" viewBox="0 0 100 100">
+        <g mask="url(#flap)">
+          <rect x="46.5" y="15" width="7" height="71" rx="3.5" fill="currentColor" />
+          <path d="M30 62 37.5 54.5H65V69.5H37.5Z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <path d="M21 25H69L80 37.5 69 50H21Z" style="fill:var(--brand);stroke:var(--brand)" stroke-width="3" stroke-linejoin="round" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./" aria-label="Edgepost, home">
+        <svg class="mark" aria-hidden="true"><use href="#i-mark" /></svg>
+        <span>Edgepost</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./#today">Tour</a></li>
+          <li><a href="./#screens">Screens</a></li>
+          <li><a href="./#privacy">Privacy</a></li>
+          <li><a href="./#source">Source</a></li>
+          <li><a href="./#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap doc">
+    <h1>Edgepost privacy policy</h1>
+    <p class="updated">Last updated: 14 October 2026</p>
+
+    <div class="summary">
+      <p><strong>In short:</strong> Edgepost has no server, and its author collects no personal data. The app talks only to the Cloudflare<sup class="tm">®</sup> API and to a mail Worker that runs in your own Cloudflare account. Your API token stays in your device's secure storage. Nothing is sold, shared, tracked or used for advertising.</p>
+    </div>
+
+    <nav class="toc" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ol>
+        <li><a href="#responsible">Who is responsible</a></li>
+        <li><a href="#app">The Edgepost app</a></li>
+        <li><a href="#worker">Your mail Worker</a></li>
+        <li><a href="#device">What stays on your device</a></li>
+        <li><a href="#deleting">Deleting your data</a></li>
+        <li><a href="#website">This website</a></li>
+        <li><a href="#contact-us">When you contact us</a></li>
+        <li><a href="#sharing">Sharing and transfers</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="responsible">Who is responsible</h2>
+    <p>Edgepost is published by Mourad Ghafiri, a private individual. It is an independent app, not made by Cloudflare, Inc.: the Cloudflare services it connects you to are provided by Cloudflare, under your own agreement with it. Write to <a href="mailto:contact@edgepost.dev">contact@edgepost.dev</a> with any question about this policy.</p>
+
+    <h2 id="app">The Edgepost app</h2>
+    <h3>What we collect</h3>
+    <p>Nothing. The author runs no server for Edgepost and receives no data from the app: no account, no analytics, no crash reports, no advertising identifiers, no tracking of any kind.</p>
+    <h3>What the app sends, and where</h3>
+    <ul>
+      <li><strong>The Cloudflare API.</strong> To show and change your domains, DNS records, settings, traffic, Workers and Pages, the app sends requests to the Cloudflare API with the API token you added. Cloudflare handles them under your own agreement with Cloudflare and <a href="https://www.cloudflare.com/privacypolicy/">its privacy policy</a>.</li>
+      <li><strong>Your mail Worker.</strong> Mail you send, and changes you make to your mail (read, starred, archived, deleted), go to the mail Worker in your own Cloudflare account, which sends through Cloudflare Email Sending. See <a href="#worker">Your mail Worker</a>.</li>
+      <li><strong>Images in mail.</strong> Remote images in HTML mail are blocked, because they can tell the sender that you opened a message. If you tap <em>Load images</em>, the app fetches them from the servers that host them, which see your IP address like any website you visit.</li>
+      <li><strong>Links.</strong> Links you tap, in mail or in the app, open in your browser or the matching app, after you see where they go.</li>
+    </ul>
+    <h3>Device features</h3>
+    <ul>
+      <li><strong>Face ID, Touch ID and fingerprint.</strong> If you turn on app lock, your device checks your face or fingerprint; Edgepost only learns whether it matched. Nothing about them reaches the app.</li>
+      <li><strong>Notifications.</strong> New-mail, budget and delivery alerts are made on your device, from the app's own checks of your Worker and of Cloudflare. There is no push service in between.</li>
+      <li><strong>Files and photos.</strong> The app reads a file only when you pick it, to attach it to a message or to use it as a domain's logo.</li>
+    </ul>
+
+    <h2 id="worker">Your mail Worker</h2>
+    <p>When you set up mail, the app deploys a Worker named <code>edgepost-mail</code> into your Cloudflare account, with a D1 database and an R2 storage bucket, and connects it to Cloudflare Email Routing for the domains you choose. It is yours: it runs under your account and your agreement with Cloudflare, and the author has no access to it.</p>
+    <p>It keeps the mail your domains receive, the copies of mail you send (from which it suggests the addresses you have written to), their attachments, each domain's signature and logo, and counts of how many messages you have sent (to keep you within your sending limit). The app protects it with a key it makes on your device.</p>
+
+    <h2 id="device">What stays on your device</h2>
+    <ul>
+      <li>Your Cloudflare API tokens and your mail Worker's key, in the system's secure storage (the Keychain on iPhone and iPad, the Android Keystore on Android).</li>
+      <li>A cache of your Cloudflare data and recent mail, so the app opens quickly and works for a while offline.</li>
+      <li>Drafts you have not sent, and your settings: appearance, alerts, pinned domains, app lock.</li>
+    </ul>
+    <p>None of it leaves your device except as described above. Your device's own backup may include the app's data, under your backup provider's terms.</p>
+
+    <h2 id="deleting">Deleting your data</h2>
+    <ul>
+      <li><strong>An account:</strong> in Settings, open the account and choose <em>Remove from Edgepost</em>. Its token and its cached data are erased from your device. You can also delete the token itself in the Cloudflare dashboard.</li>
+      <li><strong>Your mail:</strong> delete the <code>edgepost-mail</code> Worker, its D1 database and its R2 bucket in the Cloudflare dashboard.</li>
+      <li><strong>Everything on the device:</strong> remove the accounts, then delete the app.</li>
+    </ul>
+
+    <h2 id="website">This website</h2>
+    <h3>No cookies, no tracking</h3>
+    <p>This website sets no cookies, runs no analytics and loads nothing from other sites: its fonts and images are served with it.</p>
+    <h3>Logs kept by our host</h3>
+    <p>The site is hosted by GitHub Pages. GitHub states that when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub's documentation</a>). GitHub handles those logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">its privacy statement</a>; the author does not receive them.</p>
+    <h3>Links to other websites</h3>
+    <p>This site links to other websites, such as GitHub, Cloudflare and the app stores, which have their own privacy policies.</p>
+
+    <h2 id="contact-us">When you contact us</h2>
+    <p>If you email us, we use your address and your message only to answer you, and delete them when they are no longer needed for that. Issues you open on GitHub are public, under GitHub's terms.</p>
+
+    <h2 id="sharing">Sharing and transfers</h2>
+    <p>The author holds no data about you from the app, so there is nothing to share, sell or transfer. The app connects you directly to Cloudflare, a provider you chose and contract with yourself.</p>
+
+    <h2 id="rights">Your rights</h2>
+    <p>Wherever you live, you can ask what we hold about you, and ask us to correct or delete it. For the app, the answer is nothing: the data is on your device and in your own Cloudflare account, where you control it. For an email you sent us, write to <a href="mailto:contact@edgepost.dev">contact@edgepost.dev</a>.</p>
+    <p>In the European Union and the United Kingdom you also have the rights the GDPR gives you, including the right to lodge a complaint with a data protection authority, such as the <a href="https://www.cnil.fr/en">CNIL</a> in France. We do not sell or share personal information as California law defines those terms.</p>
+
+    <h2 id="children">Children</h2>
+    <p>Edgepost is a tool for people who run domains on Cloudflare. It is not directed at children, and it collects no data from anyone.</p>
+
+    <h2 id="changes">Changes to this policy</h2>
+    <p>If this policy changes, the new version is published here with a new date. The app links to this page from Settings.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="./#today">Tour</a></li>
+          <li><a href="./#screens">Screens</a></li>
+          <li><a href="./#source">Source</a></li>
+          <li><a href="./#support">Support</a></li>
+          <li><a href="mailto:contact@edgepost.dev">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="privacy.html" aria-current="page">Privacy policy</a></li>
+          <li><a href="legal.html">Legal notice</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+      <p>No ads, no analytics, no cookies: nothing to consent to. © 2026 Mourad Ghafiri. Edgepost is open source under the MIT licence.</p>
+      <p>Edgepost is an independent app. It isn't made, endorsed, sponsored or supported by Cloudflare, Inc., and isn't affiliated with it. Cloudflare, Cloudflare Workers and Cloudflare Pages are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+{
+  "dnsTitle": "DNS records",
+  "dnsAddRecord": "Add record",
+  "dnsMoreActions": "Templates, import and export",
+  "dnsSectionHeader": "{type} · {count}",
+  "@dnsSectionHeader": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsFilterAll": "All",
+  "dnsFilterAddress": "A·AAAA",
+  "dnsFilterOther": "Other",
+  "dnsSearchPlaceholder": "Search names and values",
+  "dnsEmptyTitle": "No DNS records yet",
+  "dnsEmptyMessage": "Nothing resolves for this domain yet. Add a record, start from a template, or import a BIND zone file.",
+  "dnsFilterEmpty": "No records of this type.",
+  "dnsZoneMissingTitle": "Domain not found",
+  "dnsZoneMissingMessage": "This domain isn't in your list anymore. Refresh the Domains tab, or check that its token is still added in Settings.",
+  "dnsProxied": "Proxied",
+  "dnsDnsOnly": "DNS only",
+  "dnsPriorityShort": "Priority {value}",
+  "@dnsPriorityShort": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlAuto": "Auto",
+  "dnsTtlSeconds": "{count} s",
+  "@dnsTtlSeconds": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlMinutes": "{count} min",
+  "@dnsTtlMinutes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlHours": "{count} h",
+  "@dnsTtlHours": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@dnsTtlDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsRowHint": "Touch and hold for more actions",
+  "dnsActionCopyName": "Copy name",
+  "dnsActionCopyContent": "Copy value",
+  "dnsDeleteTitle": "Delete this record?",
+  "dnsDeleteMessage": "The {type} record {name} stops resolving within its TTL. You can undo right after.",
+  "@dnsDeleteMessage": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleted": "Record deleted",
+  "dnsRestored": "Record restored",
+  "dnsRestoreFailed": "Couldn't restore the record. {reason}",
+  "@dnsRestoreFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleteFailed": "Couldn't delete the record, so it's back in the list. {reason}",
+  "@dnsDeleteFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsSaved": "Record saved",
+  "dnsCreated": "Record added",
+  "dnsSaveFailed": "Couldn't save. {reason}",
+  "@dnsSaveFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMenuPointToIp": "Point domain to an IP",
+  "dnsMenuVerifyTxt": "Add a verification TXT",
+  "dnsMenuMailCheck": "Check mail records",
+  "dnsMenuExport": "Export zone file",
+  "dnsMenuImport": "Import zone file",
+  "dnsExportSubject": "DNS records for {zone}",
+  "@dnsExportSubject": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsExportFailed": "Couldn't export. {reason}",
+  "@dnsExportFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportTitle": "Import {file}?",
+  "@dnsImportTitle": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportMessage": "Cloudflare adds the records in this BIND file to {zone}. Zone files can be up to 256 KiB, and Cloudflare accepts 3 imports per minute.",
+  "@dnsImportMessage": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportDnsOnly": "Import as DNS only",
+  "dnsImportProxied": "Import and proxy eligible records",
+  "dnsImportTooLarge": "This file is {size} KiB. Cloudflare accepts zone files up to 256 KiB: split it and import each part.",
+  "@dnsImportTooLarge": {
+    "placeholders": {
+      "size": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportThrottled": "Cloudflare accepts 3 imports per minute. Try again in {seconds} s.",
+  "@dnsImportThrottled": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportDone": "Added {added} of {parsed} records from the file.",
+  "@dnsImportDone": {
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "parsed": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportFailed": "Couldn't import. {reason}",
+  "@dnsImportFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportOpenFailed": "Couldn't open that file. Pick a plain-text BIND zone file.",
+  "dnsEditorNewTitle": "New record",
+  "dnsEditorEditTitle": "Edit record",
+  "dnsRecordMissingTitle": "Record not found",
+  "dnsRecordMissingMessage": "It may have been deleted or changed elsewhere. Go back and pull to refresh.",
+  "dnsSectionRecord": "Record",
+  "dnsSectionOptions": "Options",
+  "dnsFieldType": "Type",
+  "dnsTypeOther": "Other",
+  "dnsChooseType": "Record type",
+  "dnsFieldTypeRaw": "Record type",
+  "dnsFieldName": "Name",
+  "dnsNamePlaceholder": "@ or subdomain",
+  "dnsNameHelper": "Resolves as {name}",
+  "@dnsNameHelper": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsFieldIpv4": "IPv4 address",
+  "dnsFieldIpv6": "IPv6 address",
+  "dnsFieldTarget": "Target",
+  "dnsTargetHelper": "A hostname. Use @ for {zone}.",
+  "@dnsTargetHelper": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsFieldNameserver": "Nameserver",
+  "dnsFieldPtr": "Domain name",
+  "dnsFieldMailServer": "Mail server",
+  "dnsFieldPriority": "Priority",
+  "dnsPriorityHelper": "0–65535. Lower numbers are tried first.",
+  "dnsFieldContent": "Content",
+  "dnsTxtHelper": "{count, plural, =1{1 character} other{{count} characters}}. Values over 255 characters are split into several strings automatically.",
+  "@dnsTxtHelper": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsFieldService": "Service",
+  "dnsServiceHelper": "The service label, such as _sip or _imaps.",
+  "dnsFieldProtocol": "Protocol",
+  "dnsFieldWeight": "Weight",
+  "dnsFieldPort": "Port",
+  "dnsSrvTargetHelper": "The host that offers the service. Use a single dot if it isn't offered.",
+  "dnsFieldCaaTag": "Tag",
+  "dnsCaaIssue": "Issue",
+  "dnsCaaIssueWild": "Wildcard",
+  "dnsCaaIodef": "Report",
+  "dnsCaaTagHelp": "Issue lets a certificate authority issue certificates for this name, Wildcard covers wildcard certificates, and Report says where to send violation reports.",
+  "dnsFieldValue": "Value",
+  "dnsFieldFlags": "Flags",
+  "dnsFlagsHelper": "Usually 0. 128 marks the tag as critical.",
+  "dnsFieldHttpsValue": "Parameters",
+  "dnsHttpsValueHelper": "Service parameters, for example alpn=\"h3,h2\". Optional.",
+  "dnsFieldUri": "URI",
+  "dnsOtherDataNote": "This type stores structured data. Change its value in the Cloudflare dashboard; you can still change the name, TTL and comment here.",
+  "dnsFieldProxied": "Proxy through Cloudflare",
+  "dnsProxiedOnHelp": "Traffic passes through Cloudflare's cache and security. Visitors see Cloudflare's addresses.",
+  "dnsProxiedOffHelp": "DNS only: Cloudflare answers with this value and doesn't touch the traffic.",
+  "dnsProxiedOnFooter": "Traffic passes through Cloudflare's cache and security, and visitors see Cloudflare's addresses. Proxied records always use Auto TTL.",
+  "dnsFieldTtl": "TTL",
+  "dnsChooseTtl": "Time to live",
+  "dnsFieldComment": "Comment",
+  "dnsCommentPlaceholder": "A note for yourself, not published in DNS",
+  "dnsTypeChangeNote": "Changing the type replaces the record: the {from} record is deleted and the new one created in a single step.",
+  "@dnsTypeChangeNote": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleteRecord": "Delete record",
+  "dnsErrorName": "Use @ for the domain itself, or letters, digits, hyphens and dots. Internationalized names go in punycode (xn--…).",
+  "dnsErrorIpv4": "Enter an IPv4 address such as 203.0.113.10.",
+  "dnsErrorIpv6": "Enter an IPv6 address such as 2001:db8::1.",
+  "dnsErrorHostname": "Enter a hostname such as mail.example.com.",
+  "dnsErrorRange": "Enter a whole number from 0 to 65535.",
+  "dnsErrorFlags": "Enter a whole number from 0 to 255.",
+  "dnsErrorType": "Enter a record type in capitals, such as TLSA.",
+  "dnsErrorQuotes": "The quotation marks don't pair up. Remove them, or wrap each part in its own pair.",
+  "dnsErrorTooLong": "The full name is longer than 253 characters.",
+  "dnsTemplatePointTitle": "Point to an IP",
+  "dnsTemplatePointIntro": "Sends {zone} to your server's IP address.",
+  "@dnsTemplatePointIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateIpLabel": "Server IP address",
+  "dnsTemplateIpHelper": "IPv4 or IPv6.",
+  "dnsTemplateErrorIp": "Enter an IPv4 or IPv6 address.",
+  "dnsTemplateIncludeWww": "Also point www",
+  "dnsTemplateIncludeWwwHelp": "Adds www.{zone} as a CNAME to {zone}.",
+  "@dnsTemplateIncludeWwwHelp": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateCreates": "Creates",
+  "dnsTemplateReplaces": "Replaces",
+  "dnsTemplateReplacesFooter": "These records would conflict, so they're removed in the same step.",
+  "dnsTemplateReplaceTitle": "Replace {count, plural, =1{1 record} other{{count} records}}?",
+  "@dnsTemplateReplaceTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTemplateReplaceMessage": "The current address records for {zone} are deleted and the new ones created in a single step.",
+  "@dnsTemplateReplaceMessage": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateReplace": "Replace",
+  "dnsTemplateApplied": "Records added",
+  "dnsTemplateVerifyTitle": "Verification TXT",
+  "dnsTemplateVerifyIntro": "Services such as Google, Microsoft and Apple ask for a TXT record to prove you own {zone}.",
+  "@dnsTemplateVerifyIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateVerifyHelper": "Paste the exact value the service gave you.",
+  "dnsMailTitle": "Mail records",
+  "dnsMailIntro": "A read-only check of the records that decide where mail for {zone} goes and whether mail from it is trusted.",
+  "@dnsMailIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMx": "Receiving (MX)",
+  "dnsMailSpf": "Allowed senders (SPF)",
+  "dnsMailDmarc": "Policy (DMARC)",
+  "dnsMailDkim": "Signatures (DKIM)",
+  "dnsMailStatusOk": "Present",
+  "dnsMailStatusWarn": "Needs a look",
+  "dnsMailStatusMissing": "Missing",
+  "dnsMailMxOk": "Mail for {zone} goes to the servers below, lowest priority first.",
+  "@dnsMailMxOk": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxRouting": "Cloudflare Email Routing receives mail for {zone}.",
+  "@dnsMailMxRouting": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxMissing": "Nobody can send mail to {zone}. Turn on Email Routing, or add the MX records your mail provider gives you.",
+  "@dnsMailMxMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxNull": "This null MX record says {zone} accepts no mail. Remove it if you want to receive mail here.",
+  "@dnsMailMxNull": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfOk": "Receivers can check which servers may send mail as {zone}.",
+  "@dnsMailSpfOk": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfMissing": "Without SPF, mail from {zone} is more likely to land in spam, and anyone can pose as you. Add the SPF record your mail provider gives you, or v=spf1 -all if this domain never sends mail.",
+  "@dnsMailSpfMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfMultiple": "There are several SPF records. Receivers treat that as an error, so merge them into one.",
+  "dnsMailSpfPassAll": "This SPF record lets any server send as {zone}. End it with ~all or -all instead.",
+  "@dnsMailSpfPassAll": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailDmarcOk": "Receivers know what to do with mail that fails SPF and DKIM.",
+  "dnsMailDmarcNone": "The policy is p=none, so receivers only report failures. Move to quarantine or reject once the reports look clean.",
+  "dnsMailDmarcMissing": "Without DMARC, receivers decide on their own what to do with forged mail from {zone}. Start with a monitoring policy.",
+  "@dnsMailDmarcMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailDmarcMultiple": "There are several DMARC records at _dmarc. Keep exactly one.",
+  "dnsMailDkimOk": "{count, plural, =1{1 signing key published.} other{{count} signing keys published.}}",
+  "@dnsMailDkimOk": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsMailDkimMissing": "No DKIM keys under _domainkey. If you send mail from {zone}, add the DKIM record your mail provider gives you.",
+  "@dnsMailDkimMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailAddDmarc": "Add a monitoring DMARC record"
+}

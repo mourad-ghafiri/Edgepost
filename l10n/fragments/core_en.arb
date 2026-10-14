@@ -1,0 +1,131 @@
+{
+  "appName": "Edgepost",
+  "tabToday": "Today",
+  "tabDomains": "Domains",
+  "tabMail": "Mail",
+  "tabCompute": "Compute",
+  "tabSettings": "Settings",
+  "sidebarShow": "Show sidebar",
+  "sidebarHide": "Hide sidebar",
+  "actionCancel": "Cancel",
+  "actionDelete": "Delete",
+  "actionSave": "Save",
+  "actionRetry": "Try again",
+  "actionUndo": "Undo",
+  "actionDone": "Done",
+  "actionClose": "Close",
+  "actionCopy": "Copy",
+  "actionEdit": "Edit",
+  "actionAdd": "Add",
+  "actionOpen": "Open",
+  "copiedToClipboard": "Copied",
+  "syncedAt": "Synced {time}",
+  "@syncedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "syncFailed": "Couldn't refresh. Showing data from {time}.",
+  "@syncFailed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "timeJustNow": "just now",
+  "timeMinutesAgo": "{count, plural, =1{1 min ago} other{{count} min ago}}",
+  "@timeMinutesAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeHoursAgo": "{count, plural, =1{1 h ago} other{{count} h ago}}",
+  "@timeHoursAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeDaysAgo": "{count, plural, =1{yesterday} other{{count} days ago}}",
+  "@timeDaysAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorGeneric": "Something went wrong. Try again in a moment.",
+  "errorPermission": "This token can't do that yet. In the Cloudflare dashboard, add the permission “{permission}” to the token, then pull to refresh.",
+  "@errorPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPermissionGeneric": "This token doesn't have permission for this. Edit the token in the Cloudflare dashboard and add the missing permission.",
+  "typeToConfirm": "Type {name} to confirm.",
+  "@typeToConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldRequired": "Required",
+  "loading": "Loading…",
+  "emptySearch": "Nothing matches “{query}”.",
+  "@emptySearch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "searchPlaceholder": "Search",
+  "syntheticDataLabel": "Sample data",
+  "actionShow": "Show",
+  "actionHide": "Hide",
+  "actionRemove": "Remove",
+  "actionSend": "Send",
+  "timeSecondsAgo": "{count} s ago",
+  "@timeSecondsAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabBadge": "{count, plural, =1{1 unread} other{{count} unread}}",
+  "@tabBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabNeedsYou": "{count, plural, =1{1 needs you} other{{count} need you}}",
+  "@tabNeedsYou": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorNoToken": "None of your API tokens reaches this account any more. Add a token for it in Settings.",
+  "errorNeedsUserToken": "This needs a user API token: Cloudflare doesn't accept account-owned tokens here.",
+  "confirmAccount": "Account: {name}",
+  "@confirmAccount": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

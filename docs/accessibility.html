@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility · Edgepost</title>
+  <meta name="description" content="What the Edgepost website does for accessibility, what falls short, and how to tell us." />
+  <link rel="canonical" href="https://edgepost.dev/accessibility.html" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="flap" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+        <rect width="100" height="100" fill="#fff" />
+        <path d="M25.5 29 45 40.5 64.5 29" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+      </mask>
+      <symbol id="i-mark" viewBox="0 0 100 100">
+        <g mask="url(#flap)">
+          <rect x="46.5" y="15" width="7" height="71" rx="3.5" fill="currentColor" />
+          <path d="M30 62 37.5 54.5H65V69.5H37.5Z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <path d="M21 25H69L80 37.5 69 50H21Z" style="fill:var(--brand);stroke:var(--brand)" stroke-width="3" stroke-linejoin="round" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./" aria-label="Edgepost, home">
+        <svg class="mark" aria-hidden="true"><use href="#i-mark" /></svg>
+        <span>Edgepost</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="./#today">Tour</a></li>
+          <li><a href="./#screens">Screens</a></li>
+          <li><a href="./#privacy">Privacy</a></li>
+          <li><a href="./#source">Source</a></li>
+          <li><a href="./#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap doc">
+    <h1>Accessibility statement</h1>
+    <p class="updated">Last updated: 14 October 2026</p>
+    <p>Edgepost should work for everyone, whatever the device, the browser or the assistive technology. This statement covers this website and says what we checked, what we know falls short, and how to tell us.</p>
+
+    <h2 id="scope">Scope</h2>
+    <p>This statement covers the pages at edgepost.dev: the home page, the privacy policy, the legal notice and this page. The app follows the accessibility features of iOS, iPadOS and Android: text that grows with the system text size, a spoken label on every control for VoiceOver and TalkBack, touch targets of at least 44 points, Reduce Motion, and light and dark appearances designed as equals.</p>
+
+    <h2 id="status">Standard and conformance status</h2>
+    <p>We aim for the Web Content Accessibility Guidelines (<a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a>) at level AA. This is a self-assessment, not an audit by a third party; the site has not been tested by people who use assistive technology day to day.</p>
+
+    <h2 id="done">What we have done</h2>
+    <ul>
+      <li>Text and controls meet a contrast ratio of at least 4.5:1 in both the light and the dark palette, which follow your system setting.</li>
+      <li>Everything works with a keyboard: a skip link, a visible focus ring, the tour's chapter buttons, the device tabs (arrow keys move between them) and the screenshot viewer (arrow keys page through it, Escape closes it).</li>
+      <li>Every page reads in order without its styles, uses one heading outline, and names its landmarks.</li>
+      <li>Every screenshot has a text description of what it shows.</li>
+      <li>Pages reflow to 320 pixels wide with no sideways scrolling, and text can be enlarged to 200% without loss.</li>
+      <li>When your system asks for reduced motion, the tour swaps screens with a plain fade and nothing slides or rises.</li>
+      <li>The site works without JavaScript: the tour shows each screen under its step, and the screenshots stay in their lists.</li>
+    </ul>
+
+    <h2 id="limitations">Known limitations</h2>
+    <ul>
+      <li>The screenshots show the app in English, with demo data; they are pictures of the screens, described in text, not the screens themselves.</li>
+      <li>The licence excerpt is set in a monospaced face as it appears in the source.</li>
+    </ul>
+
+    <h2 id="technologies">Technologies relied on</h2>
+    <p>HTML, CSS, SVG and, for the tour, the tabs and the viewer, JavaScript.</p>
+
+    <h2 id="method">How this statement was prepared</h2>
+    <p>By reviewing the pages against WCAG 2.2 level AA: contrast measured for every text and control colour in both palettes, keyboard-only use, the pages read at 320 pixels wide, and the heading and landmark structure checked.</p>
+
+    <h2 id="feedback">Feedback and contact</h2>
+    <p>If something on this site or in the app does not work for you, email <a href="mailto:contact@edgepost.dev">contact@edgepost.dev</a> or <a href="https://github.com/mourad-ghafiri/Edgepost/issues">open an issue on GitHub</a>. Say which page or screen, and what you were trying to do; we aim to answer within a week.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="./#today">Tour</a></li>
+          <li><a href="./#screens">Screens</a></li>
+          <li><a href="./#source">Source</a></li>
+          <li><a href="./#support">Support</a></li>
+          <li><a href="mailto:contact@edgepost.dev">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="legal.html">Legal notice</a></li>
+          <li><a href="accessibility.html" aria-current="page">Accessibility</a></li>
+        </ul>
+      </nav>
+      <p>No ads, no analytics, no cookies: nothing to consent to. © 2026 Mourad Ghafiri. Edgepost is open source under the MIT licence.</p>
+      <p>Edgepost is an independent app. It isn't made, endorsed, sponsored or supported by Cloudflare, Inc., and isn't affiliated with it. Cloudflare, Cloudflare Workers and Cloudflare Pages are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

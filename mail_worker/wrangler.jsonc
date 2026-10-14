@@ -1,0 +1,30 @@
+// Local development / test / bundling config ONLY.
+// The Edgepost app uploads the bundled script into the user's own account itself
+// (Workers Scripts API) with its own bindings; this file is never used to deploy.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "edgepost-mail",
+  "main": "src/index.ts",
+  // Must be supported by the workerd used in tests (miniflare 5.20260815) and by wrangler 4.149.0.
+  "compatibility_date": "2026-08-01",
+  "send_metrics": false,
+  "upload_source_maps": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "edgepost-mail",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MAIL",
+      "bucket_name": "edgepost-mail"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ]
+}

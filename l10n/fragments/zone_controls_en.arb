@@ -1,0 +1,285 @@
+{
+  "controlsTitle": "SSL, cache & security",
+  "controlsSectionEncryption": "Encryption",
+  "controlsSectionCache": "Cache",
+  "controlsSectionSecurity": "Security",
+  "controlsSectionCloudflare": "Cloudflare",
+  "controlsSectionDnssec": "DNSSEC",
+  "controlsSslMode": "SSL/TLS mode",
+  "controlsSslOff": "Off",
+  "controlsSslOffDetail": "No HTTPS. Visitors and your server talk over plain HTTP.",
+  "controlsSslFlexible": "Flexible",
+  "controlsSslFlexibleDetail": "HTTPS for visitors, plain HTTP from Cloudflare to your server.",
+  "controlsSslFull": "Full",
+  "controlsSslFullDetail": "HTTPS all the way; your server's certificate isn't checked.",
+  "controlsSslStrict": "Full (strict)",
+  "controlsSslStrictDetail": "HTTPS all the way, with a valid certificate on your server.",
+  "controlsSslWeakWarning": "Off and Flexible leave traffic between Cloudflare and your server unencrypted.",
+  "controlsSslWeakReason": "SSL is {mode}: traffic to your server isn't encrypted.",
+  "@controlsSslWeakReason": {
+    "placeholders": {
+      "mode": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsAlwaysHttps": "Always Use HTTPS",
+  "controlsAlwaysHttpsDetail": "Redirects every HTTP request to HTTPS.",
+  "controlsHttpsRewrites": "Automatic HTTPS Rewrites",
+  "controlsHttpsRewritesDetail": "Rewrites http:// links in your pages to https:// where possible.",
+  "controlsMinTls": "Minimum TLS version",
+  "controlsMinTlsOption": "TLS {version}",
+  "@controlsMinTlsOption": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsMinTls10Detail": "Accepts every client, including very old ones.",
+  "controlsMinTls11Detail": "Turns away clients that only speak TLS 1.0.",
+  "controlsMinTls12Detail": "Turns away clients that only speak TLS 1.0 or 1.1.",
+  "controlsMinTls13Detail": "Modern clients only. Some older devices and tools can't connect.",
+  "controlsTls13": "TLS 1.3",
+  "controlsTls13On": "On",
+  "controlsTls13OnDetail": "Faster, more private handshakes for clients that support it.",
+  "controlsTls13Off": "Off",
+  "controlsTls13OffDetail": "Clients connect with TLS 1.2 or older.",
+  "controlsTls13Zrt": "On with 0-RTT",
+  "controlsTls13ZrtDetail": "Also lets returning visitors resume a connection without a full handshake.",
+  "controlsPurgeEverything": "Purge everything",
+  "controlsPurgeEverythingDetail": "Removes every cached file. Your server answers the next requests.",
+  "controlsPurgeEverythingTitle": "Purge all cached files?",
+  "controlsPurgeEverythingMessage": "Cloudflare fetches every file for {domain} from your server again, which can slow the site and load your server for a while.",
+  "@controlsPurgeEverythingMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeEverythingConfirm": "Purge everything",
+  "controlsPurgeEverythingDone": "Cache purged for {domain}. Your server answers the next requests.",
+  "@controlsPurgeEverythingDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeCooldown": "Wait {seconds} s: the Free plan allows 5 full purges per minute.",
+  "@controlsPurgeCooldown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeRateLimited": "Cloudflare is limiting purges for this account. Try again in a minute.",
+  "controlsPurgeUrls": "Purge URLs",
+  "controlsPurgeUrlsDetail": "Removes specific files from the cache.",
+  "controlsPurgeUrlsField": "URLs, one per line",
+  "controlsPurgeUrlsPlaceholder": "https://{domain}/styles.css",
+  "@controlsPurgeUrlsPlaceholder": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsHelp": "Full URLs on {domain} or its subdomains. Long lists go out in batches of 100.",
+  "@controlsPurgeUrlsHelp": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsEmpty": "Add at least one URL, like https://{domain}/index.html.",
+  "@controlsPurgeUrlsEmpty": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlNotUrl": "Not a full URL. Start it with https://: {line}",
+  "@controlsPurgeUrlNotUrl": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlNotHttp": "Only http:// and https:// URLs can be purged: {line}",
+  "@controlsPurgeUrlNotHttp": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlOtherDomain": "Not on {domain}: {line}",
+  "@controlsPurgeUrlOtherDomain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      },
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsMore": "{count, plural, =1{and 1 more line to fix} other{and {count} more lines to fix}}",
+  "@controlsPurgeUrlsMore": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsButton": "{count, plural, =0{Purge URLs} =1{Purge 1 URL} other{Purge {count} URLs}}",
+  "@controlsPurgeUrlsButton": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsDone": "{count, plural, =1{1 URL purged.} other{{count} URLs purged.}}",
+  "@controlsPurgeUrlsDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsPartial": "{done} of {total} URLs purged, then Cloudflare refused the rest: {reason}",
+  "@controlsPurgeUrlsPartial": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsDevMode": "Development mode",
+  "controlsDevModeOffDetail": "Bypasses the cache so changes show at once. Turns itself off after 3 hours.",
+  "controlsDevModeOnDetail": "Cache bypassed. {time} left.",
+  "@controlsDevModeOnDetail": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsUnderAttack": "Under Attack mode",
+  "controlsUnderAttackDetail": "Shows every visitor a challenge before your site. Use it only during an attack: it can block APIs and apps.",
+  "controlsUnderAttackOnTitle": "Turn on Under Attack mode?",
+  "controlsUnderAttackOnMessage": "Every visitor to {domain} sees a challenge first. APIs, webhooks and apps that call this domain may stop working until you turn it off.",
+  "@controlsUnderAttackOnMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsUnderAttackOnConfirm": "Turn on",
+  "controlsSecurityLevel": "Security level",
+  "controlsSecurityLevelOff": "Off",
+  "controlsSecurityLevelEssentiallyOff": "Essentially off",
+  "controlsSecurityLevelLow": "Low",
+  "controlsSecurityLevelMedium": "Medium",
+  "controlsSecurityLevelHigh": "High",
+  "controlsSecurityLevelFooter": "Cloudflare no longer scores visitor threat, so levels below Under Attack have little effect. Turning Under Attack mode off restores the level shown here.",
+  "controlsSecurityLevelLocked": "Restored when Under Attack mode is turned off.",
+  "controlsPause": "Pause Cloudflare",
+  "controlsPauseDetail": "Traffic goes straight to your server: no cache, no Cloudflare SSL, no protection. DNS keeps working.",
+  "controlsPauseTitle": "Pause Cloudflare?",
+  "controlsPauseMessage": "Visitors to {domain} connect straight to your server. The cache, SSL and security stop applying, and your server's IP address becomes visible.",
+  "@controlsPauseMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPauseConfirm": "Pause",
+  "controlsPauseDone": "Cloudflare paused on {domain}.",
+  "@controlsPauseDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsResume": "Resume Cloudflare",
+  "controlsResumeDetail": "Paused: traffic bypasses the proxy, cache and security.",
+  "controlsResumeTitle": "Resume Cloudflare on {domain}?",
+  "@controlsResumeTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsResumeMessage": "Traffic flows through Cloudflare's proxy, cache and security again.",
+  "controlsResumeConfirm": "Resume",
+  "controlsResumeDone": "Cloudflare resumed on {domain}.",
+  "@controlsResumeDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsDnssecStatus": "Status",
+  "controlsDnssecActive": "Active",
+  "controlsDnssecPending": "Pending",
+  "controlsDnssecDisabled": "Off",
+  "controlsDnssecPendingDisabled": "Turning off",
+  "controlsDnssecError": "Error",
+  "controlsDnssecDs": "DS record",
+  "controlsDnssecDigest": "Digest",
+  "controlsDnssecKeyTag": "Key tag",
+  "controlsDnssecAlgorithm": "Algorithm",
+  "controlsDnssecDigestType": "Digest type",
+  "controlsDnssecPublicKey": "Public key",
+  "controlsDnssecFooterActive": "Your registrar publishes this DS record. Change it only when you move DNS to another provider.",
+  "controlsDnssecFooterPending": "Add this DS record at your registrar. DNSSEC turns active once the registrar publishes it.",
+  "controlsDnssecFooterDisabled": "DNSSEC is off. Turn it on in the Cloudflare dashboard, then add the DS record it shows at your registrar.",
+  "controlsDnssecFooterError": "Cloudflare reports a DNSSEC problem. Check that the DS record at your registrar matches this one.",
+  "controlsCopyValue": "Copy {label}",
+  "@controlsCopyValue": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsSaveFailed": "Couldn't change {setting}. {reason}",
+  "@controlsSaveFailed": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsNotEditable": "Your plan can't change this setting.",
+  "controlsUnreadable": "Couldn't read this setting. {reason}",
+  "@controlsUnreadable": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  }
+}

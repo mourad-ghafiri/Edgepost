@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edgepost: mail and DNS for your domains, on iPhone, iPad and Android</title>
+  <meta name="description" content="A free, open-source, independent app for your domains: what needs you, DNS, traffic, Workers and Pages, and a real inbox on each domain you can reply from. No server in between." />
+  <link rel="canonical" href="https://edgepost.dev/" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0E0F12" media="(prefers-color-scheme: dark)" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Edgepost" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://edgepost.dev/" />
+  <meta property="og:title" content="Edgepost: run your domains, and answer their mail" />
+  <meta property="og:description" content="What needs you, DNS, traffic, Workers and Pages, and a real inbox on each domain. Free, open source, with no server in between." />
+  <meta property="og:image" content="https://edgepost.dev/images/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Edgepost icon and name beside the app's Today screen." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="preload" href="fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://edgepost.dev/#website",
+        "url": "https://edgepost.dev/",
+        "name": "Edgepost",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://edgepost.dev/#webpage",
+        "url": "https://edgepost.dev/",
+        "name": "Edgepost: mail and DNS for your domains, on iPhone, iPad and Android",
+        "description": "A free, open-source, independent app for your domains: what needs you, DNS, traffic, Workers and Pages, and a real inbox on each domain you can reply from. No server in between.",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://edgepost.dev/#website" },
+        "about": { "@id": "https://edgepost.dev/#app" },
+        "primaryImageOfPage": "https://edgepost.dev/images/social-card.png"
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://edgepost.dev/#app",
+        "name": "Edgepost",
+        "url": "https://edgepost.dev/",
+        "description": "Edgepost puts your domains in your pocket: what needs you, DNS, traffic, Workers and Pages, and a real inbox on each domain that you can reply from. An independent, open-source app with no server in between.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "availableOnDevice": "iPhone, iPad, Android phones and tablets",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/license/mit",
+        "image": "https://edgepost.dev/images/icon-512.png",
+        "screenshot": "https://edgepost.dev/images/screens/iphone/01-today.webp",
+        "author": { "@type": "Person", "name": "Mourad Ghafiri" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://edgepost.dev/#source",
+        "name": "Edgepost",
+        "codeRepository": "https://github.com/mourad-ghafiri/Edgepost",
+        "license": "https://opensource.org/license/mit",
+        "programmingLanguage": ["Dart", "TypeScript"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="flap" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+        <rect width="100" height="100" fill="#fff" />
+        <path d="M25.5 29 45 40.5 64.5 29" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" />
+      </mask>
+      <symbol id="i-mark" viewBox="0 0 100 100">
+        <g mask="url(#flap)">
+          <rect x="46.5" y="15" width="7" height="71" rx="3.5" fill="currentColor" />
+          <path d="M30 62 37.5 54.5H65V69.5H37.5Z" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <path d="M21 25H69L80 37.5 69 50H21Z" style="fill:var(--brand);stroke:var(--brand)" stroke-width="3" stroke-linejoin="round" />
+        </g>
+      </symbol>
+      <symbol id="i-today" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9" width="17" height="11.5" rx="2.5" /><path d="M5.5 6h13M7.5 3.2h9" /></symbol>
+      <symbol id="i-domains" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6" /><path d="M3.4 12h17.2M12 3.4c2.5 2.4 3.8 5.3 3.8 8.6s-1.3 6.2-3.8 8.6M12 3.4C9.5 5.8 8.2 8.7 8.2 12s1.3 6.2 3.8 8.6" /></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5" /><path d="m4.2 7.2 7.8 5.9 7.8-5.9" /></symbol>
+      <symbol id="i-compute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13.2 2.8 5.6 13.3h6.1l-1 7.9 7.7-10.5h-6.1z" /></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.38 5.62 10.21 3.18 13.79 3.18 14.62 5.62 14.66 5.63 16.97 4.5 19.5 7.03 18.37 9.34 18.38 9.38 20.82 10.21 20.82 13.79 18.38 14.62 18.37 14.66 19.5 16.97 16.97 19.5 14.66 18.37 14.62 18.38 13.79 20.82 10.21 20.82 9.38 18.38 9.34 18.37 7.03 19.5 4.5 16.97 5.63 14.66 5.62 14.62 3.18 13.79 3.18 10.21 5.62 9.38 5.63 9.34 4.5 7.03 7.03 4.5 9.34 5.63Z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8.5 7-5 5 5 5m7-10 5 5-5 5M13.5 4.5l-3 15" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7" /></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./" aria-label="Edgepost, home">
+        <svg class="mark" aria-hidden="true"><use href="#i-mark" /></svg>
+        <span>Edgepost</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#today">Tour</a></li>
+          <li><a href="#screens">Screens</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#source">Source</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap tour">
+      <div class="tour__copy">
+        <section class="hero" aria-labelledby="hero-title">
+          <h1 id="hero-title" tabindex="-1">Run your Cloudflare<sup class="tm">®</sup> domains, and answer their mail.</h1>
+          <p class="hero__offer">Edgepost puts every domain you run on Cloudflare in your pocket: what needs you, DNS, traffic, Workers and Pages, and <strong>a real inbox on each domain that you can reply from</strong>. For iPhone, iPad and Android.</p>
+          <div class="actions">
+            <span class="store" role="group" aria-label="App Store: coming soon"><small>Coming soon to the</small><strong>App Store</strong></span>
+            <span class="store" role="group" aria-label="Google Play: coming soon"><small>Coming soon to</small><strong>Google Play</strong></span>
+            <a class="button button--primary" href="https://github.com/mourad-ghafiri/Edgepost">
+              <svg aria-hidden="true"><use href="#i-code" /></svg>Source on GitHub
+            </a>
+          </div>
+          <ul class="facts">
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Free app, no in-app purchases</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>Open source, MIT licence</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg>No server in between</li>
+            <li><svg aria-hidden="true"><use href="#i-check" /></svg><a href="#independent">Independent: not made by Cloudflare, Inc.</a></li>
+          </ul>
+          <p class="caveat">Sending mail uses Cloudflare Email Sending, in beta, which needs the Cloudflare Workers Paid plan to reach any address. <a href="#cost">What it costs</a></p>
+          <picture><source srcset="images/screens/iphone-dark/01-today.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/01-today.webp" width="660" height="1434" alt="The Today screen: four domains and the sending budget need a look, each with its reason, above new mail." /></picture>
+        </section>
+
+        <article class="chapter" id="today" aria-labelledby="today-title">
+          <h2 id="today-title" tabindex="-1">What needs you, first.</h2>
+          <div class="step" data-screen="01-today">
+            <p>Today reads every domain in every account and puts what needs a look at the top, each with one sentence on why: <strong>nameservers not switched yet, development mode left on, a registration about to lapse, a sending limit close to its end.</strong> Fix it and the card settles back into line.</p>
+            <p>New mail, the latest deploys and a week of traffic follow underneath, so one glance tells you whether today is calm.</p>
+          </div>
+        </article>
+
+        <article class="chapter" id="domains" aria-labelledby="domains-title">
+          <h2 id="domains-title" tabindex="-1">Every domain, down to the record.</h2>
+          <div class="step" data-screen="05-domains">
+            <h3>All of them, at a glance.</h3>
+            <p>Search, filter what needs you, and pin the domains you check most. Every card shows its status, its plan and its requests over the last seven days.</p>
+            <picture><source srcset="images/screens/iphone-dark/05-domains.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/05-domains.webp" width="660" height="1434" loading="lazy" alt="The Domains list: each domain's status, plan and requests over seven days, two of them flagged." /></picture>
+          </div>
+          <div class="step" data-screen="06-dns">
+            <h3>DNS, without the dashboard.</h3>
+            <p>Add, edit and delete records, start from a template, or import a BIND zone file. A deleted record can be undone, and a mail check tells you whether MX, SPF, DKIM and DMARC are in place.</p>
+            <picture><source srcset="images/screens/iphone-dark/06-dns.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/06-dns.webp" width="660" height="1434" loading="lazy" alt="DNS records for a domain, grouped by type, with filters for A, CNAME, MX and TXT." /></picture>
+          </div>
+          <div class="step" data-screen="08-controls">
+            <h3>SSL, cache and security.</h3>
+            <p>Change the SSL mode and HTTPS settings, purge the cache, or turn on development mode or Under Attack mode. Each change says what it does before you make it.</p>
+            <picture><source srcset="images/screens/iphone-dark/08-controls.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/08-controls.webp" width="660" height="1434" loading="lazy" alt="SSL, cache and security settings for a domain: encryption mode, HTTPS switches, cache purge and development mode." /></picture>
+          </div>
+          <div class="step" data-screen="07-traffic">
+            <h3>Traffic over a day, a week or a month.</h3>
+            <p>Requests, bandwidth, the share served from cache, threats, visitors and page views, straight from Cloudflare analytics.</p>
+            <picture><source srcset="images/screens/iphone-dark/07-traffic.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/07-traffic.webp" width="660" height="1434" loading="lazy" alt="Seven days of traffic for a domain: totals and a chart of requests per day, cached and not cached." /></picture>
+          </div>
+        </article>
+
+        <article class="chapter" id="mail" aria-labelledby="mail-title">
+          <h2 id="mail-title" tabindex="-1">Mail on your domains, answered from your phone.</h2>
+          <div class="step" data-screen="02-inbox">
+            <h3>One inbox for every address.</h3>
+            <p>Mail sent to any address you route on any of your domains lands in one inbox, with sent mail, archive, trash, search and an alert when something new arrives.</p>
+            <p>The mailbox is a Worker that Edgepost sets up <strong>in your own Cloudflare account</strong> in one step. Your mail stays there, in your own database and storage bucket.</p>
+            <picture><source srcset="images/screens/iphone-dark/02-inbox.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/02-inbox.webp" width="660" height="1434" loading="lazy" alt="The Mail inbox: messages to several addresses on the user's domains, with a New message button." /></picture>
+          </div>
+          <div class="step" data-screen="03-thread">
+            <h3>Read it safely.</h3>
+            <p>Threads open with their attachments. HTML mail is shown with scripts blocked, and remote images, which can track you, load only when you ask.</p>
+            <picture><source srcset="images/screens/iphone-dark/03-thread.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/03-thread.webp" width="660" height="1434" loading="lazy" alt="A message thread with a PDF invoice attached, and reply, archive and delete actions." /></picture>
+          </div>
+          <div class="step" data-screen="04-reply">
+            <h3>Reply as you@yourdomain.</h3>
+            <p>Reply, reply all or forward from the address the mail was sent to, with the domain's signature and logo already in place. The people you write to are suggested as you type.</p>
+            <picture><source srcset="images/screens/iphone-dark/04-reply.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/04-reply.webp" width="660" height="1434" loading="lazy" alt="A reply being written from contact@ on the user's domain, with the domain's signature and logo below the text." /></picture>
+          </div>
+        </article>
+
+        <article class="chapter" id="compute" aria-labelledby="compute-title">
+          <h2 id="compute-title" tabindex="-1">Workers and Pages, at hand.</h2>
+          <div class="step" data-screen="09-compute">
+            <p>See every Worker and Pages project with its routes and its latest deploy. Follow a Worker's live logs, roll back to an earlier version, and keep an eye on the domains you registered with Cloudflare and when they renew.</p>
+            <picture><source srcset="images/screens/iphone-dark/09-compute.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/09-compute.webp" width="660" height="1434" loading="lazy" alt="The Compute screen: three Workers, a Pages project and the registered domains." /></picture>
+          </div>
+        </article>
+
+        <article class="chapter" id="settings" aria-labelledby="settings-title">
+          <h2 id="settings-title" tabindex="-1">Set up once, the way you work.</h2>
+          <div class="step" data-screen="10-signature">
+            <p>Add several Cloudflare accounts and switch between them with a tap. Give each domain its signature and logo, lock Edgepost with Face ID or your fingerprint, choose light or dark, and pick your alerts: new mail, your sending budget, deliveries.</p>
+            <picture><source srcset="images/screens/iphone-dark/10-signature.webp" media="(prefers-color-scheme: dark)" /><img class="step__screen" src="images/screens/iphone/10-signature.webp" width="660" height="1434" loading="lazy" alt="A domain's signature and logo settings, with a preview of how they appear under a message." /></picture>
+          </div>
+        </article>
+      </div>
+
+      <div class="tour__device">
+        <div class="device">
+          <div class="phone">
+            <div class="phone__screen">
+                <picture>
+                  <source srcset="images/screens/iphone-dark/01-today.webp" media="(prefers-color-scheme: dark)" />
+                  <img class="is-current" data-screen="01-today" data-mail="3" src="images/screens/iphone/01-today.webp" width="660" height="1434" alt="The Today screen: four domains and the sending budget need a look, each with its reason, above new mail." />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/05-domains.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="05-domains" data-mail="2" src="images/screens/iphone/05-domains.webp" width="660" height="1434" alt="The Domains list: each domain's status, plan and requests over seven days, two of them flagged." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/06-dns.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="06-dns" data-mail="2" src="images/screens/iphone/06-dns.webp" width="660" height="1434" alt="DNS records for a domain, grouped by type, with filters for A, CNAME, MX and TXT." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/08-controls.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="08-controls" data-mail="2" src="images/screens/iphone/08-controls.webp" width="660" height="1434" alt="SSL, cache and security settings for a domain: encryption mode, HTTPS switches, cache purge and development mode." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/07-traffic.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="07-traffic" data-mail="2" src="images/screens/iphone/07-traffic.webp" width="660" height="1434" alt="Seven days of traffic for a domain: totals and a chart of requests per day, cached and not cached." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/02-inbox.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="02-inbox" data-mail="3" src="images/screens/iphone/02-inbox.webp" width="660" height="1434" alt="The Mail inbox: messages to several addresses on the user's domains, with a New message button." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/03-thread.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="03-thread" data-tabbar="false" src="images/screens/iphone/03-thread.webp" width="660" height="1434" alt="A message thread with a PDF invoice attached, and reply, archive and delete actions." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/04-reply.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="04-reply" data-tabbar="false" src="images/screens/iphone/04-reply.webp" width="660" height="1434" alt="A reply being written from contact@ on the user's domain, with the domain's signature and logo below the text." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/09-compute.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="09-compute" data-mail="2" src="images/screens/iphone/09-compute.webp" width="660" height="1434" alt="The Compute screen: three Workers, a Pages project and the registered domains." aria-hidden="true" />
+                </picture>
+                <picture>
+                  <source srcset="images/screens/iphone-dark/10-signature.webp" media="(prefers-color-scheme: dark)" />
+                  <img data-screen="10-signature" data-tabbar="false" src="images/screens/iphone/10-signature.webp" width="660" height="1434" alt="A domain's signature and logo settings, with a preview of how they appear under a message." aria-hidden="true" />
+                </picture>
+              <nav class="dock" aria-label="Tour chapters" hidden>
+                <button type="button" data-chapter="today"><span class="dock__glyph"><svg aria-hidden="true"><use href="#i-today" /></svg><span class="badge badge--attention" aria-hidden="true">4</span></span>Today</button>
+                <button type="button" data-chapter="domains"><span class="dock__glyph"><svg aria-hidden="true"><use href="#i-domains" /></svg></span>Domains</button>
+                <button type="button" data-chapter="mail"><span class="dock__glyph"><svg aria-hidden="true"><use href="#i-mail" /></svg><span class="badge" data-badge="mail" aria-hidden="true">3</span></span>Mail</button>
+                <button type="button" data-chapter="compute"><span class="dock__glyph"><svg aria-hidden="true"><use href="#i-compute" /></svg></span>Compute</button>
+                <button type="button" data-chapter="settings"><span class="dock__glyph"><svg aria-hidden="true"><use href="#i-settings" /></svg></span>Settings</button>
+              </nav>
+            </div>
+          </div>
+          <p class="demo-note">Screens show demo data: no real domains or people.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="screens" aria-labelledby="screens-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="screens-title">At home on iPhone, iPad and Android.</h2>
+          <p>On an iPad, Edgepost uses the room the way iPad Mail does: a sidebar, the list beside the message or the domain, and a sheet to write in. On Android it follows Material Design, down to the back gesture.</p>
+        </div>
+        <div class="gallery-bar">
+        <div class="tabs" role="tablist" aria-label="Device">
+          <button type="button" role="tab" id="tab-iphone" aria-controls="strip-iphone" aria-selected="true">iPhone</button>
+          <button type="button" role="tab" id="tab-ipad" aria-controls="strip-ipad" aria-selected="false" tabindex="-1">iPad</button>
+          <button type="button" role="tab" id="tab-android" aria-controls="strip-android" aria-selected="false" tabindex="-1">Android</button>
+        </div>
+        <div class="strip-nav" hidden>
+          <button class="icon-button" type="button" data-strip="-1" aria-label="Previous screens"><svg aria-hidden="true"><use href="#i-left" /></svg></button>
+          <button class="icon-button" type="button" data-strip="1" aria-label="Next screens"><svg aria-hidden="true"><use href="#i-right" /></svg></button>
+        </div>
+        </div>
+        <div class="strip" id="strip-iphone" data-device="iphone" role="tabpanel" aria-labelledby="tab-iphone" tabindex="0">
+          <!-- screens:iphone -->
+          <button class="shot" type="button" data-full="images/screens/iphone/01-today.webp" data-caption="iPhone · Today">
+            <img src="images/screens/iphone/01-today.webp" width="660" height="1434" loading="lazy" alt="iPhone: Today: the domains and the sending budget that need a look, each with its reason, above new mail." />
+            <span>Today</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/02-inbox.webp" data-caption="iPhone · Inbox">
+            <img src="images/screens/iphone/02-inbox.webp" width="660" height="1434" loading="lazy" alt="iPhone: The inbox: mail to several addresses on the user's domains." />
+            <span>Inbox</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/03-thread.webp" data-caption="iPhone · A message">
+            <img src="images/screens/iphone/03-thread.webp" width="660" height="1434" loading="lazy" alt="iPhone: A message with a PDF invoice attached." />
+            <span>A message</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/04-reply.webp" data-caption="iPhone · Replying">
+            <img src="images/screens/iphone/04-reply.webp" width="660" height="1434" loading="lazy" alt="iPhone: A reply from contact@ on the user's domain, with the domain's signature and logo." />
+            <span>Replying</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/05-domains.webp" data-caption="iPhone · Domains">
+            <img src="images/screens/iphone/05-domains.webp" width="660" height="1434" loading="lazy" alt="iPhone: The domains: status, plan and requests over seven days." />
+            <span>Domains</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/06-dns.webp" data-caption="iPhone · DNS records">
+            <img src="images/screens/iphone/06-dns.webp" width="660" height="1434" loading="lazy" alt="iPhone: A domain's DNS records, grouped by type." />
+            <span>DNS records</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/07-traffic.webp" data-caption="iPhone · Traffic">
+            <img src="images/screens/iphone/07-traffic.webp" width="660" height="1434" loading="lazy" alt="iPhone: Seven days of traffic for a domain." />
+            <span>Traffic</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/08-controls.webp" data-caption="iPhone · SSL, cache and security">
+            <img src="images/screens/iphone/08-controls.webp" width="660" height="1434" loading="lazy" alt="iPhone: A domain's SSL, cache and security settings." />
+            <span>SSL, cache and security</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/09-compute.webp" data-caption="iPhone · Compute">
+            <img src="images/screens/iphone/09-compute.webp" width="660" height="1434" loading="lazy" alt="iPhone: Workers, Pages and registered domains." />
+            <span>Compute</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/iphone/10-signature.webp" data-caption="iPhone · Signature and logo">
+            <img src="images/screens/iphone/10-signature.webp" width="660" height="1434" loading="lazy" alt="iPhone: A domain's signature and logo, with a preview." />
+            <span>Signature and logo</span>
+          </button>
+          <!-- /screens:iphone -->
+        </div>
+        <div class="strip" id="strip-ipad" data-device="ipad" role="tabpanel" aria-labelledby="tab-ipad" tabindex="0" hidden>
+          <!-- screens:ipad -->
+          <button class="shot" type="button" data-full="images/screens/ipad/01-today.webp" data-caption="iPad · Today">
+            <img src="images/screens/ipad/01-today.webp" width="1032" height="1376" loading="lazy" alt="iPad: Today: the domains and the sending budget that need a look, each with its reason, above new mail." />
+            <span>Today</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/02-inbox.webp" data-caption="iPad · Inbox">
+            <img src="images/screens/ipad/02-inbox.webp" width="1032" height="1376" loading="lazy" alt="iPad: The inbox: mail to several addresses on the user's domains." />
+            <span>Inbox</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/03-thread.webp" data-caption="iPad · A message">
+            <img src="images/screens/ipad/03-thread.webp" width="1032" height="1376" loading="lazy" alt="iPad: A message with a PDF invoice attached." />
+            <span>A message</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/04-reply.webp" data-caption="iPad · Replying">
+            <img src="images/screens/ipad/04-reply.webp" width="1032" height="1376" loading="lazy" alt="iPad: A reply from contact@ on the user's domain, with the domain's signature and logo." />
+            <span>Replying</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/05-domains.webp" data-caption="iPad · Domains">
+            <img src="images/screens/ipad/05-domains.webp" width="1032" height="1376" loading="lazy" alt="iPad: The domains: status, plan and requests over seven days." />
+            <span>Domains</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/06-dns.webp" data-caption="iPad · DNS records">
+            <img src="images/screens/ipad/06-dns.webp" width="1032" height="1376" loading="lazy" alt="iPad: A domain's DNS records, grouped by type." />
+            <span>DNS records</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/07-traffic.webp" data-caption="iPad · Traffic">
+            <img src="images/screens/ipad/07-traffic.webp" width="1032" height="1376" loading="lazy" alt="iPad: Seven days of traffic for a domain." />
+            <span>Traffic</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/08-controls.webp" data-caption="iPad · SSL, cache and security">
+            <img src="images/screens/ipad/08-controls.webp" width="1032" height="1376" loading="lazy" alt="iPad: A domain's SSL, cache and security settings." />
+            <span>SSL, cache and security</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/09-compute.webp" data-caption="iPad · Compute">
+            <img src="images/screens/ipad/09-compute.webp" width="1032" height="1376" loading="lazy" alt="iPad: Workers, Pages and registered domains." />
+            <span>Compute</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/ipad/10-signature.webp" data-caption="iPad · Signature and logo">
+            <img src="images/screens/ipad/10-signature.webp" width="1032" height="1376" loading="lazy" alt="iPad: A domain's signature and logo, with a preview." />
+            <span>Signature and logo</span>
+          </button>
+          <!-- /screens:ipad -->
+        </div>
+        <div class="strip" id="strip-android" data-device="android" role="tabpanel" aria-labelledby="tab-android" tabindex="0" hidden>
+          <!-- screens:android -->
+          <button class="shot" type="button" data-full="images/screens/android/01-today.webp" data-caption="Android · Today">
+            <img src="images/screens/android/01-today.webp" width="540" height="928" loading="lazy" alt="Android: Today: the domains and the sending budget that need a look, each with its reason, above new mail." />
+            <span>Today</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/02-inbox.webp" data-caption="Android · Inbox">
+            <img src="images/screens/android/02-inbox.webp" width="540" height="928" loading="lazy" alt="Android: The inbox: mail to several addresses on the user's domains." />
+            <span>Inbox</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/03-thread.webp" data-caption="Android · A message">
+            <img src="images/screens/android/03-thread.webp" width="540" height="928" loading="lazy" alt="Android: A message with a PDF invoice attached." />
+            <span>A message</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/04-reply.webp" data-caption="Android · Replying">
+            <img src="images/screens/android/04-reply.webp" width="540" height="928" loading="lazy" alt="Android: A reply from contact@ on the user's domain, with the domain's signature and logo." />
+            <span>Replying</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/05-domains.webp" data-caption="Android · Domains">
+            <img src="images/screens/android/05-domains.webp" width="540" height="928" loading="lazy" alt="Android: The domains: status, plan and requests over seven days." />
+            <span>Domains</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/06-dns.webp" data-caption="Android · DNS records">
+            <img src="images/screens/android/06-dns.webp" width="540" height="928" loading="lazy" alt="Android: A domain's DNS records, grouped by type." />
+            <span>DNS records</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/07-traffic.webp" data-caption="Android · Traffic">
+            <img src="images/screens/android/07-traffic.webp" width="540" height="928" loading="lazy" alt="Android: Seven days of traffic for a domain." />
+            <span>Traffic</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/08-controls.webp" data-caption="Android · SSL, cache and security">
+            <img src="images/screens/android/08-controls.webp" width="540" height="928" loading="lazy" alt="Android: A domain's SSL, cache and security settings." />
+            <span>SSL, cache and security</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/09-compute.webp" data-caption="Android · Compute">
+            <img src="images/screens/android/09-compute.webp" width="540" height="928" loading="lazy" alt="Android: Workers, Pages and registered domains." />
+            <span>Compute</span>
+          </button>
+          <button class="shot" type="button" data-full="images/screens/android/10-signature.webp" data-caption="Android · Signature and logo">
+            <img src="images/screens/android/10-signature.webp" width="540" height="928" loading="lazy" alt="Android: A domain's signature and logo, with a preview." />
+            <span>Signature and logo</span>
+          </button>
+          <!-- /screens:android -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="privacy-title">Nothing in between.</h2>
+          <p>Edgepost has no server. Your API token stays in your device's secure storage and is sent only to Cloudflare. Your mail is kept in your own Cloudflare account. The author never sees your domains, your mail or your token.</p>
+        </div>
+        <div class="route" role="group" aria-label="Where your data goes">
+          <div class="node node--phone">
+            <svg class="mark" aria-hidden="true"><use href="#i-mark" /></svg>
+            <strong>Edgepost, on your device</strong>
+            <span>Your token in the keychain or keystore</span>
+          </div>
+          <div class="wire" aria-hidden="true"></div>
+          <div class="node">
+            <strong>The Cloudflare API</strong>
+            <span>Your domains, DNS, settings, traffic, Workers and Pages</span>
+          </div>
+          <div class="wire" aria-hidden="true"></div>
+          <div class="node">
+            <strong>Your mail Worker, in your Cloudflare account</strong>
+            <span>Your mail, in your own D1 database and R2 bucket</span>
+          </div>
+          <p class="none"><s>An Edgepost server</s> There isn't one: no account, no analytics, no ads.</p>
+        </div>
+        <ul class="points">
+          <li>
+            <h3>Least privilege, made legible.</h3>
+            <p>Create a Cloudflare API token with just the permissions you want to use. When a token can't do something, the app names the exact permission to add.</p>
+          </li>
+          <li>
+            <h3>Your Worker, your rules.</h3>
+            <p>The app deploys the mail Worker into your account with a key it makes on your device. Delete the Worker, its database and its bucket in Cloudflare and your mail is gone.</p>
+          </li>
+          <li>
+            <h3>Locked when you leave.</h3>
+            <p>Turn on app lock and Edgepost asks for Face ID or your fingerprint, and hides its content in the app switcher. <a href="privacy.html">Read the privacy policy</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="source" aria-labelledby="source-title">
+      <div class="wrap source">
+        <div class="section__head">
+          <h2 id="source-title">Free, and open source.</h2>
+          <p>Edgepost is free, with no in-app purchases. Its source is public under the MIT licence: the app, and the mail Worker it deploys into your account. Read it, build it, or send a fix.</p>
+          <div class="actions">
+            <a class="button button--primary" href="https://github.com/mourad-ghafiri/Edgepost">
+              <svg aria-hidden="true"><use href="#i-code" /></svg>View the source on GitHub
+            </a>
+          </div>
+        </div>
+        <pre class="license" aria-label="The licence, in short"><b>MIT License</b>
+
+Copyright 2026 Mourad Ghafiri
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software … to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software …</pre>
+      </div>
+    </section>
+
+    <section class="section" id="support" aria-labelledby="support-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="support-title">Questions.</h2>
+          <p>Something else? Email <a href="mailto:contact@edgepost.dev">contact@edgepost.dev</a> or <a href="https://github.com/mourad-ghafiri/Edgepost/issues">open an issue on GitHub</a>.</p>
+        </div>
+        <div class="faq">
+          <details id="independent">
+            <summary>Is Edgepost made by Cloudflare?<svg aria-hidden="true"><use href="#i-plus" /></svg></summary>
+            <div>
+              <p>No. Edgepost is an independent, open-source app by Mourad Ghafiri. It isn't made, endorsed, sponsored or supported by Cloudflare, Inc., and isn't affiliated with it. It works through the public Cloudflare API, with a token you create in your own account and can revoke at any time.</p>
+              <p>For help with Edgepost, email <a href="mailto:contact@edgepost.dev">contact@edgepost.dev</a> or <a href="https://github.com/mourad-ghafiri/Edgepost/issues">open an issue</a>, not Cloudflare support. For your Cloudflare account or its billing, contact Cloudflare.</p>
+            </div>
+          </details>
+          <details id="cost">
+            <summary>What does it cost?<svg aria-hidden="true"><use href="#i-plus" /></svg></summary>
+            <div>
+              <p>The app is free. Cloudflare bills your own account as it always does, and Edgepost works with domains on any plan.</p>
+              <p>Sending mail uses Cloudflare Email Sending, which Cloudflare lists as a beta. Sending to any address needs the Workers Paid plan, which includes 3,000 emails a month; sending to addresses you have verified in your account is free on every plan. See <a href="https://developers.cloudflare.com/email-service/platform/pricing/">the Email Sending pricing page</a>. Edgepost shows how much of your sending budget is left and can alert you before it runs out.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Which permissions does my token need?<svg aria-hidden="true"><use href="#i-plus" /></svg></summary>
+            <div>
+              <p>Only the ones for what you want to do. Read access lets you look around; each feature that changes something needs its matching edit permission, and the app tells you which one is missing when it is. The setup screen walks you through creating the token in the Cloudflare dashboard.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Where is my mail kept?<svg aria-hidden="true"><use href="#i-plus" /></svg></summary>
+            <div>
+              <p>In your own Cloudflare account. Mail to your domains is routed by Cloudflare Email Routing to a Worker the app sets up there, which keeps it in a D1 database and an R2 bucket of yours. Your phone keeps a cache to show it quickly. Nothing passes through anyone else's server.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Can I use several Cloudflare accounts?<svg aria-hidden="true"><use href="#i-plus" /></svg></summary>
+            <div>
+              <p>Yes. Add one token per account and switch between them with a tap. Today tells you when another account needs you or has unread mail.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap close" aria-labelledby="close-title">
+      <h2 id="close-title">Take your domains, and their mail, with you.</h2>
+      <div class="actions">
+        <span class="store" role="group" aria-label="App Store: coming soon"><small>Coming soon to the</small><strong>App Store</strong></span>
+        <span class="store" role="group" aria-label="Google Play: coming soon"><small>Coming soon to</small><strong>Google Play</strong></span>
+        <a class="button button--primary" href="https://github.com/mourad-ghafiri/Edgepost">
+          <svg aria-hidden="true"><use href="#i-code" /></svg>Source on GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#today">Tour</a></li>
+          <li><a href="#screens">Screens</a></li>
+          <li><a href="#source">Source</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="mailto:contact@edgepost.dev">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal">
+        <ul>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="legal.html">Legal notice</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </nav>
+      <p>No ads, no analytics, no cookies: nothing to consent to. © 2026 Mourad Ghafiri. Edgepost is open source under the MIT licence.</p>
+      <p>Edgepost is an independent app. It isn't made, endorsed, sponsored or supported by Cloudflare, Inc., and isn't affiliated with it. Cloudflare, Cloudflare Workers and Cloudflare Pages are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.</p>
+    </div>
+  </footer>
+
+  <dialog class="viewer" id="viewer" aria-label="Screenshot">
+    <button class="icon-button viewer__close" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#i-close" /></svg></button>
+    <div class="viewer__body">
+      <button class="icon-button" type="button" data-prev aria-label="Previous screenshot"><svg aria-hidden="true"><use href="#i-left" /></svg></button>
+      <figure>
+        <img src="images/screens/iphone/01-today.webp" alt="" />
+        <figcaption></figcaption>
+      </figure>
+      <button class="icon-button" type="button" data-next aria-label="Next screenshot"><svg aria-hidden="true"><use href="#i-right" /></svg></button>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

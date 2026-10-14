@@ -1,0 +1,2953 @@
+{
+  "@@locale": "en",
+  "trafficTitle": "Traffic",
+  "trafficRange24h": "24 hours",
+  "trafficRange7d": "7 days",
+  "trafficRange30d": "30 days",
+  "trafficCaption24h": "Last 24 hours · UTC",
+  "trafficCaption7d": "Last 7 days · UTC",
+  "trafficCaption30d": "Last 30 days · UTC",
+  "trafficFieldRequests": "Requests",
+  "trafficFieldBandwidth": "Bandwidth",
+  "trafficFieldCached": "Cached",
+  "trafficFieldThreats": "Threats",
+  "trafficFieldVisitors": "Visitors",
+  "trafficChartHourly": "Requests per hour",
+  "trafficChartDaily": "Requests per day",
+  "trafficLegendAll": "Not cached",
+  "trafficLegendCached": "Served from cache",
+  "trafficTooltipRequests": "{count} requests",
+  "@trafficTooltipRequests": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficTooltipCached": "{count} from cache ({percent})",
+  "@trafficTooltipCached": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficChartSummary": "{chart}, {range}. {total} requests in all, {cached} served from cache. Busiest: {peak} requests, {when}.",
+  "@trafficChartSummary": {
+    "placeholders": {
+      "chart": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "cached": {
+        "type": "String"
+      },
+      "peak": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficEmptyTitle": "No traffic in this range",
+  "trafficEmptyMessage": "Cloudflare saw no requests for {domain}. Traffic shows here once its DNS records are proxied through Cloudflare and visitors arrive.",
+  "@trafficEmptyMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficRangeUnavailableTitle": "This range isn't available on your plan",
+  "trafficRangeUnavailableMessage": "Cloudflare keeps traffic history for a limited time on each plan, and this range reaches further back. Pick a shorter range.",
+  "trafficShowRange": "Show {range}",
+  "@trafficShowRange": {
+    "placeholders": {
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "trafficFieldPageViews": "Page views",
+  "computeBayWorkers": "Workers",
+  "computeBayPages": "Pages",
+  "computeGapPermission": "This token can't list these. Add “{permission}” to it in the Cloudflare dashboard, then pull to refresh.",
+  "@computeGapPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "computeGapFailed": "Couldn't load these: {message} Pull to refresh to try again.",
+  "@computeGapFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "computeNoAccessTitle": "No access to Workers or Pages",
+  "computeNoAccessMessage": "Your tokens can't read Workers or Pages. In the Cloudflare dashboard, add “{workers}” and “{pages}” to a token, then pull to refresh.",
+  "@computeNoAccessMessage": {
+    "placeholders": {
+      "workers": {
+        "type": "String"
+      },
+      "pages": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesTitle": "Worker routes",
+  "computeZoneRoutesSectionRoutes": "Routes",
+  "computeZoneRoutesRoutesFooter": "Requests matching a route run the Worker before reaching your origin.",
+  "computeZoneRoutesSectionDomains": "Custom domains",
+  "computeZoneRoutesDomainsFooter": "A custom domain points a whole hostname at a Worker, with no origin behind it.",
+  "computeZoneRoutesNoRoutes": "No routes on this domain.",
+  "computeZoneRoutesNoDomains": "No Worker custom domains on this domain.",
+  "computeZoneRoutesNoScript": "No Worker: requests go straight to the origin",
+  "computeZoneRoutesRunsScript": "Runs {script}",
+  "@computeZoneRoutesRunsScript": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesEmptyTitle": "No Workers on {zone}",
+  "@computeZoneRoutesEmptyTitle": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "computeZoneRoutesEmptyMessage": "Add a route or custom domain to a Worker in the Cloudflare dashboard or with wrangler, then pull to refresh.",
+  "workersEmpty": "No Workers in this account yet.",
+  "workersFieldModified": "Modified",
+  "workersFieldRoutes": "Routes",
+  "workersFieldCompat": "Compat date",
+  "workersFieldUsage": "Usage",
+  "workersStripSemantics": "Worker {name}, modified {modified}, {routes, plural, =0{no routes} =1{1 route} other{{routes} routes}}",
+  "@workersStripSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "modified": {
+        "type": "String"
+      },
+      "routes": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLiveLogs": "Live logs",
+  "workersLiveLogsHint": "Stream console output and requests as they happen",
+  "workersOpenWorkersDev": "Open on workers.dev",
+  "workersSectionOverview": "Overview",
+  "workersCreated": "Created",
+  "workersModified": "Modified",
+  "workersCompatDate": "Compatibility date",
+  "workersCompatFlags": "Compatibility flags",
+  "workersUsageModel": "Usage model",
+  "workersDeployedFrom": "Last deployed from",
+  "workersHandlers": "Handlers",
+  "workersSectionTriggers": "Triggers",
+  "workersDev": "workers.dev",
+  "workersStateOn": "On",
+  "workersStateOff": "Off",
+  "workersPreviewsOn": "Preview URLs on",
+  "workersPreviewsOff": "Preview URLs off",
+  "workersCustomDomain": "Custom domain",
+  "workersRoute": "Route",
+  "workersNoTriggers": "This Worker has no route, custom domain or workers.dev address, so nothing on the internet reaches it.",
+  "workersSectionDeployment": "Deployment",
+  "workersActiveDeployment": "Serving now",
+  "workersNoDeployments": "Nothing is deployed yet.",
+  "workersGradualFooter": "Traffic is split between versions (a gradual deployment).",
+  "workersPercent": "{percent}%",
+  "@workersPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLiveShare": "Live {percent}%",
+  "@workersLiveShare": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "workersSectionVersions": "Versions",
+  "workersNoVersions": "No versions uploaded yet.",
+  "workersVersionsFooter": "Tap a version to roll back to it. Rolling back sends all traffic to that version; you can roll forward the same way.",
+  "workersVersionNumber": "Version {number}",
+  "@workersVersionNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "workersVersionShort": "Version {id}",
+  "@workersVersionShort": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackAction": "Roll back to this version",
+  "workersCopyVersionId": "Copy version ID",
+  "workersRollbackTitle": "Roll back to {version}?",
+  "@workersRollbackTitle": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackMessage": "All traffic to {script} will go to {version} ({id}). The version serving now stays available, so you can roll forward the same way.",
+  "@workersRollbackMessage": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      },
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackConfirm": "Roll back",
+  "workersRollbackDone": "{version} now serves all traffic.",
+  "@workersRollbackDone": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackBlockedTitle": "Cloudflare blocked this rollback",
+  "workersRollbackBlockedMessage": "Cloudflare said: “{message}” You can force it, but that version may expect secrets or settings that have changed since.",
+  "@workersRollbackBlockedMessage": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "workersRollbackForce": "Roll back anyway",
+  "workersSectionSecrets": "Secrets",
+  "workersSecretsFooter": "Cloudflare never returns secret values, so only names are shown.",
+  "workersNoSecrets": "No secrets on this Worker.",
+  "workersSecretText": "Secret text",
+  "workersSecretKey": "Secret key",
+  "workersLogsTitle": "Live logs",
+  "workersLogsConnecting": "Connecting…",
+  "workersLogsLive": "{count, plural, =0{Live · waiting for events} =1{Live · 1 event} other{Live · {count} events}}",
+  "@workersLogsLive": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsPaused": "{count, plural, =0{Paused} =1{Paused · 1 new event held} other{Paused · {count} new events held}}",
+  "@workersLogsPaused": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsEnded": "Stream ended",
+  "workersLogsEndedHint": "Cloudflare closed the log stream; log sessions expire after a while. Reconnect to keep watching.",
+  "workersLogsStopped": "Stopped",
+  "workersLogsFailed": "Couldn't start the log stream",
+  "workersLogsWaiting": "Waiting for {script} to run…",
+  "@workersLogsWaiting": {
+    "placeholders": {
+      "script": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsWaitingHint": "Send a request to the Worker; its console output, exceptions and requests show up here as they happen.",
+  "workersLogsPrivacy": "Logs stream straight from Cloudflare and are not saved.",
+  "workersLogsPause": "Pause",
+  "workersLogsResume": "Resume",
+  "workersLogsClear": "Clear",
+  "workersLogsStop": "Stop",
+  "workersLogsReconnect": "Reconnect",
+  "workersLogsNoUrl": "(no URL)",
+  "workersLogsCron": "Cron {cron}",
+  "@workersLogsCron": {
+    "placeholders": {
+      "cron": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsAlarm": "Durable Object alarm",
+  "workersLogsEmail": "Email {route}",
+  "@workersLogsEmail": {
+    "placeholders": {
+      "route": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsQueue": "Queue {queue}",
+  "@workersLogsQueue": {
+    "placeholders": {
+      "queue": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsRpc": "RPC {method}",
+  "@workersLogsRpc": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsTailEvent": "Tail {scripts}",
+  "@workersLogsTailEvent": {
+    "placeholders": {
+      "scripts": {
+        "type": "String"
+      }
+    }
+  },
+  "workersLogsEvent": "Event",
+  "workersLogsOverload": "Too many events: Cloudflare is sampling this stream.",
+  "workersLogsOverloadStop": "Sampling stopped: every event is shown again.",
+  "workersLogsLines": "{count, plural, =1{1 log line} other{{count} log lines}}",
+  "@workersLogsLines": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersLogsExceptions": "{count, plural, =1{1 exception} other{{count} exceptions}}",
+  "@workersLogsExceptions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "workersOutcomeOk": "OK",
+  "workersOutcomeCanceled": "Canceled",
+  "workersOutcomeException": "Exception thrown",
+  "workersOutcomeCpu": "Exceeded CPU limit",
+  "workersOutcomeMemory": "Exceeded memory limit",
+  "workersOutcomeUnknown": "Unknown outcome",
+  "pagesEmpty": "No Pages projects in this account.",
+  "pagesFieldStatus": "Latest",
+  "pagesFieldBranch": "Branch",
+  "pagesFieldWhen": "When",
+  "pagesFieldEnv": "Environment",
+  "pagesStatusSuccess": "Success",
+  "pagesStatusFailed": "Failed",
+  "pagesStatusBuilding": "Building",
+  "pagesStatusQueued": "Queued",
+  "pagesStatusCanceled": "Canceled",
+  "pagesStatusSkipped": "Skipped",
+  "pagesStatusUnknown": "Unknown",
+  "pagesStatusNone": "No deploys",
+  "pagesReasonFailed": "Last build on {branch} failed {time}.",
+  "@pagesReasonFailed": {
+    "placeholders": {
+      "branch": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesReasonFailedNoBranch": "Last build failed {time}.",
+  "@pagesReasonFailedNoBranch": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesWorkersNote": "Cloudflare recommends starting new projects on Workers.",
+  "pagesWorkersNoteLink": "Migration guide",
+  "pagesEnvProduction": "Production",
+  "pagesEnvPreview": "Preview",
+  "pagesLiveMarker": "Live",
+  "pagesDeploymentSemantics": "Deployment {id}, {status}, {environment}, branch {branch}, {time}",
+  "@pagesDeploymentSemantics": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      },
+      "environment": {
+        "type": "String"
+      },
+      "branch": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesOpenSite": "Open site",
+  "pagesSectionProject": "Project",
+  "pagesSite": "Site",
+  "pagesProductionBranch": "Production branch",
+  "pagesRepository": "Repository",
+  "pagesCreated": "Created",
+  "pagesSectionDomains": "Custom domains",
+  "pagesNoDomains": "No custom domains.",
+  "pagesDomainActive": "Active",
+  "pagesDomainPending": "Pending",
+  "pagesDomainInitializing": "Setting up",
+  "pagesDomainBlocked": "Blocked",
+  "pagesDomainDeactivated": "Deactivated",
+  "pagesDomainError": "Error",
+  "pagesSectionDeployments": "Deployments",
+  "pagesNoDeployments": "No deployments yet.",
+  "pagesDeploymentsHint": "Touch and hold a deployment to retry, roll back or open it.",
+  "pagesSectionDeployment": "Deployment",
+  "pagesCommit": "Commit",
+  "pagesTrigger": "Trigger",
+  "pagesTriggerPush": "Git push",
+  "pagesTriggerUpload": "Direct upload",
+  "pagesTriggerHook": "Deploy hook",
+  "pagesAlias": "Alias",
+  "pagesSectionStages": "Stages",
+  "pagesStageQueued": "Queued",
+  "pagesStageInitialize": "Initialize",
+  "pagesStageClone": "Clone repository",
+  "pagesStageBuild": "Build",
+  "pagesStageDeploy": "Deploy",
+  "pagesStageSuccess": "Done",
+  "pagesStageActive": "Running",
+  "pagesStageIdle": "Waiting",
+  "pagesStageFailure": "Failed",
+  "pagesStageCanceled": "Canceled",
+  "pagesStageSkipped": "Skipped",
+  "pagesSectionBuildLog": "Build log",
+  "pagesLogEmpty": "This build has no log lines.",
+  "pagesLogUnavailable": "Cloudflare has no build log for this deployment (direct uploads don't build).",
+  "pagesLogPartial": "Showing {shown} of {total} lines.",
+  "@pagesLogPartial": {
+    "placeholders": {
+      "shown": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "pagesOpenDeployment": "Open this deployment",
+  "pagesRetry": "Retry build",
+  "pagesRetryHint": "Builds the same commit again as a new deployment",
+  "pagesRetryStarted": "New build started for {name}.",
+  "@pagesRetryStarted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackAction": "Roll back production to this",
+  "pagesRollbackHint": "Production serves this deployment again",
+  "pagesRollbackTitle": "Roll back to {id}?",
+  "@pagesRollbackTitle": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackMessage": "Production for {project} will serve {deployment} again. Newer deployments stay in the list, so you can roll forward the same way.",
+  "@pagesRollbackMessage": {
+    "placeholders": {
+      "project": {
+        "type": "String"
+      },
+      "deployment": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesRollbackConfirm": "Roll back",
+  "pagesRollbackDone": "Production now serves {id}.",
+  "@pagesRollbackDone": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "pagesCopyId": "Copy deployment ID",
+  "pagesDeploymentOnBranch": "{id} on {branch}",
+  "@pagesDeploymentOnBranch": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      },
+      "branch": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarTitle": "Registrar",
+  "registrarRowTitle": "Registered domains",
+  "registrarSummary": "{count, plural, =1{1 domain, in line} other{{count} domains, all in line}}",
+  "@registrarSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarSummaryAttention": "{count, plural, =1{1 domain needs you} other{{count} domains need you}}",
+  "@registrarSummaryAttention": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarSummaryNone": "No domains registered with Cloudflare",
+  "registrarSummaryFailed": "Couldn't load registrations",
+  "registrarAccountTokenShort": "Not available with account-owned tokens",
+  "registrarNeedsPermission": "Needs “{permission}” on the token",
+  "@registrarNeedsPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarAccountTokenTitle": "Registrar needs a user API token",
+  "registrarAccountTokenMessage": "Cloudflare Registrar doesn't accept account-owned API tokens. To see expiry dates here, add a user API token with “{permission}” in Settings.",
+  "@registrarAccountTokenMessage": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarPermissionTitle": "No access to Registrar",
+  "registrarPermissionMessage": "Add “{permission}” to a user API token in the Cloudflare dashboard, then pull to refresh.",
+  "@registrarPermissionMessage": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarFailedTitle": "Couldn't load registered domains",
+  "registrarEmptyTitle": "No domains registered with Cloudflare",
+  "registrarEmptyMessage": "Domains you register or transfer to Cloudflare Registrar show up here with their expiry dates.",
+  "registrarBayAttention": "Needs you",
+  "registrarBayAll": "In line",
+  "registrarAllAttention": "Every registered domain needs a look.",
+  "registrarFieldExpires": "Expires",
+  "registrarFieldAutoRenew": "Auto-renew",
+  "registrarFieldLock": "Transfer lock",
+  "registrarAutoRenewOn": "On",
+  "registrarAutoRenewOff": "Off",
+  "registrarLocked": "Locked",
+  "registrarUnlocked": "Unlocked",
+  "registrarExpiresSemantics": "expires {date}",
+  "@registrarExpiresSemantics": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarReasonExpiring": "{days, plural, =1{Expires tomorrow and won't renew automatically.} other{Expires in {days} days and won't renew automatically.}}",
+  "@registrarReasonExpiring": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "registrarReasonToday": "Expires today and won't renew automatically.",
+  "registrarReasonStatus": "{status}: renew or restore it in Cloudflare Registrar before it's lost.",
+  "@registrarReasonStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "registrarStatusActive": "Active",
+  "registrarStatusRegistering": "Registering",
+  "registrarStatusTransferring": "Transferring in",
+  "registrarStatusExpired": "Expired",
+  "registrarStatusSuspended": "Suspended",
+  "registrarStatusRedemption": "In redemption period",
+  "registrarStatusPendingDelete": "Pending deletion",
+  "registrarStatusUnknown": "Unknown status",
+  "registrarFooter": "Turn on auto-renew in the Cloudflare dashboard so a domain never lapses.",
+  "appName": "Edgepost",
+  "tabToday": "Today",
+  "tabDomains": "Domains",
+  "tabMail": "Mail",
+  "tabCompute": "Compute",
+  "tabSettings": "Settings",
+  "sidebarShow": "Show sidebar",
+  "sidebarHide": "Hide sidebar",
+  "actionCancel": "Cancel",
+  "actionDelete": "Delete",
+  "actionSave": "Save",
+  "actionRetry": "Try again",
+  "actionUndo": "Undo",
+  "actionDone": "Done",
+  "actionClose": "Close",
+  "actionCopy": "Copy",
+  "actionEdit": "Edit",
+  "actionAdd": "Add",
+  "actionOpen": "Open",
+  "copiedToClipboard": "Copied",
+  "syncedAt": "Synced {time}",
+  "@syncedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "syncFailed": "Couldn't refresh. Showing data from {time}.",
+  "@syncFailed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "timeJustNow": "just now",
+  "timeMinutesAgo": "{count, plural, =1{1 min ago} other{{count} min ago}}",
+  "@timeMinutesAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeHoursAgo": "{count, plural, =1{1 h ago} other{{count} h ago}}",
+  "@timeHoursAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "timeDaysAgo": "{count, plural, =1{yesterday} other{{count} days ago}}",
+  "@timeDaysAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorGeneric": "Something went wrong. Try again in a moment.",
+  "errorPermission": "This token can't do that yet. In the Cloudflare dashboard, add the permission “{permission}” to the token, then pull to refresh.",
+  "@errorPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "errorPermissionGeneric": "This token doesn't have permission for this. Edit the token in the Cloudflare dashboard and add the missing permission.",
+  "typeToConfirm": "Type {name} to confirm.",
+  "@typeToConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "fieldRequired": "Required",
+  "loading": "Loading…",
+  "emptySearch": "Nothing matches “{query}”.",
+  "@emptySearch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "searchPlaceholder": "Search",
+  "syntheticDataLabel": "Sample data",
+  "actionShow": "Show",
+  "actionHide": "Hide",
+  "actionRemove": "Remove",
+  "actionSend": "Send",
+  "timeSecondsAgo": "{count} s ago",
+  "@timeSecondsAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabBadge": "{count, plural, =1{1 unread} other{{count} unread}}",
+  "@tabBadge": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "tabNeedsYou": "{count, plural, =1{1 needs you} other{{count} need you}}",
+  "@tabNeedsYou": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "errorNoToken": "None of your API tokens reaches this account any more. Add a token for it in Settings.",
+  "errorNeedsUserToken": "This needs a user API token: Cloudflare doesn't accept account-owned tokens here.",
+  "confirmAccount": "Account: {name}",
+  "@confirmAccount": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTitle": "DNS records",
+  "dnsAddRecord": "Add record",
+  "dnsMoreActions": "Templates, import and export",
+  "dnsSectionHeader": "{type} · {count}",
+  "@dnsSectionHeader": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsFilterAll": "All",
+  "dnsFilterAddress": "A·AAAA",
+  "dnsFilterOther": "Other",
+  "dnsSearchPlaceholder": "Search names and values",
+  "dnsEmptyTitle": "No DNS records yet",
+  "dnsEmptyMessage": "Nothing resolves for this domain yet. Add a record, start from a template, or import a BIND zone file.",
+  "dnsFilterEmpty": "No records of this type.",
+  "dnsZoneMissingTitle": "Domain not found",
+  "dnsZoneMissingMessage": "This domain isn't in your list anymore. Refresh the Domains tab, or check that its token is still added in Settings.",
+  "dnsProxied": "Proxied",
+  "dnsDnsOnly": "DNS only",
+  "dnsPriorityShort": "Priority {value}",
+  "@dnsPriorityShort": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlAuto": "Auto",
+  "dnsTtlSeconds": "{count} s",
+  "@dnsTtlSeconds": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlMinutes": "{count} min",
+  "@dnsTtlMinutes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlHours": "{count} h",
+  "@dnsTtlHours": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTtlDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@dnsTtlDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsRowHint": "Touch and hold for more actions",
+  "dnsActionCopyName": "Copy name",
+  "dnsActionCopyContent": "Copy value",
+  "dnsDeleteTitle": "Delete this record?",
+  "dnsDeleteMessage": "The {type} record {name} stops resolving within its TTL. You can undo right after.",
+  "@dnsDeleteMessage": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleted": "Record deleted",
+  "dnsRestored": "Record restored",
+  "dnsRestoreFailed": "Couldn't restore the record. {reason}",
+  "@dnsRestoreFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleteFailed": "Couldn't delete the record, so it's back in the list. {reason}",
+  "@dnsDeleteFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsSaved": "Record saved",
+  "dnsCreated": "Record added",
+  "dnsSaveFailed": "Couldn't save. {reason}",
+  "@dnsSaveFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMenuPointToIp": "Point domain to an IP",
+  "dnsMenuVerifyTxt": "Add a verification TXT",
+  "dnsMenuMailCheck": "Check mail records",
+  "dnsMenuExport": "Export zone file",
+  "dnsMenuImport": "Import zone file",
+  "dnsExportSubject": "DNS records for {zone}",
+  "@dnsExportSubject": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsExportFailed": "Couldn't export. {reason}",
+  "@dnsExportFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportTitle": "Import {file}?",
+  "@dnsImportTitle": {
+    "placeholders": {
+      "file": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportMessage": "Cloudflare adds the records in this BIND file to {zone}. Zone files can be up to 256 KiB, and Cloudflare accepts 3 imports per minute.",
+  "@dnsImportMessage": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportDnsOnly": "Import as DNS only",
+  "dnsImportProxied": "Import and proxy eligible records",
+  "dnsImportTooLarge": "This file is {size} KiB. Cloudflare accepts zone files up to 256 KiB: split it and import each part.",
+  "@dnsImportTooLarge": {
+    "placeholders": {
+      "size": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportThrottled": "Cloudflare accepts 3 imports per minute. Try again in {seconds} s.",
+  "@dnsImportThrottled": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportDone": "Added {added} of {parsed} records from the file.",
+  "@dnsImportDone": {
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "parsed": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsImportFailed": "Couldn't import. {reason}",
+  "@dnsImportFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsImportOpenFailed": "Couldn't open that file. Pick a plain-text BIND zone file.",
+  "dnsEditorNewTitle": "New record",
+  "dnsEditorEditTitle": "Edit record",
+  "dnsRecordMissingTitle": "Record not found",
+  "dnsRecordMissingMessage": "It may have been deleted or changed elsewhere. Go back and pull to refresh.",
+  "dnsSectionRecord": "Record",
+  "dnsSectionOptions": "Options",
+  "dnsFieldType": "Type",
+  "dnsTypeOther": "Other",
+  "dnsChooseType": "Record type",
+  "dnsFieldTypeRaw": "Record type",
+  "dnsFieldName": "Name",
+  "dnsNamePlaceholder": "@ or subdomain",
+  "dnsNameHelper": "Resolves as {name}",
+  "@dnsNameHelper": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsFieldIpv4": "IPv4 address",
+  "dnsFieldIpv6": "IPv6 address",
+  "dnsFieldTarget": "Target",
+  "dnsTargetHelper": "A hostname. Use @ for {zone}.",
+  "@dnsTargetHelper": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsFieldNameserver": "Nameserver",
+  "dnsFieldPtr": "Domain name",
+  "dnsFieldMailServer": "Mail server",
+  "dnsFieldPriority": "Priority",
+  "dnsPriorityHelper": "0–65535. Lower numbers are tried first.",
+  "dnsFieldContent": "Content",
+  "dnsTxtHelper": "{count, plural, =1{1 character} other{{count} characters}}. Values over 255 characters are split into several strings automatically.",
+  "@dnsTxtHelper": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsFieldService": "Service",
+  "dnsServiceHelper": "The service label, such as _sip or _imaps.",
+  "dnsFieldProtocol": "Protocol",
+  "dnsFieldWeight": "Weight",
+  "dnsFieldPort": "Port",
+  "dnsSrvTargetHelper": "The host that offers the service. Use a single dot if it isn't offered.",
+  "dnsFieldCaaTag": "Tag",
+  "dnsCaaIssue": "Issue",
+  "dnsCaaIssueWild": "Wildcard",
+  "dnsCaaIodef": "Report",
+  "dnsCaaTagHelp": "Issue lets a certificate authority issue certificates for this name, Wildcard covers wildcard certificates, and Report says where to send violation reports.",
+  "dnsFieldValue": "Value",
+  "dnsFieldFlags": "Flags",
+  "dnsFlagsHelper": "Usually 0. 128 marks the tag as critical.",
+  "dnsFieldHttpsValue": "Parameters",
+  "dnsHttpsValueHelper": "Service parameters, for example alpn=\"h3,h2\". Optional.",
+  "dnsFieldUri": "URI",
+  "dnsOtherDataNote": "This type stores structured data. Change its value in the Cloudflare dashboard; you can still change the name, TTL and comment here.",
+  "dnsFieldProxied": "Proxy through Cloudflare",
+  "dnsProxiedOnHelp": "Traffic passes through Cloudflare's cache and security. Visitors see Cloudflare's addresses.",
+  "dnsProxiedOffHelp": "DNS only: Cloudflare answers with this value and doesn't touch the traffic.",
+  "dnsProxiedOnFooter": "Traffic passes through Cloudflare's cache and security, and visitors see Cloudflare's addresses. Proxied records always use Auto TTL.",
+  "dnsFieldTtl": "TTL",
+  "dnsChooseTtl": "Time to live",
+  "dnsFieldComment": "Comment",
+  "dnsCommentPlaceholder": "A note for yourself, not published in DNS",
+  "dnsTypeChangeNote": "Changing the type replaces the record: the {from} record is deleted and the new one created in a single step.",
+  "@dnsTypeChangeNote": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsDeleteRecord": "Delete record",
+  "dnsErrorName": "Use @ for the domain itself, or letters, digits, hyphens and dots. Internationalized names go in punycode (xn--…).",
+  "dnsErrorIpv4": "Enter an IPv4 address such as 203.0.113.10.",
+  "dnsErrorIpv6": "Enter an IPv6 address such as 2001:db8::1.",
+  "dnsErrorHostname": "Enter a hostname such as mail.example.com.",
+  "dnsErrorRange": "Enter a whole number from 0 to 65535.",
+  "dnsErrorFlags": "Enter a whole number from 0 to 255.",
+  "dnsErrorType": "Enter a record type in capitals, such as TLSA.",
+  "dnsErrorQuotes": "The quotation marks don't pair up. Remove them, or wrap each part in its own pair.",
+  "dnsErrorTooLong": "The full name is longer than 253 characters.",
+  "dnsTemplatePointTitle": "Point to an IP",
+  "dnsTemplatePointIntro": "Sends {zone} to your server's IP address.",
+  "@dnsTemplatePointIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateIpLabel": "Server IP address",
+  "dnsTemplateIpHelper": "IPv4 or IPv6.",
+  "dnsTemplateErrorIp": "Enter an IPv4 or IPv6 address.",
+  "dnsTemplateIncludeWww": "Also point www",
+  "dnsTemplateIncludeWwwHelp": "Adds www.{zone} as a CNAME to {zone}.",
+  "@dnsTemplateIncludeWwwHelp": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateCreates": "Creates",
+  "dnsTemplateReplaces": "Replaces",
+  "dnsTemplateReplacesFooter": "These records would conflict, so they're removed in the same step.",
+  "dnsTemplateReplaceTitle": "Replace {count, plural, =1{1 record} other{{count} records}}?",
+  "@dnsTemplateReplaceTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsTemplateReplaceMessage": "The current address records for {zone} are deleted and the new ones created in a single step.",
+  "@dnsTemplateReplaceMessage": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateReplace": "Replace",
+  "dnsTemplateApplied": "Records added",
+  "dnsTemplateVerifyTitle": "Verification TXT",
+  "dnsTemplateVerifyIntro": "Services such as Google, Microsoft and Apple ask for a TXT record to prove you own {zone}.",
+  "@dnsTemplateVerifyIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsTemplateVerifyHelper": "Paste the exact value the service gave you.",
+  "dnsMailTitle": "Mail records",
+  "dnsMailIntro": "A read-only check of the records that decide where mail for {zone} goes and whether mail from it is trusted.",
+  "@dnsMailIntro": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMx": "Receiving (MX)",
+  "dnsMailSpf": "Allowed senders (SPF)",
+  "dnsMailDmarc": "Policy (DMARC)",
+  "dnsMailDkim": "Signatures (DKIM)",
+  "dnsMailStatusOk": "Present",
+  "dnsMailStatusWarn": "Needs a look",
+  "dnsMailStatusMissing": "Missing",
+  "dnsMailMxOk": "Mail for {zone} goes to the servers below, lowest priority first.",
+  "@dnsMailMxOk": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxRouting": "Cloudflare Email Routing receives mail for {zone}.",
+  "@dnsMailMxRouting": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxMissing": "Nobody can send mail to {zone}. Turn on Email Routing, or add the MX records your mail provider gives you.",
+  "@dnsMailMxMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailMxNull": "This null MX record says {zone} accepts no mail. Remove it if you want to receive mail here.",
+  "@dnsMailMxNull": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfOk": "Receivers can check which servers may send mail as {zone}.",
+  "@dnsMailSpfOk": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfMissing": "Without SPF, mail from {zone} is more likely to land in spam, and anyone can pose as you. Add the SPF record your mail provider gives you, or v=spf1 -all if this domain never sends mail.",
+  "@dnsMailSpfMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailSpfMultiple": "There are several SPF records. Receivers treat that as an error, so merge them into one.",
+  "dnsMailSpfPassAll": "This SPF record lets any server send as {zone}. End it with ~all or -all instead.",
+  "@dnsMailSpfPassAll": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailDmarcOk": "Receivers know what to do with mail that fails SPF and DKIM.",
+  "dnsMailDmarcNone": "The policy is p=none, so receivers only report failures. Move to quarantine or reject once the reports look clean.",
+  "dnsMailDmarcMissing": "Without DMARC, receivers decide on their own what to do with forged mail from {zone}. Start with a monitoring policy.",
+  "@dnsMailDmarcMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailDmarcMultiple": "There are several DMARC records at _dmarc. Keep exactly one.",
+  "dnsMailDkimOk": "{count, plural, =1{1 signing key published.} other{{count} signing keys published.}}",
+  "@dnsMailDkimOk": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dnsMailDkimMissing": "No DKIM keys under _domainkey. If you send mail from {zone}, add the DKIM record your mail provider gives you.",
+  "@dnsMailDkimMissing": {
+    "placeholders": {
+      "zone": {
+        "type": "String"
+      }
+    }
+  },
+  "dnsMailAddDmarc": "Add a monitoring DMARC record",
+  "routingTitle": "Email routing",
+  "routingStripCaption": "Email routing",
+  "routingFieldStatus": "Status",
+  "routingFieldRules": "Rules",
+  "routingFieldCatchAll": "Catch-all",
+  "routingStatusReady": "Ready",
+  "routingStatusOff": "Off",
+  "routingStatusMisconfigured": "Misconfigured",
+  "routingStatusUnlocked": "Unlocked",
+  "routingReasonOff": "Routing is off. Turn it on to receive mail at this domain through Cloudflare.",
+  "routingReasonMisconfigured": "DNS records don't match what Email Routing needs, so mail may not arrive. Add the missing records below.",
+  "routingReasonUnlocked": "Routing records are unlocked and can be changed. Lock them again when you're done.",
+  "routingReasonUnverified": "{count, plural, =1{1 rule waits on an unverified destination and can't deliver yet.} other{{count} rules wait on unverified destinations and can't deliver yet.}}",
+  "@routingReasonUnverified": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingEnableHeader": "Turn on Email Routing",
+  "routingEnableExplain": "Cloudflare adds the MX and SPF records {domain} needs and locks them so other DNS edits can't break delivery. Mail for {domain} then arrives at Cloudflare instead of any other mail provider.",
+  "@routingEnableExplain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnableRecordsFooter": "Cloudflare adds these records when you turn routing on.",
+  "routingEnableAction": "Turn on routing",
+  "routingEnableConfirmTitle": "Turn on routing for {domain}?",
+  "@routingEnableConfirmTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnableConfirmMessage": "Cloudflare adds and locks the routing records. Mail for {domain} stops reaching any other mail provider.",
+  "@routingEnableConfirmMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnabledToast": "Email routing is on.",
+  "routingMisconfiguredExplain": "Cloudflare can add the missing MX and SPF records and lock them. If this domain used another mail provider, remove its MX records in DNS first.",
+  "routingRepairAction": "Add missing records",
+  "routingRepairedToast": "Records added and locked.",
+  "routingUnlockedExplain": "The MX and SPF records are unlocked, so DNS edits can change them. Lock them again to protect mail delivery.",
+  "routingLockAction": "Lock records",
+  "routingRulesHeader": "Addresses",
+  "routingRulesCount": "{count} of {max} rules used.",
+  "@routingRulesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "routingRulesOffFooter": "Rules take effect once routing is on.",
+  "routingRulesEmptyTitle": "No address rules yet",
+  "routingRulesEmptyMessage": "Add one to send mail for an address at {domain} to an inbox, your Edgepost mailbox, or nowhere.",
+  "@routingRulesEmptyMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddRule": "New address rule",
+  "routingRuleArrow": "→",
+  "routingRuleOffNote": "Off.",
+  "routingRuleUnverifiedNote": "Destination not verified, so this rule can't deliver yet.",
+  "routingRuleWranglerNote": "Managed by a Worker's Wrangler config.",
+  "routingRuleTurnOff": "Turn off",
+  "routingRuleTurnOn": "Turn on",
+  "routingRuleTurnedOff": "{address} is off.",
+  "@routingRuleTurnedOff": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleTurnedOn": "{address} is on.",
+  "@routingRuleTurnedOn": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleDeleteTitle": "Delete {address}?",
+  "@routingRuleDeleteTitle": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleDeleteMessage": "Mail to this address is no longer routed by this rule. The catch-all handles it if it's on.",
+  "routingRuleDeleted": "Deleted {address}.",
+  "@routingRuleDeleted": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleSaved": "Saved {address}.",
+  "@routingRuleSaved": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllHeader": "Everything else",
+  "routingCatchAllTitle": "Catch-all",
+  "routingCatchAllFooter": "Handles mail to any address at {domain} that has no rule of its own, including typos.",
+  "@routingCatchAllFooter": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllOffLine": "Off. Mail to addresses without a rule isn't delivered.",
+  "routingCatchAllOffShort": "Off",
+  "routingCatchAllSheetTitle": "Catch-all",
+  "routingCatchAllSheetMessage": "What happens to mail for addresses at {domain} that have no rule?",
+  "@routingCatchAllSheetMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllOff": "Off",
+  "routingCatchAllForward": "Forward to…",
+  "routingCatchAllDrop": "Drop",
+  "routingCatchAllSaved": "Catch-all updated.",
+  "routingActionForward": "Forward",
+  "routingActionMailbox": "Mailbox",
+  "routingActionWorker": "Worker",
+  "routingActionDrop": "Drop",
+  "routingActionUnknown": "Other",
+  "routingDestMailbox": "Edgepost mailbox",
+  "routingDestWorker": "Worker {name}",
+  "@routingDestWorker": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "routingDestDropped": "Dropped",
+  "routingDestinationsLink": "Destination addresses",
+  "routingPendingCount": "{count} waiting for verification",
+  "@routingPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingPickDestinationTitle": "Forward to",
+  "routingPickDestinationUnavailable": "Destination addresses couldn't be loaded. Add one here, or check that the token has Email Routing Addresses permission.",
+  "routingPendingAddress": "{address} (waiting for verification)",
+  "@routingPendingAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddAddressEllipsis": "Add address…",
+  "routingAddAddress": "Add address",
+  "routingAddAddressTitle": "Add destination address",
+  "routingAddAddressMessage": "Cloudflare emails this address a link. Mail is forwarded to it only after the owner clicks it.",
+  "routingAddressPlaceholder": "you@example.com",
+  "routingAddressInvalid": "Enter a full email address, like you@example.com.",
+  "routingAddressAddedToast": "Cloudflare sent a verification link to {email}.",
+  "@routingAddressAddedToast": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthHeader": "Mail authentication",
+  "routingAuthLoadFailed": "Couldn't check mail authentication",
+  "routingAuthNeedsDnsTitle": "DNS access needed to check SPF, DKIM and DMARC",
+  "routingAuthNoDmarcPermission": "Add “{permission}” to the token to also see SPF lookup counts and DMARC report status.",
+  "@routingAuthNoDmarcPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthSpf": "SPF",
+  "routingAuthDkim": "DKIM",
+  "routingAuthDmarc": "DMARC",
+  "routingAuthMx": "MX",
+  "routingAuthStateOk": "Passing",
+  "routingAuthStateAttention": "Needs attention",
+  "routingAuthStateMissing": "Missing",
+  "routingAuthStateUnknown": "Unknown",
+  "routingAuthCopySuggestion": "Copy suggested {kind} record",
+  "@routingAuthCopySuggestion": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthUnknownAdvice": "Couldn't be checked.",
+  "routingAuthSpfOk": "Published and valid.",
+  "routingAuthSpfOkLookups": "Published and valid. Uses {count} of 10 DNS lookups.",
+  "@routingAuthSpfOkLookups": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingAuthSpfMissing": "No SPF record, so receivers can't tell which servers may send as this domain.",
+  "routingAuthSpfMissingRouting": "No SPF record. Copy Cloudflare's record and add it as a TXT record on the domain.",
+  "routingAuthSpfMultiple": "More than one SPF record, which receivers treat as an error. Replace them with the merged record.",
+  "routingAuthSpfNoCloudflare": "Doesn't include Cloudflare's mail servers. Copy the updated record, which adds include:_spf.mx.cloudflare.net.",
+  "routingAuthSpfPassAll": "Ends in +all, which lets any server send as this domain. Copy the record ending in ~all instead.",
+  "routingAuthSpfTooManyLookups": "Needs {count} DNS lookups; the limit is 10, so SPF fails. Remove includes you no longer use.",
+  "@routingAuthSpfTooManyLookups": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingAuthSpfInvalid": "Cloudflare couldn't evaluate it: {detail}",
+  "@routingAuthSpfInvalid": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthDkimOk": "Email Routing's signing key (cf2024-1) is published.",
+  "routingAuthDkimMissing": "No Email Routing signing key. Cloudflare adds it when routing is turned on.",
+  "routingAuthDkimMissingRouting": "Email Routing's signing key (cf2024-1) is missing. Copy it and add it as a TXT record at cf2024-1._domainkey.",
+  "routingAuthDkimOther": "Keys published for: {selectors}.",
+  "@routingAuthDkimOther": {
+    "placeholders": {
+      "selectors": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthDmarcOk": "Enforced: spoofed mail is quarantined or rejected.",
+  "routingAuthDmarcNoReports": "Enforced. Reports don't reach Cloudflare; turn on DMARC Management in the dashboard to see who sends as this domain.",
+  "routingAuthDmarcCname": "Published through a CNAME and valid.",
+  "routingAuthDmarcMissing": "No DMARC policy. Add one at _dmarc: start with p=none to monitor, then move to quarantine.",
+  "routingAuthDmarcMultiple": "More than one DMARC record, so receivers ignore them all. Keep one.",
+  "routingAuthDmarcNone": "Policy is none, so spoofed mail still gets delivered. Move to p=quarantine once your senders pass.",
+  "routingAuthDmarcInvalid": "The record has no valid policy (p=none, quarantine or reject). Replace it.",
+  "routingAuthDmarcReportIssue": "DMARC reports need a fix ({status}). Check DMARC Management in the Cloudflare dashboard.",
+  "@routingAuthDmarcReportIssue": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthForeignMx": "Other MX hosts ({hosts}) compete with Cloudflare's, so some mail skips your rules. Remove them in DNS.",
+  "@routingAuthForeignMx": {
+    "placeholders": {
+      "hosts": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCopyRecordHint": "Copies the record value",
+  "routingDnsHeader": "Routing DNS records",
+  "routingDnsLockedFooter": "Locked by Email Routing, so DNS edits can't change them.",
+  "routingDnsUnlockedFooter": "Unlocked: DNS edits can change these records.",
+  "routingDnsPriority": "Priority {priority}",
+  "@routingDnsPriority": {
+    "placeholders": {
+      "priority": {
+        "type": "int"
+      }
+    }
+  },
+  "routingUnlockAction": "Unlock records",
+  "routingUnlockConfirmTitle": "Unlock routing records?",
+  "routingUnlockConfirmMessage": "The MX and SPF records become editable. A wrong edit can stop mail from arriving. Lock them again when you're done.",
+  "routingDisableAction": "Turn off Email Routing",
+  "routingDisableFooter": "Removes the MX records Email Routing added. Mail to every address at this domain stops arriving.",
+  "routingDisableConfirmTitle": "Turn off Email Routing?",
+  "routingDisableConfirmMessage": "Cloudflare removes the MX records it added for {domain}. Mail to every address there, including your Edgepost mailbox, stops arriving until you turn routing back on.",
+  "@routingDisableConfirmMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingDisabledToast": "Email routing is off.",
+  "routingEditorNewTitle": "New address",
+  "routingEditorEditTitle": "Edit address",
+  "routingEditorGoneTitle": "This rule no longer exists",
+  "routingEditorGoneMessage": "It was deleted, perhaps from another device or the Cloudflare dashboard.",
+  "routingEditorAddressLabel": "Address",
+  "routingEditorAddressPlaceholder": "contact",
+  "routingEditorAddressHelp": "The part before the @.",
+  "routingEditorAddressPreview": "Mail to {address}",
+  "@routingEditorAddressPreview": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorAddressRequired": "Enter the part before the @.",
+  "routingEditorAddressTooLong": "Too long: up to 64 characters before the @, and 90 for the whole address.",
+  "routingEditorAddressInvalid": "Use letters, numbers and symbols like . _ + - with no spaces, and no dot at the start, the end or twice in a row.",
+  "routingEditorDuplicate": "This address already has a rule. Edit that one instead.",
+  "routingEditorLimit": "This domain has {max} rules, Cloudflare's limit. Delete one, or use the catch-all.",
+  "@routingEditorLimit": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "routingEditorActionLabel": "When mail arrives",
+  "routingEditorForwardHelp": "Forward it to an address you own, such as your personal inbox.",
+  "routingEditorMailboxHelp": "Keep it in your Edgepost mailbox, the {worker} Worker in your account. Set up the mailbox in the Mail tab first.",
+  "@routingEditorMailboxHelp": {
+    "placeholders": {
+      "worker": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorWorkerHelp": "Handled by the Worker {worker}.",
+  "@routingEditorWorkerHelp": {
+    "placeholders": {
+      "worker": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorDropHelp": "Discard mail sent to this address.",
+  "routingEditorDeliverTo": "Forward to",
+  "routingEditorDestFooter": "Destination addresses belong to the account and work for every domain in it.",
+  "routingEditorPendingFooter": "{email} isn't verified yet. The rule can't deliver until its owner clicks the link Cloudflare emailed.",
+  "@routingEditorPendingFooter": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorPickDestination": "Choose where to forward mail.",
+  "routingEditorEnabled": "Rule on",
+  "routingEditorEnabledHelp": "Turn off to pause this address without deleting it.",
+  "routingEditorDelete": "Delete rule",
+  "routingSelected": "Selected",
+  "routingAddressesTitle": "Destination addresses",
+  "routingAddressesEmptyTitle": "No destination addresses",
+  "routingAddressesEmptyMessage": "Add an inbox you own. Cloudflare emails it a link, and forwarding starts once the owner clicks it.",
+  "routingAddressesPendingHeader": "Waiting for verification",
+  "routingAddressesPendingFooter": "Each owner must click the link Cloudflare emailed. Edgepost can't resend it, because Cloudflare's API has no way to; resend it from the Cloudflare dashboard.",
+  "routingAddressesVerifiedHeader": "Verified",
+  "routingAddressesAccountNote": "These addresses belong to the account {account} and work for every domain in it.",
+  "@routingAddressesAccountNote": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressVerified": "Verified",
+  "routingAddressVerifiedOn": "Verified {date}",
+  "@routingAddressVerifiedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressWaiting": "Waiting for verification",
+  "routingAddressWaitingSince": "Waiting for verification since {date}",
+  "@routingAddressWaitingSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleteTitle": "Delete {email}?",
+  "@routingAddressDeleteTitle": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleteMessage": "Rules that forward to it stop delivering mail.",
+  "routingAddressDeleteUsed": "{count, plural, =1{1 rule on {domain} forwards to it and will stop delivering mail.} other{{count} rules on {domain} forward to it and will stop delivering mail.}}",
+  "@routingAddressDeleteUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleted": "Deleted {email}.",
+  "@routingAddressDeleted": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAllInboxes": "All inboxes",
+  "mailFolderInbox": "Inbox",
+  "mailFolderSent": "Sent",
+  "mailFolderArchive": "Archive",
+  "mailFolderTrash": "Trash",
+  "mailCompose": "New message",
+  "mailReply": "Reply",
+  "mailReplyAll": "Reply all",
+  "mailForward": "Forward",
+  "mailArchive": "Archive",
+  "mailMoveToInbox": "Move to inbox",
+  "mailTrash": "Move to trash",
+  "mailDeleteForever": "Delete forever",
+  "mailDeleteForeverConfirm": "Delete this message forever? It can't be recovered.",
+  "mailMarkRead": "Mark as read",
+  "mailMarkUnread": "Mark as unread",
+  "mailStar": "Star",
+  "mailUnstar": "Remove star",
+  "mailArchived": "Archived",
+  "mailTrashed": "Moved to trash",
+  "mailMoved": "Moved to inbox",
+  "mailDeleted": "Deleted",
+  "mailUnreadCount": "{count, plural, =0{No unread mail} =1{1 unread} other{{count} unread}}",
+  "@mailUnreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailEmptyInbox": "Inbox zero. Nothing waiting on you.",
+  "mailEmptyFolder": "Nothing in {folder}.",
+  "@mailEmptyFolder": {
+    "placeholders": {
+      "folder": {
+        "type": "String"
+      }
+    }
+  },
+  "mailLoadMore": "Load older messages",
+  "mailFieldTo": "To",
+  "mailFieldFrom": "From",
+  "mailFieldCc": "Cc",
+  "mailFieldBcc": "Bcc",
+  "mailFieldSubject": "Subject",
+  "mailToPrefix": "To {name}",
+  "@mailToPrefix": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailNoSubject": "(no subject)",
+  "mailSetupTitle": "Your domain mailbox",
+  "mailSetupIntro": "Read, reply to and send mail on your own domains. Edgepost deploys a small mail service into your Cloudflare account: incoming mail is stored in your account's D1 and R2, and you send through Cloudflare Email Sending. Nothing passes through anyone else's server.",
+  "mailSetupStart": "Set up mailbox",
+  "mailSetupRequirements": "What it needs",
+  "mailSetupReqToken": "A token with Workers Scripts, D1, Workers R2 Storage and Email Routing permissions",
+  "mailSetupReqR2": "R2 turned on for the account (once, in the Cloudflare dashboard)",
+  "mailSetupReqPaid": "To send to any address: the Workers Paid plan. Email Sending is in public beta. Receiving works on every plan.",
+  "mailSetupDomains": "Domains",
+  "mailSetupDomainsHelp": "Mail to these domains lands in Edgepost.",
+  "mailSetupRouting": "Which addresses",
+  "mailSetupCatchAll": "Every address (catch-all)",
+  "mailSetupSpecific": "Only these addresses",
+  "mailSetupAddressesHelp": "Local parts, separated by commas, e.g. contact, billing",
+  "mailSetupSending": "Enable sending",
+  "mailSetupSendingHelp": "Onboards each domain to Cloudflare Email Sending and adds its DNS records (cf-bounce MX, SPF and DKIM).",
+  "mailSetupRun": "Deploy and connect",
+  "mailSetupRunning": "Setting up…",
+  "mailSetupDone": "Your mailbox is ready",
+  "mailSetupDoneBody": "Send yourself a message at one of your addresses to see it arrive.",
+  "mailSetupOpenInbox": "Open inbox",
+  "mailSetupRetry": "Retry from this step",
+  "mailStepPermissions": "Check token permissions",
+  "mailStepD1": "Create D1 database",
+  "mailStepR2": "Create R2 bucket",
+  "mailStepUpload": "Upload mail Worker",
+  "mailStepPublish": "Publish on workers.dev",
+  "mailStepSchedule": "Schedule trash clean-up",
+  "mailStepConnect": "Connect to the mail service",
+  "mailStepRoute": "Route mail for {domain}",
+  "@mailStepRoute": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailStepSending": "Enable sending for {domain}",
+  "@mailStepSending": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailStepSave": "Save on this device",
+  "mailErrNoSubdomain": "This account has no workers.dev subdomain yet. In the Cloudflare dashboard open Workers & Pages once to choose one, then retry.",
+  "mailErrR2Disabled": "R2 isn't turned on for this account. Open R2 in the Cloudflare dashboard and enable it (the free tier is enough), then retry.",
+  "mailErrHealth": "The Worker was uploaded but isn't answering yet. New workers.dev addresses can take a minute. Retry shortly.",
+  "mailServiceTitle": "Mail service",
+  "mailServiceVersion": "Version {version}",
+  "@mailServiceVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "mailServiceUpdate": "Update mail service",
+  "mailServiceUpdateAvailable": "An update is available ({version}).",
+  "@mailServiceUpdateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "mailServiceAddDomains": "Add domains",
+  "mailServiceForget": "Disconnect from this device",
+  "mailServiceForgetBody": "Edgepost forgets this mail service on this device. The Worker and your stored mail stay in your Cloudflare account.",
+  "mailServiceUrl": "Endpoint",
+  "mailServiceDomains": "Domains",
+  "mailSetupNoService": "No mailbox yet",
+  "mailSetupNoServiceBody": "Deploy your mail service once and every domain you pick gets a real inbox you can answer from.",
+  "mailRemoteImagesBlocked": "Remote images are blocked to stop tracking.",
+  "mailLoadImages": "Load images",
+  "mailOpenLinkTitle": "Open link?",
+  "mailOpenLinkBody": "This link goes to:\n{url}",
+  "@mailOpenLinkBody": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachments": "{count, plural, =1{1 attachment} other{{count} attachments}}",
+  "@mailAttachments": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailShowQuoted": "Show quoted text",
+  "mailIncludeQuote": "Include original message",
+  "mailIncludeAttachments": "Include original attachments",
+  "mailAddAttachment": "Attach files",
+  "mailRecipientsRequired": "Add at least one recipient.",
+  "mailInvalidAddress": "“{value}” isn't a valid email address.",
+  "@mailInvalidAddress": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSent": "Sent",
+  "mailSending": "Sending…",
+  "mailDiscardTitle": "Discard this message?",
+  "mailDiscard": "Discard",
+  "mailSaveDraft": "Save draft",
+  "mailDraftRestored": "Draft restored",
+  "mailBodyPlaceholder": "Write your message",
+  "mailRecipientsPlaceholder": "name@example.com",
+  "mailErrRecipientNotAllowed": "Cloudflare refused this recipient. Sending to outside addresses needs the Workers Paid plan and the sending domain onboarded to Email Sending.",
+  "mailErrSenderDomain": "{domain} isn't onboarded to Email Sending yet. Run “Enable sending” in Mail service settings.",
+  "@mailErrSenderDomain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrSenderNotAllowed": "You can only send from domains connected to your mail service.",
+  "mailErrSuppressed": "This recipient is on Cloudflare's suppression list after earlier bounces or complaints.",
+  "mailErrSendingLimit": "Sending limit reached. Cloudflare raises it gradually; try again later.",
+  "mailErrTooLarge": "The message is too large to send (5 MB limit including attachments).",
+  "mailErrDelivery": "Cloudflare couldn't deliver the message. Try again in a moment.",
+  "mailErrInvalid": "Cloudflare rejected the message format: {detail}",
+  "@mailErrInvalid": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "mailNotifNewMany": "{count} new messages",
+  "@mailNotifNewMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailNotifChannel": "New mail",
+  "mailNotifChannelDescription": "A new message arrived at one of your domain addresses.",
+  "mailIdentityName": "Display name",
+  "mailSearchPlaceholder": "Search mail",
+  "mailThreadCount": "{count, plural, =1{1 message} other{{count} messages}}",
+  "@mailThreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailAttachmentFailed": "Couldn't open the attachment: {error}",
+  "@mailAttachmentFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "mailYesterday": "Yesterday",
+  "mailUnread": "Unread",
+  "mailStarred": "Starred",
+  "mailBudgetTitle": "Sending budget",
+  "mailBudgetExplain": "Workers Paid includes 3,000 sent emails a month. Beyond that Cloudflare charges $0.35 per 1,000 and has no spending cap, so your mail service stops at the limit you set here. It counts every recipient over the last 31 days. Receiving is always free.",
+  "mailBudgetLimit": "Monthly sending limit",
+  "mailBudgetOff": "Off (receive only)",
+  "mailBudgetValue": "{count} recipients",
+  "@mailBudgetValue": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetIncluded": "{count} recipients (included in Workers Paid)",
+  "@mailBudgetIncluded": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetUsage": "Sent in the last 31 days: {used} of {limit}",
+  "@mailBudgetUsage": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetResets": "Room frees up from {date}.",
+  "@mailBudgetResets": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBudgetSaved": "Sending limit updated",
+  "mailErrMonthlyLimit": "You've reached your sending limit for the last 31 days. Raise it in Settings → Mail service, or wait for older sends to drop out of the window.",
+  "mailSetupBlockedDenied": "The token is missing a permission mail needs. Add it in the Cloudflare dashboard (My Profile → API Tokens → Edit), then check again.",
+  "mailSetupBlockedR2": "Turn on R2 for this account first (one-time, free tier included), then check again.",
+  "mailSendingPending": "Sending is set up. Cloudflare is still publishing these records: {records}. This usually takes 5–15 minutes. If they don't appear, open the domain under Compute → Email Service → Email Sending in the dashboard.",
+  "@mailSendingPending": {
+    "placeholders": {
+      "records": {
+        "type": "String"
+      }
+    }
+  },
+  "mailCloudflareSaid": "Cloudflare said: {message}",
+  "@mailCloudflareSaid": {
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "mailDnsCheckTitle": "Mail DNS check",
+  "mailDnsCheckHelp": "Each domain must have exactly one DMARC record and one SPF record per name. Extra copies make receivers ignore them.",
+  "mailDnsCheckClean": "No duplicate DMARC or SPF records.",
+  "mailDnsCheckRunning": "Checking DNS…",
+  "mailDnsDupDmarc": "{count} DMARC records at _dmarc: keep one, delete the others.",
+  "@mailDnsDupDmarc": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailDnsDupSpf": "{count} SPF records at {name}: keep one, delete the others.",
+  "@mailDnsDupSpf": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailDnsAddedOn": "added {date}",
+  "@mailDnsAddedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthTitle": "Sending health",
+  "mailHealthIntro": "What happened to each email you sent in the last {days} days. Cloudflare's targets: deliver above 95%, hard bounces under 2%.",
+  "@mailHealthIntro": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "mailHealthDelivered": "Delivered",
+  "mailHealthFailed": "Failed",
+  "mailHealthRate": "Rate",
+  "mailHealthNoSends": "Nothing sent from this domain in the last {days} days.",
+  "@mailHealthNoSends": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "mailHealthLowRate": "Delivery is below Cloudflare's 95% target. Fix the causes below before sending more.",
+  "mailHealthAllGood": "Every recent send was delivered.",
+  "mailHealthAuth": "SPF {spf} · DKIM {dkim} · DMARC {dmarc}",
+  "@mailHealthAuth": {
+    "placeholders": {
+      "spf": {
+        "type": "String"
+      },
+      "dkim": {
+        "type": "String"
+      },
+      "dmarc": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthHintAuth": "Authentication failed: receivers reject mail that fails SPF, DKIM or DMARC. Run the Mail DNS check, make sure each name has only one SPF and one DMARC record, and wait until the sending records are published.",
+  "mailHealthHintUnknownUser": "The address doesn't exist. Check it for typos; Cloudflare stops sending to it for a while.",
+  "mailHealthHintSpam": "The receiver flagged this message as spam.",
+  "mailHealthHintOther": "Not delivered. The receiving server's reason is below.",
+  "mailHealthPause": "Pause sending",
+  "mailHealthPauseBody": "Sets your sending limit to Off, so nothing more is sent until you raise it again in Mail service. Receiving keeps working.",
+  "mailHealthPaused": "Sending paused",
+  "mailHealthOpen": "Sending health",
+  "mailHealthOpenHelp": "Delivery rate, bounces and why each failed send failed.",
+  "mailFromTitle": "Send from",
+  "mailFromSearch": "Search addresses",
+  "mailFromRecent": "Recent",
+  "mailFromOtherTitle": "Another address",
+  "mailFromOtherHelp": "Any address on your domains works. Replies to it land in Edgepost.",
+  "mailFromLocalHint": "name",
+  "mailFromUse": "Use this address",
+  "mailFromInvalid": "Use letters, numbers, dots, dashes or underscores.",
+  "mailFromNameTitle": "Name and signature",
+  "mailFromNameHelp": "Shown to recipients for {address}.",
+  "@mailFromNameHelp": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailFromNoMatch": "No address matches “{query}”.",
+  "@mailFromNoMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachPhoto": "Photo or video",
+  "mailAttachFile": "File",
+  "mailAttachTooBig": "{name} is too big: {size} won't fit. {room} left in this message.",
+  "@mailAttachTooBig": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "size": {
+        "type": "String"
+      },
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "mailAttachFailed": "Couldn't add the file: {error}",
+  "@mailAttachFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSizeAsSent": "{used} of 5 MB as sent",
+  "@mailSizeAsSent": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSizeOver": "Over Cloudflare's 5 MB limit (attachments grow about a third when encoded). Remove an attachment.",
+  "mailSendFailedTitle": "Couldn't send",
+  "mailErrorDetails": "Details: {details}",
+  "@mailErrorDetails": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrOffline": "You're offline. The message is kept as a draft.",
+  "mailErrTimeout": "Your mail service is taking too long. If the message went out it won't be sent twice: try again.",
+  "mailErrUnavailable": "Your mail service is temporarily unavailable (Cloudflare {status}). Try again in a moment.",
+  "@mailErrUnavailable": {
+    "placeholders": {
+      "status": {
+        "type": "int"
+      }
+    }
+  },
+  "mailToAddress": "to {address}",
+  "@mailToAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailFromAddress": "from {address}",
+  "@mailFromAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHasAttachment": "Has attachments",
+  "mailAddCcBcc": "Add Cc or Bcc",
+  "mailSendsLeft": "{count, plural, =0{Sending limit reached: this message won't go out until older sends leave the 31-day window.} =1{1 send left before your sending limit.} other{{count} sends left before your sending limit.}}",
+  "@mailSendsLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mailFromEditFor": "Name and signature for {address}",
+  "@mailFromEditFor": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "mailChooseInbox": "Showing {scope}. Choose inbox",
+  "@mailChooseInbox": {
+    "placeholders": {
+      "scope": {
+        "type": "String"
+      }
+    }
+  },
+  "mailHealthEmpty": "No sending domains yet",
+  "mailHealthEmptyBody": "Once you send from one of your domains, delivered, bounced and failed messages show up here.",
+  "mailYouTo": "You → {name}",
+  "@mailYouTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSignature": "Signature",
+  "mailSignaturePlaceholder": "Add a signature to this message",
+  "mailSignatureReset": "Reset",
+  "mailSignatureThisMessage": "Changes here are for this message only.",
+  "mailSignatureEditedHere": "Changed for this message only.",
+  "mailSignatureLogo": "Logo",
+  "mailSignatureLogoLabel": "The {domain} logo",
+  "@mailSignatureLogoLabel": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSignatureEditDefault": "Edit the default for {domain}",
+  "@mailSignatureEditDefault": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandTitle": "Signature & logo",
+  "mailBrandLogo": "Logo",
+  "mailBrandLogoHelp": "Shown above your signature in mail you send. Any photo or image works; it's resized to fit 240 × 48.",
+  "mailBrandChooseLogo": "Choose image",
+  "mailBrandReplaceLogo": "Replace image",
+  "mailBrandRemoveLogo": "Remove logo",
+  "mailBrandSignaturePlaceholder": "Your name, role, phone, website…",
+  "mailBrandSignature": "Signature",
+  "mailBrandSignatureHelp": "Added to mail you send from {domain}, on every device. Links and email addresses become clickable. You can still change it for a single message.",
+  "@mailBrandSignatureHelp": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandPreview": "Preview",
+  "mailBrandSample": "Thanks for your message, I'll get back to you today.",
+  "mailBrandSaved": "Saved for {domain}",
+  "@mailBrandSaved": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailBrandLogoUnreadable": "That file isn't an image Edgepost can read. Try a PNG or JPEG.",
+  "mailBrandSummaryNone": "Add a signature or logo",
+  "mailBrandSummarySignature": "Signature",
+  "mailBrandSummaryLogo": "Logo",
+  "mailBrandSummaryBoth": "Signature and logo",
+  "mailSplitPlaceholder": "Choose a message to read it here.",
+  "mailSuggestedRecipients": "People you've written to",
+  "mailSuggestAdd": "Add {recipient}",
+  "@mailSuggestAdd": {
+    "placeholders": {
+      "recipient": {
+        "type": "String"
+      }
+    }
+  },
+  "mailSuggestTypo": "Did you mean this? You typed {domain}",
+  "@mailSuggestTypo": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "mailErrServiceMissing": "Your mail service is no longer in your Cloudflare account.",
+  "mailServiceMissingTitle": "Your mail service is gone",
+  "mailServiceMissingBody": "The edgepost-mail Worker isn't in your Cloudflare account any more. Set it up again to receive and send mail here. Mail it kept is gone if its database and bucket were deleted too.",
+  "mailServiceSetUpAgain": "Set up again",
+  "welcomeTitle": "Your domains, handled.",
+  "welcomeBody": "Edgepost brings your Cloudflare® domains into one place: DNS, SSL and cache, traffic, Workers and Pages, and a real mailbox on each domain that you can read, reply to and send from.",
+  "welcomePrivacy": "Your token stays in this device's secure storage. Edgepost talks only to Cloudflare and to a mail service that runs in your own Cloudflare account. No Edgepost server, no tracking.",
+  "welcomeAddToken": "Add a Cloudflare API token",
+  "welcomeHowTo": "How to create a token",
+  "welcomeNotAffiliated": "Edgepost is an independent app. It isn't made, endorsed or supported by Cloudflare, Inc., and isn't affiliated with it.",
+  "addTokenTitle": "Add API token",
+  "addTokenLabel": "Name (optional)",
+  "addTokenLabelPlaceholder": "e.g. Personal account",
+  "addTokenField": "API token",
+  "addTokenFieldHelp": "Create it under My Profile → API Tokens in the Cloudflare dashboard. Paste it here; it's stored only on this device.",
+  "addTokenPaste": "Paste",
+  "addTokenVerify": "Verify and add",
+  "addTokenVerifying": "Checking the token and what it can reach…",
+  "addTokenEmpty": "Paste a token first.",
+  "addTokenRecommended": "Recommended permissions",
+  "addTokenRecommendedHelp": "Grant only what you'll use. Each feature tells you if a permission is missing.",
+  "addTokenAddedTitle": "Token added",
+  "addTokenWriteNote": "Edit rights are confirmed the first time you change something.",
+  "capabilityAvailable": "Available",
+  "capabilityMissing": "Missing",
+  "capZones": "See domains",
+  "capDns": "DNS records",
+  "capZoneSettings": "SSL, cache and security settings",
+  "capCachePurge": "Purge cache",
+  "capAnalytics": "Traffic analytics",
+  "capEmailRouting": "Email routing rules",
+  "capEmailAddresses": "Forwarding addresses",
+  "capDmarc": "DMARC reports",
+  "capWorkers": "Workers",
+  "capWorkerRoutes": "Worker routes",
+  "capPages": "Pages",
+  "capD1": "D1 (mailbox storage)",
+  "capR2": "R2 (mail attachments)",
+  "capRegistrar": "Registrar renewals",
+  "lockTitle": "Edgepost is locked",
+  "lockUnlock": "Unlock",
+  "lockReason": "Unlock to see your domains and mail",
+  "capabilityNotEnabled": "Turn on in the dashboard",
+  "capabilityUnknown": "Not confirmed yet: checked again when you use it",
+  "capR2NotEnabledHint": "R2 needs a one-time subscription (free tier included). In the Cloudflare dashboard open Storage & databases → R2 → Overview and complete the checkout.",
+  "capDeniedHint": "Add this permission to the token in the Cloudflare dashboard: {permission}",
+  "@capDeniedHint": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "capOpenDashboard": "Open the Cloudflare dashboard",
+  "capCheckAgain": "Check permissions again",
+  "capChecking": "Checking permissions…",
+  "capBilling": "Budget and usage cost",
+  "addAccountAvailable": "Reachable with your tokens",
+  "addAccountAvailableHelp": "Accounts your API tokens already reach. Adding one needs no new token.",
+  "addAccountNewToken": "With a new API token",
+  "addAccountChoose": "Choose accounts",
+  "addAccountChooseHelp": "{count, plural, =1{This token reaches 1 account.} other{This token reaches {count} accounts. Pick the ones to show in Edgepost; you can add the others later.}}",
+  "@addAccountChooseHelp": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addAccountAlready": "Already added",
+  "addAccountAllAdded": "Every account this token reaches is already in Edgepost. Keep it as another key for them (for example while you replace an expiring token).",
+  "addAccountKeepToken": "Keep token",
+  "addAccountConfirm": "{count, plural, =0{Choose an account} =1{Add 1 account} other{Add {count} accounts}}",
+  "@addAccountConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addAccountChecking": "Checking what the token can do: {done} of {total}",
+  "@addAccountChecking": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsTokens": "API tokens",
+  "settingsTokenKindUser": "User token",
+  "settingsTokenKindAccount": "Account token",
+  "settingsTokenRecheck": "Check permissions again",
+  "settingsTokenRemove": "Remove token",
+  "settingsTokenRemoveConfirm": "Remove “{label}”?",
+  "@settingsTokenRemoveConfirm": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsTokenRemoveBody": "The token is deleted from this device. It stays valid in Cloudflare until you revoke it there.",
+  "settingsTokenCapabilities": "What it can do",
+  "settingsTokenRechecked": "Permissions updated",
+  "settingsSecurity": "Security",
+  "settingsAppearance": "Appearance",
+  "settingsAppearanceLight": "Light",
+  "settingsAppearanceDark": "Dark",
+  "settingsAppearanceSystem": "System",
+  "settingsAppearanceSystemHelp": "Follows your device's light or dark setting.",
+  "settingsAppLock": "Require Face ID / fingerprint",
+  "settingsAppLockHelp": "Locks Edgepost when you leave it for more than a minute and hides its content in the app switcher.",
+  "settingsAppLockUnavailable": "Set up a device passcode to use app lock.",
+  "settingsMail": "Mail",
+  "settingsMailService": "Mail service",
+  "settingsMailNotSetUp": "Not set up",
+  "settingsMailReady": "Running",
+  "settingsNewMailAlerts": "New mail alerts",
+  "settingsNewMailAlertsHelp": "Checks for new mail in the background. The system decides how often, usually every 15 to 60 minutes.",
+  "settingsAbout": "About",
+  "settingsVersion": "Version",
+  "settingsLicenses": "Open-source licenses",
+  "settingsPrivacy": "Privacy policy",
+  "settingsSourceCode": "Source code",
+  "settingsSourceCodeLicense": "MIT",
+  "settingsContact": "Contact",
+  "settingsPrivacyBody": "Edgepost has no server and collects no data. Your API tokens live in this device's secure storage. App traffic goes only to api.cloudflare.com and to the mail Worker in your own Cloudflare account. Cached lists and recent mail are stored on this device so they open instantly.",
+  "settingsNotAffiliated": "Edgepost is an independent app. It isn't made, endorsed or supported by Cloudflare, Inc., and isn't affiliated with it. Cloudflare, Cloudflare Workers and Cloudflare Pages are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.",
+  "settingsNotifications": "Notifications",
+  "settingsBudgetAlerts": "Budget alerts",
+  "settingsBudgetAlertsHelp": "When emails reach 80% and 100% of your sending limit, and the first time usage costs money in a billing period.",
+  "settingsDeliveryAlerts": "Delivery alerts",
+  "settingsDeliveryAlertsHelp": "When a domain's delivery rate drops below Cloudflare's 95% target.",
+  "settingsNotificationsDenied": "Notifications are off for Edgepost. Turn them on in Settings.",
+  "settingsTokenExpiresTitle": "Expires",
+  "settingsTokenNoExpiry": "Never",
+  "settingsTokenExpiryHelp": "Read from Cloudflare each time the app opens, so a date you change in the Cloudflare dashboard shows up here. To replace an expiring token, create or roll it in the dashboard and add the new one.",
+  "settingsTokenAddReplacement": "Add the new token",
+  "accountsTitle": "Accounts",
+  "accountTitle": "Account",
+  "accountAdd": "Add account",
+  "accountsManage": "Manage accounts",
+  "accountNoAccess": "No access: add a token for it",
+  "accountCurrent": "current account",
+  "accountShowing": "Showing now",
+  "accountSwitched": "Switched to {name}",
+  "@accountSwitched": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountButtonLabel": "Account: {name}",
+  "@accountButtonLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountButtonHint": "Shows your accounts",
+  "accountSwitchBack": "Switch to {name}",
+  "@accountSwitchBack": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountOthersNeedYou": "Another account needs you",
+  "accountOthersUnread": "Another account has unread mail",
+  "accountName": "Name",
+  "accountRename": "Name this account",
+  "accountRenameHelp": "Only on this device. Leave it empty to use Cloudflare's name, “{name}”.",
+  "@accountRenameHelp": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountCloudflareName": "In Cloudflare: {name}",
+  "@accountCloudflareName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSwitchTo": "Switch to {name}",
+  "@accountSwitchTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountTokenAlsoReaches": "This token also gives access to {names}; they'll keep working only if another token reaches them.",
+  "@accountTokenAlsoReaches": {
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "accountRemove": "Remove from Edgepost",
+  "accountRemoveConfirm": "Remove {name} from Edgepost?",
+  "@accountRemoveConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountRemoveBody": "Nothing changes in Cloudflare. This device forgets the account: its mail connection, what was kept for it offline, and any token that only reached it.",
+  "accountRemoved": "{name} removed from Edgepost",
+  "@accountRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "todayNeedsYou": "Needs you",
+  "todayInbound": "Inbound",
+  "todayDeploys": "Deploys",
+  "todayTraffic": "Traffic · 7 days",
+  "todayAllClear": "Every strip is in line. Nothing needs you right now.",
+  "todaySeeAll": "All {count}",
+  "@todaySeeAll": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "todayNoUnread": "No unread mail.",
+  "todaySetUpMail": "Set up your domain mailbox",
+  "todayFieldRequests": "Requests",
+  "todayFieldBandwidth": "Bandwidth",
+  "todayFieldCached": "Cached",
+  "todayFleetCallsign": "All domains",
+  "todayFleetCaption": "{count, plural, =1{1 domain} other{{count} domains}}",
+  "@todayFleetCaption": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonRegistrar": "Registration expires in {days, plural, =0{less than a day} =1{1 day} other{{days} days}} and auto-renew is off.",
+  "@todayReasonRegistrar": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonRegistrarExpired": "Registration has expired. Renew it in the Cloudflare dashboard.",
+  "todayReasonTokenExpiry": "This API token expires in {days, plural, =0{less than a day} =1{1 day} other{{days} days}}. Roll it in the Cloudflare dashboard, then add the new one.",
+  "@todayReasonTokenExpiry": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonMailUpdate": "A newer mail service ({version}) is ready to install.",
+  "@todayReasonMailUpdate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "todayFieldExpires": "Expires",
+  "todayFieldToken": "Token",
+  "todayFieldMail": "Mail service",
+  "todayFieldNeedsYou": "Needs you",
+  "todayFieldUnread": "Unread",
+  "todayNoAnalytics": "Add “Zone · Analytics · Read” to a token to see traffic here.",
+  "budgetTitle": "Budget",
+  "budgetCallsign": "This period",
+  "budgetUsageCost": "Usage cost",
+  "budgetDaysLeft": "{count, plural, =0{ends today} =1{ends tomorrow} other{{count} days left}}",
+  "@budgetDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "budgetReasonSendCap": "Emails at {percent} of your sending limit. Sending stops at the limit.",
+  "@budgetReasonSendCap": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetReasonCost": "Usage beyond your plan this period: {amount}. See what's billing.",
+  "@budgetReasonCost": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetNoBilling": "Add “Account · Billing · Read” to your token to see usage cost. Emails sent are tracked either way.",
+  "budgetUnavailable": "Cloudflare's usage data isn't available right now ({reason}). Emails sent are still tracked.",
+  "@budgetUnavailable": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetScreenTitle": "Budget",
+  "budgetPeriod": "{start} – {end}",
+  "@budgetPeriod": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetServices": "Usage this period",
+  "budgetServicesEmpty": "No usage beyond what your plan includes so far.",
+  "budgetIncluded": "Included in Workers Paid",
+  "budgetIncludedSource": "From Cloudflare's pricing pages. Usage past these amounts is billed.",
+  "budgetIncWorkers": "Workers: 10 M requests, 30 M CPU ms",
+  "budgetIncD1": "D1: 25 B rows read, 50 M written, 5 GB",
+  "budgetIncR2": "R2: 10 GB, 1 M Class A, 10 M Class B operations",
+  "budgetIncEmail": "Email Sending: 3,000 emails",
+  "budgetSending": "Sending limit",
+  "budgetOpenBilling": "Billing in the Cloudflare dashboard",
+  "budgetAlpha": "Usage cost comes from Cloudflare's billable-usage API (Alpha) and may lag by a few hours.",
+  "alertSend80Title": "Sending at 80% of your limit",
+  "alertSend80Body": "{used} of {limit} emails in the last 31 days. Sending stops at the limit.",
+  "@alertSend80Body": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "alertSend100Title": "Sending limit reached",
+  "alertSend100Body": "No more emails go out until older sends leave the 31-day window, or you raise the limit.",
+  "alertCostTitle": "Cloudflare usage is costing money",
+  "alertCostBody": "{amount} beyond your plan this period. Open Budget to see which service.",
+  "@alertCostBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "alertDeliveryTitle": "Delivery problems on {domain}",
+  "@alertDeliveryTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "alertDeliveryBody": "Delivered {rate} of recent emails (target 95%). Open Sending health to see why.",
+  "@alertDeliveryBody": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "todayReasonDelivery": "Delivered {rate} of recent emails, below Cloudflare's 95% target.",
+  "@todayReasonDelivery": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailFrom": "New mail from {sender}",
+  "@newMailFrom": {
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailOpen": "Open",
+  "todayOtherAccounts": "Other accounts",
+  "newMailInFrom": "New mail in {account} from {sender}",
+  "@newMailInFrom": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      },
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailInMany": "{count} new messages in {account}",
+  "@newMailInMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "alertChannelName": "Budget and delivery",
+  "notifOfferAction": "Turn on",
+  "notifOfferTitle": "Get alerts on this device?",
+  "notifOfferLater": "Not now",
+  "budgetSendsLeft": "Sends left",
+  "budgetPeriodField": "Period",
+  "budgetSendingOff": "Off",
+  "budgetMeterCaption": "{sent} of {limit} emails sent in the last 31 days",
+  "@budgetMeterCaption": {
+    "placeholders": {
+      "sent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetNoBillingShort": "Usage cost needs “Account · Billing · Read” on your token.",
+  "budgetUsageUnavailableShort": "Usage cost isn't available right now; emails are still counted.",
+  "budgetAlertsTitle": "Alert me at 80% and 100%",
+  "budgetAlertsHelp": "A notification when emails reach 80% and 100% of your sending limit, and the first time usage costs money in a period.",
+  "budgetSemantic": "{sent} of {limit} emails sent, {left} left",
+  "@budgetSemantic": {
+    "placeholders": {
+      "sent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "todayBackInLine": "Back in line",
+  "budgetSendingLimit": "Sending limit",
+  "todayMailServiceCallsign": "Mail service",
+  "controlsTitle": "SSL, cache & security",
+  "controlsSectionEncryption": "Encryption",
+  "controlsSectionCache": "Cache",
+  "controlsSectionSecurity": "Security",
+  "controlsSectionCloudflare": "Cloudflare",
+  "controlsSectionDnssec": "DNSSEC",
+  "controlsSslMode": "SSL/TLS mode",
+  "controlsSslOff": "Off",
+  "controlsSslOffDetail": "No HTTPS. Visitors and your server talk over plain HTTP.",
+  "controlsSslFlexible": "Flexible",
+  "controlsSslFlexibleDetail": "HTTPS for visitors, plain HTTP from Cloudflare to your server.",
+  "controlsSslFull": "Full",
+  "controlsSslFullDetail": "HTTPS all the way; your server's certificate isn't checked.",
+  "controlsSslStrict": "Full (strict)",
+  "controlsSslStrictDetail": "HTTPS all the way, with a valid certificate on your server.",
+  "controlsSslWeakWarning": "Off and Flexible leave traffic between Cloudflare and your server unencrypted.",
+  "controlsSslWeakReason": "SSL is {mode}: traffic to your server isn't encrypted.",
+  "@controlsSslWeakReason": {
+    "placeholders": {
+      "mode": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsAlwaysHttps": "Always Use HTTPS",
+  "controlsAlwaysHttpsDetail": "Redirects every HTTP request to HTTPS.",
+  "controlsHttpsRewrites": "Automatic HTTPS Rewrites",
+  "controlsHttpsRewritesDetail": "Rewrites http:// links in your pages to https:// where possible.",
+  "controlsMinTls": "Minimum TLS version",
+  "controlsMinTlsOption": "TLS {version}",
+  "@controlsMinTlsOption": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsMinTls10Detail": "Accepts every client, including very old ones.",
+  "controlsMinTls11Detail": "Turns away clients that only speak TLS 1.0.",
+  "controlsMinTls12Detail": "Turns away clients that only speak TLS 1.0 or 1.1.",
+  "controlsMinTls13Detail": "Modern clients only. Some older devices and tools can't connect.",
+  "controlsTls13": "TLS 1.3",
+  "controlsTls13On": "On",
+  "controlsTls13OnDetail": "Faster, more private handshakes for clients that support it.",
+  "controlsTls13Off": "Off",
+  "controlsTls13OffDetail": "Clients connect with TLS 1.2 or older.",
+  "controlsTls13Zrt": "On with 0-RTT",
+  "controlsTls13ZrtDetail": "Also lets returning visitors resume a connection without a full handshake.",
+  "controlsPurgeEverything": "Purge everything",
+  "controlsPurgeEverythingDetail": "Removes every cached file. Your server answers the next requests.",
+  "controlsPurgeEverythingTitle": "Purge all cached files?",
+  "controlsPurgeEverythingMessage": "Cloudflare fetches every file for {domain} from your server again, which can slow the site and load your server for a while.",
+  "@controlsPurgeEverythingMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeEverythingConfirm": "Purge everything",
+  "controlsPurgeEverythingDone": "Cache purged for {domain}. Your server answers the next requests.",
+  "@controlsPurgeEverythingDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeCooldown": "Wait {seconds} s: the Free plan allows 5 full purges per minute.",
+  "@controlsPurgeCooldown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeRateLimited": "Cloudflare is limiting purges for this account. Try again in a minute.",
+  "controlsPurgeUrls": "Purge URLs",
+  "controlsPurgeUrlsDetail": "Removes specific files from the cache.",
+  "controlsPurgeUrlsField": "URLs, one per line",
+  "controlsPurgeUrlsPlaceholder": "https://{domain}/styles.css",
+  "@controlsPurgeUrlsPlaceholder": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsHelp": "Full URLs on {domain} or its subdomains. Long lists go out in batches of 100.",
+  "@controlsPurgeUrlsHelp": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsEmpty": "Add at least one URL, like https://{domain}/index.html.",
+  "@controlsPurgeUrlsEmpty": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlNotUrl": "Not a full URL. Start it with https://: {line}",
+  "@controlsPurgeUrlNotUrl": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlNotHttp": "Only http:// and https:// URLs can be purged: {line}",
+  "@controlsPurgeUrlNotHttp": {
+    "placeholders": {
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlOtherDomain": "Not on {domain}: {line}",
+  "@controlsPurgeUrlOtherDomain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      },
+      "line": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPurgeUrlsMore": "{count, plural, =1{and 1 more line to fix} other{and {count} more lines to fix}}",
+  "@controlsPurgeUrlsMore": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsButton": "{count, plural, =0{Purge URLs} =1{Purge 1 URL} other{Purge {count} URLs}}",
+  "@controlsPurgeUrlsButton": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsDone": "{count, plural, =1{1 URL purged.} other{{count} URLs purged.}}",
+  "@controlsPurgeUrlsDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "controlsPurgeUrlsPartial": "{done} of {total} URLs purged, then Cloudflare refused the rest: {reason}",
+  "@controlsPurgeUrlsPartial": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsDevMode": "Development mode",
+  "controlsDevModeOffDetail": "Bypasses the cache so changes show at once. Turns itself off after 3 hours.",
+  "controlsDevModeOnDetail": "Cache bypassed. {time} left.",
+  "@controlsDevModeOnDetail": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsUnderAttack": "Under Attack mode",
+  "controlsUnderAttackDetail": "Shows every visitor a challenge before your site. Use it only during an attack: it can block APIs and apps.",
+  "controlsUnderAttackOnTitle": "Turn on Under Attack mode?",
+  "controlsUnderAttackOnMessage": "Every visitor to {domain} sees a challenge first. APIs, webhooks and apps that call this domain may stop working until you turn it off.",
+  "@controlsUnderAttackOnMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsUnderAttackOnConfirm": "Turn on",
+  "controlsSecurityLevel": "Security level",
+  "controlsSecurityLevelOff": "Off",
+  "controlsSecurityLevelEssentiallyOff": "Essentially off",
+  "controlsSecurityLevelLow": "Low",
+  "controlsSecurityLevelMedium": "Medium",
+  "controlsSecurityLevelHigh": "High",
+  "controlsSecurityLevelFooter": "Cloudflare no longer scores visitor threat, so levels below Under Attack have little effect. Turning Under Attack mode off restores the level shown here.",
+  "controlsSecurityLevelLocked": "Restored when Under Attack mode is turned off.",
+  "controlsPause": "Pause Cloudflare",
+  "controlsPauseDetail": "Traffic goes straight to your server: no cache, no Cloudflare SSL, no protection. DNS keeps working.",
+  "controlsPauseTitle": "Pause Cloudflare?",
+  "controlsPauseMessage": "Visitors to {domain} connect straight to your server. The cache, SSL and security stop applying, and your server's IP address becomes visible.",
+  "@controlsPauseMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsPauseConfirm": "Pause",
+  "controlsPauseDone": "Cloudflare paused on {domain}.",
+  "@controlsPauseDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsResume": "Resume Cloudflare",
+  "controlsResumeDetail": "Paused: traffic bypasses the proxy, cache and security.",
+  "controlsResumeTitle": "Resume Cloudflare on {domain}?",
+  "@controlsResumeTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsResumeMessage": "Traffic flows through Cloudflare's proxy, cache and security again.",
+  "controlsResumeConfirm": "Resume",
+  "controlsResumeDone": "Cloudflare resumed on {domain}.",
+  "@controlsResumeDone": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsDnssecStatus": "Status",
+  "controlsDnssecActive": "Active",
+  "controlsDnssecPending": "Pending",
+  "controlsDnssecDisabled": "Off",
+  "controlsDnssecPendingDisabled": "Turning off",
+  "controlsDnssecError": "Error",
+  "controlsDnssecDs": "DS record",
+  "controlsDnssecDigest": "Digest",
+  "controlsDnssecKeyTag": "Key tag",
+  "controlsDnssecAlgorithm": "Algorithm",
+  "controlsDnssecDigestType": "Digest type",
+  "controlsDnssecPublicKey": "Public key",
+  "controlsDnssecFooterActive": "Your registrar publishes this DS record. Change it only when you move DNS to another provider.",
+  "controlsDnssecFooterPending": "Add this DS record at your registrar. DNSSEC turns active once the registrar publishes it.",
+  "controlsDnssecFooterDisabled": "DNSSEC is off. Turn it on in the Cloudflare dashboard, then add the DS record it shows at your registrar.",
+  "controlsDnssecFooterError": "Cloudflare reports a DNSSEC problem. Check that the DS record at your registrar matches this one.",
+  "controlsCopyValue": "Copy {label}",
+  "@controlsCopyValue": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsSaveFailed": "Couldn't change {setting}. {reason}",
+  "@controlsSaveFailed": {
+    "placeholders": {
+      "setting": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "controlsNotEditable": "Your plan can't change this setting.",
+  "controlsUnreadable": "Couldn't read this setting. {reason}",
+  "@controlsUnreadable": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "domainsFilterAll": "All",
+  "domainsFilterAttention": "Needs you",
+  "domainsFilterPinned": "Pinned",
+  "domainsEmptyTitle": "No domains yet",
+  "domainsEmptyMessage": "This token can't see any zones. Add a token with “Zone · Zone · Read”, or add a domain in the Cloudflare dashboard.",
+  "domainsAttentionEmpty": "Every domain is in line.",
+  "domainsPinnedEmpty": "Pin a domain from its page to keep it on top.",
+  "zoneFieldStatus": "Status",
+  "zoneFieldPlan": "Plan",
+  "zoneStatusActive": "Active",
+  "zoneStatusPending": "Pending",
+  "zoneStatusPaused": "Paused",
+  "zoneStatusMoved": "Moved",
+  "zoneStatusOther": "Inactive",
+  "zoneReasonPending": "Nameservers not switched yet: Cloudflare isn't serving this domain.",
+  "zoneReasonPaused": "Cloudflare is paused: traffic bypasses the proxy, cache and security.",
+  "zoneReasonDevMode": "Development mode is on: the cache is bypassed for {minutes} more min.",
+  "@zoneReasonDevMode": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "zoneHubDns": "DNS records",
+  "zoneHubControls": "SSL, cache & security",
+  "zoneHubAnalytics": "Traffic",
+  "zoneHubEmail": "Email routing",
+  "zoneHubMailbox": "Mailbox",
+  "zoneHubWorkers": "Worker routes",
+  "zoneHubPin": "Pin",
+  "zoneHubUnpin": "Unpin",
+  "zoneHubNameservers": "Nameservers",
+  "zoneHubNameserversHelp": "Set these at your registrar to finish moving the domain to Cloudflare.",
+  "zoneHubOpenDashboard": "Open in Cloudflare dashboard",
+  "zoneHubDetails": "Details",
+  "zoneHubCreated": "Added",
+  "zoneHubActivated": "Activated",
+  "zoneHubRegistrar": "Previous registrar",
+  "zoneHubManage": "Manage",
+  "domainsFieldRequests": "Requests · 7d",
+  "domainsSplitPlaceholder": "Choose a domain to see its DNS, traffic and settings here."
+}

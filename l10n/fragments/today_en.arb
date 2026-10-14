@@ -1,0 +1,237 @@
+{
+  "todayNeedsYou": "Needs you",
+  "todayInbound": "Inbound",
+  "todayDeploys": "Deploys",
+  "todayTraffic": "Traffic · 7 days",
+  "todayAllClear": "Every strip is in line. Nothing needs you right now.",
+  "todaySeeAll": "All {count}",
+  "@todaySeeAll": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "todayNoUnread": "No unread mail.",
+  "todaySetUpMail": "Set up your domain mailbox",
+  "todayFieldRequests": "Requests",
+  "todayFieldBandwidth": "Bandwidth",
+  "todayFieldCached": "Cached",
+  "todayFleetCallsign": "All domains",
+  "todayFleetCaption": "{count, plural, =1{1 domain} other{{count} domains}}",
+  "@todayFleetCaption": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonRegistrar": "Registration expires in {days, plural, =0{less than a day} =1{1 day} other{{days} days}} and auto-renew is off.",
+  "@todayReasonRegistrar": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonRegistrarExpired": "Registration has expired. Renew it in the Cloudflare dashboard.",
+  "todayReasonTokenExpiry": "This API token expires in {days, plural, =0{less than a day} =1{1 day} other{{days} days}}. Roll it in the Cloudflare dashboard, then add the new one.",
+  "@todayReasonTokenExpiry": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "todayReasonMailUpdate": "A newer mail service ({version}) is ready to install.",
+  "@todayReasonMailUpdate": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "todayFieldExpires": "Expires",
+  "todayFieldToken": "Token",
+  "todayFieldMail": "Mail service",
+  "todayFieldNeedsYou": "Needs you",
+  "todayFieldUnread": "Unread",
+  "todayNoAnalytics": "Add “Zone · Analytics · Read” to a token to see traffic here.",
+  "budgetTitle": "Budget",
+  "budgetCallsign": "This period",
+  "budgetUsageCost": "Usage cost",
+  "budgetDaysLeft": "{count, plural, =0{ends today} =1{ends tomorrow} other{{count} days left}}",
+  "@budgetDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "budgetReasonSendCap": "Emails at {percent} of your sending limit. Sending stops at the limit.",
+  "@budgetReasonSendCap": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetReasonCost": "Usage beyond your plan this period: {amount}. See what's billing.",
+  "@budgetReasonCost": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetNoBilling": "Add “Account · Billing · Read” to your token to see usage cost. Emails sent are tracked either way.",
+  "budgetUnavailable": "Cloudflare's usage data isn't available right now ({reason}). Emails sent are still tracked.",
+  "@budgetUnavailable": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetScreenTitle": "Budget",
+  "budgetPeriod": "{start} – {end}",
+  "@budgetPeriod": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetServices": "Usage this period",
+  "budgetServicesEmpty": "No usage beyond what your plan includes so far.",
+  "budgetIncluded": "Included in Workers Paid",
+  "budgetIncludedSource": "From Cloudflare's pricing pages. Usage past these amounts is billed.",
+  "budgetIncWorkers": "Workers: 10 M requests, 30 M CPU ms",
+  "budgetIncD1": "D1: 25 B rows read, 50 M written, 5 GB",
+  "budgetIncR2": "R2: 10 GB, 1 M Class A, 10 M Class B operations",
+  "budgetIncEmail": "Email Sending: 3,000 emails",
+  "budgetSending": "Sending limit",
+  "budgetOpenBilling": "Billing in the Cloudflare dashboard",
+  "budgetAlpha": "Usage cost comes from Cloudflare's billable-usage API (Alpha) and may lag by a few hours.",
+  "alertSend80Title": "Sending at 80% of your limit",
+  "alertSend80Body": "{used} of {limit} emails in the last 31 days. Sending stops at the limit.",
+  "@alertSend80Body": {
+    "placeholders": {
+      "used": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "alertSend100Title": "Sending limit reached",
+  "alertSend100Body": "No more emails go out until older sends leave the 31-day window, or you raise the limit.",
+  "alertCostTitle": "Cloudflare usage is costing money",
+  "alertCostBody": "{amount} beyond your plan this period. Open Budget to see which service.",
+  "@alertCostBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "alertDeliveryTitle": "Delivery problems on {domain}",
+  "@alertDeliveryTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "alertDeliveryBody": "Delivered {rate} of recent emails (target 95%). Open Sending health to see why.",
+  "@alertDeliveryBody": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "todayReasonDelivery": "Delivered {rate} of recent emails, below Cloudflare's 95% target.",
+  "@todayReasonDelivery": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailFrom": "New mail from {sender}",
+  "@newMailFrom": {
+    "placeholders": {
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailOpen": "Open",
+  "todayOtherAccounts": "Other accounts",
+  "newMailInFrom": "New mail in {account} from {sender}",
+  "@newMailInFrom": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      },
+      "sender": {
+        "type": "String"
+      }
+    }
+  },
+  "newMailInMany": "{count} new messages in {account}",
+  "@newMailInMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "alertChannelName": "Budget and delivery",
+  "notifOfferAction": "Turn on",
+  "notifOfferTitle": "Get alerts on this device?",
+  "notifOfferLater": "Not now",
+  "budgetSendsLeft": "Sends left",
+  "budgetPeriodField": "Period",
+  "budgetSendingOff": "Off",
+  "budgetMeterCaption": "{sent} of {limit} emails sent in the last 31 days",
+  "@budgetMeterCaption": {
+    "placeholders": {
+      "sent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "budgetNoBillingShort": "Usage cost needs “Account · Billing · Read” on your token.",
+  "budgetUsageUnavailableShort": "Usage cost isn't available right now; emails are still counted.",
+  "budgetAlertsTitle": "Alert me at 80% and 100%",
+  "budgetAlertsHelp": "A notification when emails reach 80% and 100% of your sending limit, and the first time usage costs money in a period.",
+  "budgetSemantic": "{sent} of {limit} emails sent, {left} left",
+  "@budgetSemantic": {
+    "placeholders": {
+      "sent": {
+        "type": "String"
+      },
+      "limit": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "todayBackInLine": "Back in line",
+  "budgetSendingLimit": "Sending limit",
+  "todayMailServiceCallsign": "Mail service"
+}

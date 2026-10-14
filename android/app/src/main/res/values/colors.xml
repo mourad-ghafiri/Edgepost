@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The Signpost tile behind the adaptive icon's foreground. -->
+    <color name="ic_launcher_background">#141518</color>
+    <!-- The app's canvas, so launch hands over to the first frame seamlessly. -->
+    <color name="launch_background">#F6F7F9</color>
+</resources>

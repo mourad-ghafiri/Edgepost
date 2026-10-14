@@ -1,0 +1,89 @@
+{
+  "welcomeTitle": "Your domains, handled.",
+  "welcomeBody": "Edgepost brings your Cloudflare® domains into one place: DNS, SSL and cache, traffic, Workers and Pages, and a real mailbox on each domain that you can read, reply to and send from.",
+  "welcomePrivacy": "Your token stays in this device's secure storage. Edgepost talks only to Cloudflare and to a mail service that runs in your own Cloudflare account. No Edgepost server, no tracking.",
+  "welcomeAddToken": "Add a Cloudflare API token",
+  "welcomeHowTo": "How to create a token",
+  "welcomeNotAffiliated": "Edgepost is an independent app. It isn't made, endorsed or supported by Cloudflare, Inc., and isn't affiliated with it.",
+  "addTokenTitle": "Add API token",
+  "addTokenLabel": "Name (optional)",
+  "addTokenLabelPlaceholder": "e.g. Personal account",
+  "addTokenField": "API token",
+  "addTokenFieldHelp": "Create it under My Profile → API Tokens in the Cloudflare dashboard. Paste it here; it's stored only on this device.",
+  "addTokenPaste": "Paste",
+  "addTokenVerify": "Verify and add",
+  "addTokenVerifying": "Checking the token and what it can reach…",
+  "addTokenEmpty": "Paste a token first.",
+  "addTokenRecommended": "Recommended permissions",
+  "addTokenRecommendedHelp": "Grant only what you'll use. Each feature tells you if a permission is missing.",
+  "addTokenAddedTitle": "Token added",
+  "addTokenWriteNote": "Edit rights are confirmed the first time you change something.",
+  "capabilityAvailable": "Available",
+  "capabilityMissing": "Missing",
+  "capZones": "See domains",
+  "capDns": "DNS records",
+  "capZoneSettings": "SSL, cache and security settings",
+  "capCachePurge": "Purge cache",
+  "capAnalytics": "Traffic analytics",
+  "capEmailRouting": "Email routing rules",
+  "capEmailAddresses": "Forwarding addresses",
+  "capDmarc": "DMARC reports",
+  "capWorkers": "Workers",
+  "capWorkerRoutes": "Worker routes",
+  "capPages": "Pages",
+  "capD1": "D1 (mailbox storage)",
+  "capR2": "R2 (mail attachments)",
+  "capRegistrar": "Registrar renewals",
+  "lockTitle": "Edgepost is locked",
+  "lockUnlock": "Unlock",
+  "lockReason": "Unlock to see your domains and mail",
+  "capabilityNotEnabled": "Turn on in the dashboard",
+  "capabilityUnknown": "Not confirmed yet: checked again when you use it",
+  "capR2NotEnabledHint": "R2 needs a one-time subscription (free tier included). In the Cloudflare dashboard open Storage & databases → R2 → Overview and complete the checkout.",
+  "capDeniedHint": "Add this permission to the token in the Cloudflare dashboard: {permission}",
+  "@capDeniedHint": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "capOpenDashboard": "Open the Cloudflare dashboard",
+  "capCheckAgain": "Check permissions again",
+  "capChecking": "Checking permissions…",
+  "capBilling": "Budget and usage cost",
+  "addAccountAvailable": "Reachable with your tokens",
+  "addAccountAvailableHelp": "Accounts your API tokens already reach. Adding one needs no new token.",
+  "addAccountNewToken": "With a new API token",
+  "addAccountChoose": "Choose accounts",
+  "addAccountChooseHelp": "{count, plural, =1{This token reaches 1 account.} other{This token reaches {count} accounts. Pick the ones to show in Edgepost; you can add the others later.}}",
+  "@addAccountChooseHelp": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addAccountAlready": "Already added",
+  "addAccountAllAdded": "Every account this token reaches is already in Edgepost. Keep it as another key for them (for example while you replace an expiring token).",
+  "addAccountKeepToken": "Keep token",
+  "addAccountConfirm": "{count, plural, =0{Choose an account} =1{Add 1 account} other{Add {count} accounts}}",
+  "@addAccountConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "addAccountChecking": "Checking what the token can do: {done} of {total}",
+  "@addAccountChecking": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  }
+}

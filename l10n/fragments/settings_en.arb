@@ -1,0 +1,138 @@
+{
+  "settingsTokens": "API tokens",
+  "settingsTokenKindUser": "User token",
+  "settingsTokenKindAccount": "Account token",
+  "settingsTokenRecheck": "Check permissions again",
+  "settingsTokenRemove": "Remove token",
+  "settingsTokenRemoveConfirm": "Remove “{label}”?",
+  "@settingsTokenRemoveConfirm": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsTokenRemoveBody": "The token is deleted from this device. It stays valid in Cloudflare until you revoke it there.",
+  "settingsTokenCapabilities": "What it can do",
+  "settingsTokenRechecked": "Permissions updated",
+  "settingsSecurity": "Security",
+  "settingsAppearance": "Appearance",
+  "settingsAppearanceLight": "Light",
+  "settingsAppearanceDark": "Dark",
+  "settingsAppearanceSystem": "System",
+  "settingsAppearanceSystemHelp": "Follows your device's light or dark setting.",
+  "settingsAppLock": "Require Face ID / fingerprint",
+  "settingsAppLockHelp": "Locks Edgepost when you leave it for more than a minute and hides its content in the app switcher.",
+  "settingsAppLockUnavailable": "Set up a device passcode to use app lock.",
+  "settingsMail": "Mail",
+  "settingsMailService": "Mail service",
+  "settingsMailNotSetUp": "Not set up",
+  "settingsMailReady": "Running",
+  "settingsNewMailAlerts": "New mail alerts",
+  "settingsNewMailAlertsHelp": "Checks for new mail in the background. The system decides how often, usually every 15 to 60 minutes.",
+  "settingsAbout": "About",
+  "settingsVersion": "Version",
+  "settingsLicenses": "Open-source licenses",
+  "settingsPrivacy": "Privacy policy",
+  "settingsSourceCode": "Source code",
+  "settingsSourceCodeLicense": "MIT",
+  "settingsContact": "Contact",
+  "settingsPrivacyBody": "Edgepost has no server and collects no data. Your API tokens live in this device's secure storage. App traffic goes only to api.cloudflare.com and to the mail Worker in your own Cloudflare account. Cached lists and recent mail are stored on this device so they open instantly.",
+  "settingsNotAffiliated": "Edgepost is an independent app. It isn't made, endorsed or supported by Cloudflare, Inc., and isn't affiliated with it. Cloudflare, Cloudflare Workers and Cloudflare Pages are trademarks and/or registered trademarks of Cloudflare, Inc. in the United States and other jurisdictions.",
+  "settingsNotifications": "Notifications",
+  "settingsBudgetAlerts": "Budget alerts",
+  "settingsBudgetAlertsHelp": "When emails reach 80% and 100% of your sending limit, and the first time usage costs money in a billing period.",
+  "settingsDeliveryAlerts": "Delivery alerts",
+  "settingsDeliveryAlertsHelp": "When a domain's delivery rate drops below Cloudflare's 95% target.",
+  "settingsNotificationsDenied": "Notifications are off for Edgepost. Turn them on in Settings.",
+  "settingsTokenExpiresTitle": "Expires",
+  "settingsTokenNoExpiry": "Never",
+  "settingsTokenExpiryHelp": "Read from Cloudflare each time the app opens, so a date you change in the Cloudflare dashboard shows up here. To replace an expiring token, create or roll it in the dashboard and add the new one.",
+  "settingsTokenAddReplacement": "Add the new token",
+  "accountsTitle": "Accounts",
+  "accountTitle": "Account",
+  "accountAdd": "Add account",
+  "accountsManage": "Manage accounts",
+  "accountNoAccess": "No access: add a token for it",
+  "accountCurrent": "current account",
+  "accountShowing": "Showing now",
+  "accountSwitched": "Switched to {name}",
+  "@accountSwitched": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountButtonLabel": "Account: {name}",
+  "@accountButtonLabel": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountButtonHint": "Shows your accounts",
+  "accountSwitchBack": "Switch to {name}",
+  "@accountSwitchBack": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountOthersNeedYou": "Another account needs you",
+  "accountOthersUnread": "Another account has unread mail",
+  "accountName": "Name",
+  "accountRename": "Name this account",
+  "accountRenameHelp": "Only on this device. Leave it empty to use Cloudflare's name, “{name}”.",
+  "@accountRenameHelp": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountCloudflareName": "In Cloudflare: {name}",
+  "@accountCloudflareName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSwitchTo": "Switch to {name}",
+  "@accountSwitchTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountTokenAlsoReaches": "This token also gives access to {names}; they'll keep working only if another token reaches them.",
+  "@accountTokenAlsoReaches": {
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "accountRemove": "Remove from Edgepost",
+  "accountRemoveConfirm": "Remove {name} from Edgepost?",
+  "@accountRemoveConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "accountRemoveBody": "Nothing changes in Cloudflare. This device forgets the account: its mail connection, what was kept for it offline, and any token that only reached it.",
+  "accountRemoved": "{name} removed from Edgepost",
+  "@accountRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

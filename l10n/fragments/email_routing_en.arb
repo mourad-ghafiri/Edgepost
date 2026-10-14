@@ -1,0 +1,438 @@
+{
+  "routingTitle": "Email routing",
+  "routingStripCaption": "Email routing",
+  "routingFieldStatus": "Status",
+  "routingFieldRules": "Rules",
+  "routingFieldCatchAll": "Catch-all",
+  "routingStatusReady": "Ready",
+  "routingStatusOff": "Off",
+  "routingStatusMisconfigured": "Misconfigured",
+  "routingStatusUnlocked": "Unlocked",
+  "routingReasonOff": "Routing is off. Turn it on to receive mail at this domain through Cloudflare.",
+  "routingReasonMisconfigured": "DNS records don't match what Email Routing needs, so mail may not arrive. Add the missing records below.",
+  "routingReasonUnlocked": "Routing records are unlocked and can be changed. Lock them again when you're done.",
+  "routingReasonUnverified": "{count, plural, =1{1 rule waits on an unverified destination and can't deliver yet.} other{{count} rules wait on unverified destinations and can't deliver yet.}}",
+  "@routingReasonUnverified": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingEnableHeader": "Turn on Email Routing",
+  "routingEnableExplain": "Cloudflare adds the MX and SPF records {domain} needs and locks them so other DNS edits can't break delivery. Mail for {domain} then arrives at Cloudflare instead of any other mail provider.",
+  "@routingEnableExplain": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnableRecordsFooter": "Cloudflare adds these records when you turn routing on.",
+  "routingEnableAction": "Turn on routing",
+  "routingEnableConfirmTitle": "Turn on routing for {domain}?",
+  "@routingEnableConfirmTitle": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnableConfirmMessage": "Cloudflare adds and locks the routing records. Mail for {domain} stops reaching any other mail provider.",
+  "@routingEnableConfirmMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEnabledToast": "Email routing is on.",
+  "routingMisconfiguredExplain": "Cloudflare can add the missing MX and SPF records and lock them. If this domain used another mail provider, remove its MX records in DNS first.",
+  "routingRepairAction": "Add missing records",
+  "routingRepairedToast": "Records added and locked.",
+  "routingUnlockedExplain": "The MX and SPF records are unlocked, so DNS edits can change them. Lock them again to protect mail delivery.",
+  "routingLockAction": "Lock records",
+  "routingRulesHeader": "Addresses",
+  "routingRulesCount": "{count} of {max} rules used.",
+  "@routingRulesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "routingRulesOffFooter": "Rules take effect once routing is on.",
+  "routingRulesEmptyTitle": "No address rules yet",
+  "routingRulesEmptyMessage": "Add one to send mail for an address at {domain} to an inbox, your Edgepost mailbox, or nowhere.",
+  "@routingRulesEmptyMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddRule": "New address rule",
+  "routingRuleArrow": "→",
+  "routingRuleOffNote": "Off.",
+  "routingRuleUnverifiedNote": "Destination not verified, so this rule can't deliver yet.",
+  "routingRuleWranglerNote": "Managed by a Worker's Wrangler config.",
+  "routingRuleTurnOff": "Turn off",
+  "routingRuleTurnOn": "Turn on",
+  "routingRuleTurnedOff": "{address} is off.",
+  "@routingRuleTurnedOff": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleTurnedOn": "{address} is on.",
+  "@routingRuleTurnedOn": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleDeleteTitle": "Delete {address}?",
+  "@routingRuleDeleteTitle": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleDeleteMessage": "Mail to this address is no longer routed by this rule. The catch-all handles it if it's on.",
+  "routingRuleDeleted": "Deleted {address}.",
+  "@routingRuleDeleted": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingRuleSaved": "Saved {address}.",
+  "@routingRuleSaved": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllHeader": "Everything else",
+  "routingCatchAllTitle": "Catch-all",
+  "routingCatchAllFooter": "Handles mail to any address at {domain} that has no rule of its own, including typos.",
+  "@routingCatchAllFooter": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllOffLine": "Off. Mail to addresses without a rule isn't delivered.",
+  "routingCatchAllOffShort": "Off",
+  "routingCatchAllSheetTitle": "Catch-all",
+  "routingCatchAllSheetMessage": "What happens to mail for addresses at {domain} that have no rule?",
+  "@routingCatchAllSheetMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCatchAllOff": "Off",
+  "routingCatchAllForward": "Forward to…",
+  "routingCatchAllDrop": "Drop",
+  "routingCatchAllSaved": "Catch-all updated.",
+  "routingActionForward": "Forward",
+  "routingActionMailbox": "Mailbox",
+  "routingActionWorker": "Worker",
+  "routingActionDrop": "Drop",
+  "routingActionUnknown": "Other",
+  "routingDestMailbox": "Edgepost mailbox",
+  "routingDestWorker": "Worker {name}",
+  "@routingDestWorker": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "routingDestDropped": "Dropped",
+  "routingDestinationsLink": "Destination addresses",
+  "routingPendingCount": "{count} waiting for verification",
+  "@routingPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingPickDestinationTitle": "Forward to",
+  "routingPickDestinationUnavailable": "Destination addresses couldn't be loaded. Add one here, or check that the token has Email Routing Addresses permission.",
+  "routingPendingAddress": "{address} (waiting for verification)",
+  "@routingPendingAddress": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddAddressEllipsis": "Add address…",
+  "routingAddAddress": "Add address",
+  "routingAddAddressTitle": "Add destination address",
+  "routingAddAddressMessage": "Cloudflare emails this address a link. Mail is forwarded to it only after the owner clicks it.",
+  "routingAddressPlaceholder": "you@example.com",
+  "routingAddressInvalid": "Enter a full email address, like you@example.com.",
+  "routingAddressAddedToast": "Cloudflare sent a verification link to {email}.",
+  "@routingAddressAddedToast": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthHeader": "Mail authentication",
+  "routingAuthLoadFailed": "Couldn't check mail authentication",
+  "routingAuthNeedsDnsTitle": "DNS access needed to check SPF, DKIM and DMARC",
+  "routingAuthNoDmarcPermission": "Add “{permission}” to the token to also see SPF lookup counts and DMARC report status.",
+  "@routingAuthNoDmarcPermission": {
+    "placeholders": {
+      "permission": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthSpf": "SPF",
+  "routingAuthDkim": "DKIM",
+  "routingAuthDmarc": "DMARC",
+  "routingAuthMx": "MX",
+  "routingAuthStateOk": "Passing",
+  "routingAuthStateAttention": "Needs attention",
+  "routingAuthStateMissing": "Missing",
+  "routingAuthStateUnknown": "Unknown",
+  "routingAuthCopySuggestion": "Copy suggested {kind} record",
+  "@routingAuthCopySuggestion": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthUnknownAdvice": "Couldn't be checked.",
+  "routingAuthSpfOk": "Published and valid.",
+  "routingAuthSpfOkLookups": "Published and valid. Uses {count} of 10 DNS lookups.",
+  "@routingAuthSpfOkLookups": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingAuthSpfMissing": "No SPF record, so receivers can't tell which servers may send as this domain.",
+  "routingAuthSpfMissingRouting": "No SPF record. Copy Cloudflare's record and add it as a TXT record on the domain.",
+  "routingAuthSpfMultiple": "More than one SPF record, which receivers treat as an error. Replace them with the merged record.",
+  "routingAuthSpfNoCloudflare": "Doesn't include Cloudflare's mail servers. Copy the updated record, which adds include:_spf.mx.cloudflare.net.",
+  "routingAuthSpfPassAll": "Ends in +all, which lets any server send as this domain. Copy the record ending in ~all instead.",
+  "routingAuthSpfTooManyLookups": "Needs {count} DNS lookups; the limit is 10, so SPF fails. Remove includes you no longer use.",
+  "@routingAuthSpfTooManyLookups": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routingAuthSpfInvalid": "Cloudflare couldn't evaluate it: {detail}",
+  "@routingAuthSpfInvalid": {
+    "placeholders": {
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthDkimOk": "Email Routing's signing key (cf2024-1) is published.",
+  "routingAuthDkimMissing": "No Email Routing signing key. Cloudflare adds it when routing is turned on.",
+  "routingAuthDkimMissingRouting": "Email Routing's signing key (cf2024-1) is missing. Copy it and add it as a TXT record at cf2024-1._domainkey.",
+  "routingAuthDkimOther": "Keys published for: {selectors}.",
+  "@routingAuthDkimOther": {
+    "placeholders": {
+      "selectors": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthDmarcOk": "Enforced: spoofed mail is quarantined or rejected.",
+  "routingAuthDmarcNoReports": "Enforced. Reports don't reach Cloudflare; turn on DMARC Management in the dashboard to see who sends as this domain.",
+  "routingAuthDmarcCname": "Published through a CNAME and valid.",
+  "routingAuthDmarcMissing": "No DMARC policy. Add one at _dmarc: start with p=none to monitor, then move to quarantine.",
+  "routingAuthDmarcMultiple": "More than one DMARC record, so receivers ignore them all. Keep one.",
+  "routingAuthDmarcNone": "Policy is none, so spoofed mail still gets delivered. Move to p=quarantine once your senders pass.",
+  "routingAuthDmarcInvalid": "The record has no valid policy (p=none, quarantine or reject). Replace it.",
+  "routingAuthDmarcReportIssue": "DMARC reports need a fix ({status}). Check DMARC Management in the Cloudflare dashboard.",
+  "@routingAuthDmarcReportIssue": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAuthForeignMx": "Other MX hosts ({hosts}) compete with Cloudflare's, so some mail skips your rules. Remove them in DNS.",
+  "@routingAuthForeignMx": {
+    "placeholders": {
+      "hosts": {
+        "type": "String"
+      }
+    }
+  },
+  "routingCopyRecordHint": "Copies the record value",
+  "routingDnsHeader": "Routing DNS records",
+  "routingDnsLockedFooter": "Locked by Email Routing, so DNS edits can't change them.",
+  "routingDnsUnlockedFooter": "Unlocked: DNS edits can change these records.",
+  "routingDnsPriority": "Priority {priority}",
+  "@routingDnsPriority": {
+    "placeholders": {
+      "priority": {
+        "type": "int"
+      }
+    }
+  },
+  "routingUnlockAction": "Unlock records",
+  "routingUnlockConfirmTitle": "Unlock routing records?",
+  "routingUnlockConfirmMessage": "The MX and SPF records become editable. A wrong edit can stop mail from arriving. Lock them again when you're done.",
+  "routingDisableAction": "Turn off Email Routing",
+  "routingDisableFooter": "Removes the MX records Email Routing added. Mail to every address at this domain stops arriving.",
+  "routingDisableConfirmTitle": "Turn off Email Routing?",
+  "routingDisableConfirmMessage": "Cloudflare removes the MX records it added for {domain}. Mail to every address there, including your Edgepost mailbox, stops arriving until you turn routing back on.",
+  "@routingDisableConfirmMessage": {
+    "placeholders": {
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingDisabledToast": "Email routing is off.",
+  "routingEditorNewTitle": "New address",
+  "routingEditorEditTitle": "Edit address",
+  "routingEditorGoneTitle": "This rule no longer exists",
+  "routingEditorGoneMessage": "It was deleted, perhaps from another device or the Cloudflare dashboard.",
+  "routingEditorAddressLabel": "Address",
+  "routingEditorAddressPlaceholder": "contact",
+  "routingEditorAddressHelp": "The part before the @.",
+  "routingEditorAddressPreview": "Mail to {address}",
+  "@routingEditorAddressPreview": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorAddressRequired": "Enter the part before the @.",
+  "routingEditorAddressTooLong": "Too long: up to 64 characters before the @, and 90 for the whole address.",
+  "routingEditorAddressInvalid": "Use letters, numbers and symbols like . _ + - with no spaces, and no dot at the start, the end or twice in a row.",
+  "routingEditorDuplicate": "This address already has a rule. Edit that one instead.",
+  "routingEditorLimit": "This domain has {max} rules, Cloudflare's limit. Delete one, or use the catch-all.",
+  "@routingEditorLimit": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "routingEditorActionLabel": "When mail arrives",
+  "routingEditorForwardHelp": "Forward it to an address you own, such as your personal inbox.",
+  "routingEditorMailboxHelp": "Keep it in your Edgepost mailbox, the {worker} Worker in your account. Set up the mailbox in the Mail tab first.",
+  "@routingEditorMailboxHelp": {
+    "placeholders": {
+      "worker": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorWorkerHelp": "Handled by the Worker {worker}.",
+  "@routingEditorWorkerHelp": {
+    "placeholders": {
+      "worker": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorDropHelp": "Discard mail sent to this address.",
+  "routingEditorDeliverTo": "Forward to",
+  "routingEditorDestFooter": "Destination addresses belong to the account and work for every domain in it.",
+  "routingEditorPendingFooter": "{email} isn't verified yet. The rule can't deliver until its owner clicks the link Cloudflare emailed.",
+  "@routingEditorPendingFooter": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingEditorPickDestination": "Choose where to forward mail.",
+  "routingEditorEnabled": "Rule on",
+  "routingEditorEnabledHelp": "Turn off to pause this address without deleting it.",
+  "routingEditorDelete": "Delete rule",
+  "routingSelected": "Selected",
+  "routingAddressesTitle": "Destination addresses",
+  "routingAddressesEmptyTitle": "No destination addresses",
+  "routingAddressesEmptyMessage": "Add an inbox you own. Cloudflare emails it a link, and forwarding starts once the owner clicks it.",
+  "routingAddressesPendingHeader": "Waiting for verification",
+  "routingAddressesPendingFooter": "Each owner must click the link Cloudflare emailed. Edgepost can't resend it, because Cloudflare's API has no way to; resend it from the Cloudflare dashboard.",
+  "routingAddressesVerifiedHeader": "Verified",
+  "routingAddressesAccountNote": "These addresses belong to the account {account} and work for every domain in it.",
+  "@routingAddressesAccountNote": {
+    "placeholders": {
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressVerified": "Verified",
+  "routingAddressVerifiedOn": "Verified {date}",
+  "@routingAddressVerifiedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressWaiting": "Waiting for verification",
+  "routingAddressWaitingSince": "Waiting for verification since {date}",
+  "@routingAddressWaitingSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleteTitle": "Delete {email}?",
+  "@routingAddressDeleteTitle": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleteMessage": "Rules that forward to it stop delivering mail.",
+  "routingAddressDeleteUsed": "{count, plural, =1{1 rule on {domain} forwards to it and will stop delivering mail.} other{{count} rules on {domain} forward to it and will stop delivering mail.}}",
+  "@routingAddressDeleteUsed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "domain": {
+        "type": "String"
+      }
+    }
+  },
+  "routingAddressDeleted": "Deleted {email}.",
+  "@routingAddressDeleted": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  }
+}
