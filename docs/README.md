@@ -91,8 +91,10 @@ it names the file. It needs Pillow, fontTools and brotli.
 ## Rules the site keeps
 
 - **Nothing loads from another site.** No web fonts from a CDN, no analytics,
-  no embeds, no cookies, so there is no cookie banner. The privacy policy says
-  so ("This website"); keep the two true together.
+  no embeds, no cookies, so there is no cookie banner. The one thing kept is
+  the theme switch's pick, `theme` in the browser's localStorage, and only
+  when a visitor picks Light or Dark. The privacy policy says all this ("This
+  website"); keep the two true together.
 - **Only true claims.** Every feature on the page is something the app does
   today, in the app's own words. The screens show synthetic demo data from the
   local fake API (`tool/fake_cf_api`), and the page says so. Never add

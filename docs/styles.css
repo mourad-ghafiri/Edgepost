@@ -51,8 +51,10 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Dark: the system's setting unless the theme switch picked light, or the
+   switch's own pick. The two lists are the same; change them together. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --canvas: #0e0f12;
     --surface: #17181c;
     --ink: #ecedef;
@@ -72,6 +74,32 @@
     --bezel: #2a2c33;
     --bezel-edge: #3b3e46;
   }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --canvas: #0e0f12;
+  --surface: #17181c;
+  --ink: #ecedef;
+  --ink-muted: #a2a6ae;
+  --hairline: #2a2c31;
+  --tint: #86a8ff;
+  --tint-hover: #a9c1ff;
+  --on-tint: #0b1530;
+  --tint-wash: #1b2541;
+  --brand: #ff8a4f;
+  --attention: #ff6b5e;
+  --on-attention: #2a0d0a;
+  --neutral-wash: #24262b;
+  --band: #1f2025;
+  --band-hairline: #2a2c31;
+  --shot-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.7), 0 0 0 1px #2a2c31;
+  --bezel: #2a2c33;
+  --bezel-edge: #3b3e46;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 *,
@@ -276,6 +304,99 @@ p {
   cursor: pointer;
 }
 
+/* The theme switch: System, Light or Dark under one button. It shows once
+   the script runs; without it, the theme is the system's. */
+.theme {
+  position: relative;
+}
+
+.theme__button {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+
+.theme__button:hover,
+.theme__button[aria-expanded='true'] {
+  color: var(--ink);
+  background: var(--neutral-wash);
+}
+
+.theme__button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  gap: 2px;
+  min-width: 168px;
+  padding: 6px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: 0 16px 32px -16px rgba(23, 24, 28, 0.3);
+}
+
+.theme__menu[hidden] {
+  display: none;
+}
+
+.theme__menu button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-muted);
+  font: 500 0.95rem var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.theme__menu button:hover {
+  color: var(--ink);
+  background: var(--neutral-wash);
+}
+
+.theme__menu button:focus-visible {
+  outline-offset: -2px;
+}
+
+.theme__menu button[aria-pressed='true'] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.theme__menu svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.theme__menu .theme__check {
+  margin-left: auto;
+  color: var(--tint);
+  visibility: hidden;
+}
+
+.theme__menu [aria-pressed='true'] .theme__check {
+  visibility: visible;
+}
+
 /* Narrow screens: a menu once the script runs; without it, the links wrap
    under the name. */
 @media (max-width: 760px) {
@@ -289,6 +410,7 @@ p {
 
   .has-menu .site-header__inner {
     flex-wrap: nowrap;
+    gap: 8px;
   }
 
   .has-menu .menu-button {
@@ -524,7 +646,7 @@ p {
   overflow: hidden;
   aspect-ratio: 1320 / 2868;
   border-radius: 41px;
-  background: #f6f7f9;
+  background: var(--canvas);
 }
 
 .phone__screen::after {

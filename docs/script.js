@@ -43,6 +43,74 @@
     sync();
   }
 
+  // The theme switch: the system's setting, or light or dark as picked here.
+  // The pick is kept in the browser (privacy.html says so) and applied by
+  // each page's head before it paints. The screens and the browser's bar
+  // colour follow the system through media queries; a pick overrides them.
+  const themeSwitch = document.querySelector('.theme');
+  if (themeSwitch) {
+    const root = document.documentElement;
+    const toggle = themeSwitch.querySelector('.theme__button');
+    const menu = themeSwitch.querySelector('.theme__menu');
+    const choices = [...menu.querySelectorAll('button[value]')];
+    const darkSources = [...document.querySelectorAll('source[media="(prefers-color-scheme: dark)"]')];
+    const bars = [...document.querySelectorAll('meta[name="theme-color"]')].map((meta) => ({
+      meta,
+      scheme: meta.media.includes('dark') ? 'dark' : 'light',
+    }));
+    const barColour = Object.fromEntries(bars.map(({ meta, scheme }) => [scheme, meta.content]));
+
+    const apply = (theme) => {
+      if (theme === 'system') delete root.dataset.theme;
+      else root.dataset.theme = theme;
+      const dark = { system: '(prefers-color-scheme: dark)', light: 'not all', dark: 'all' }[theme];
+      darkSources.forEach((source) => (source.media = dark));
+      bars.forEach(({ meta, scheme }) => (meta.content = barColour[theme === 'system' ? scheme : theme]));
+      choices.forEach((choice) => choice.setAttribute('aria-pressed', String(choice.value === theme)));
+    };
+    const save = (theme) => {
+      try {
+        if (theme === 'system') localStorage.removeItem('theme');
+        else localStorage.setItem('theme', theme);
+      } catch {
+        // Storage is off: the pick lasts until the page is left.
+      }
+    };
+    const open = (on) => {
+      toggle.setAttribute('aria-expanded', String(on));
+      menu.hidden = !on;
+    };
+
+    toggle.addEventListener('click', () => open(menu.hidden));
+    choices.forEach((choice) => {
+      choice.addEventListener('click', () => {
+        apply(choice.value);
+        save(choice.value);
+        open(false);
+        toggle.focus();
+      });
+    });
+    themeSwitch.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.hidden) {
+        open(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!themeSwitch.contains(e.target)) open(false);
+    });
+    document.addEventListener('focusin', (e) => {
+      if (!themeSwitch.contains(e.target)) open(false);
+    });
+    // A pick in another tab of the site.
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'theme' || e.key === null) apply(['light', 'dark'].includes(e.newValue) ? e.newValue : 'system');
+    });
+
+    apply(root.dataset.theme || 'system');
+    themeSwitch.hidden = false;
+  }
+
   // The tour: as a step's words reach the reading line (60% down the
   // window), the pinned phone shows its screen (sliding in like a pushed
   // page, or back out like a popped one when scrolling up), and the phone's
