@@ -444,10 +444,11 @@ p {
 
 /* Buttons and store boxes */
 
+/* 12px: Apple's minimum clear space around a 48px badge, a quarter of its height. */
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
 }
 
@@ -511,6 +512,17 @@ p {
 .store strong {
   color: var(--ink);
   font: 600 0.98rem/1.2 var(--display);
+}
+
+/* A live listing: the store's own badge, unmodified, linked to it. */
+.store-badge {
+  display: inline-flex;
+}
+
+.store-badge img {
+  display: block;
+  width: auto;
+  height: 48px;
 }
 
 /* The tour: the copy on the left, the pinned phone on the right. */
